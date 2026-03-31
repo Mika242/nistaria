@@ -3201,7 +3201,7 @@ footer {
       <div class="bridge-steps">
         <div class="bridge-step">
           <div class="bridge-step-num">01</div>
-          <div class="bridge-step-text" data-i18n="bridge_sell_1">Dépose le profil via le formulaire</div>
+          <div class="bridge-step-text" data-i18n="bridge_sell_1">Dépose le profil via le formulaire — <a href="#" onclick="openForms('submit');return false;" style="color:var(--teal);text-decoration:underline">accès ici</a></div>
         </div>
         <div class="bridge-step">
           <div class="bridge-step-num">02</div>
@@ -3252,7 +3252,7 @@ footer {
         </div>
         <div class="bridge-step">
           <div class="bridge-step-num">02</div>
-          <div class="bridge-step-text" data-i18n="bridge_buy_2">Soumet une demande de mise en relation</div>
+          <div class="bridge-step-text" data-i18n="bridge_buy_2">Soumet une demande de mise en relation — <a href="#" onclick="openForms('contact');return false;" style="color:var(--gold);text-decoration:underline">accès ici</a></div>
         </div>
         <div class="bridge-step">
           <div class="bridge-step-num">03</div>
@@ -3305,7 +3305,7 @@ footer {
           <li data-i18n="esn_ff3">Coordonnées recruteur : 249€ HT</li>
           <li data-i18n="esn_ff4">Profil supplémentaire : 49€ HT</li>
         </ul>
-        <button type="button" class="esn-cta" onclick="openForms('submit')" data-i18n="esn_cta_submit">Déposer un profil →</button>
+        <a class="esn-cta" href="mailto:contact@nistaria.com" data-i18n="esn_cta_submit">Nous contacter →</a>
       </div>
 
       <div class="esn-card esn-card-featured">
@@ -3322,7 +3322,7 @@ footer {
           <li data-i18n="esn_af5">Reporting mensuel des opportunités</li>
           <li data-i18n="esn_af6">Dépôt par email direct avec CV PDF — sans formulaire</li>
         </ul>
-        <button type="button" class="esn-cta esn-cta-featured" onclick="openForms('contact')" data-i18n="esn_cta_contact2">Nous contacter →</button>
+        <a class="esn-cta esn-cta-featured" href="mailto:contact@nistaria.com" data-i18n="esn_cta_contact2">Nous contacter →</a>
       </div>
 
       <div class="esn-card">
@@ -3336,7 +3336,7 @@ footer {
           <li data-i18n="esn_hf3">Adapté aux volumes moyens</li>
           <li data-i18n="esn_hf4">Flexible selon votre activité</li>
         </ul>
-        <button type="button" class="esn-cta" onclick="openForms('contact')" data-i18n="esn_cta_contact3">Nous contacter →</button>
+        <a class="esn-cta" href="mailto:contact@nistaria.com" data-i18n="esn_cta_contact3">Nous contacter →</a>
       </div>
 
     </div>
@@ -3523,9 +3523,9 @@ footer {
               <div class="f-error" id="err_contact_context"></div>
             </div>
           </div>
-          <div style="display:flex;gap:12px">
-            <button type="button" class="f-submit" style="background:transparent;border:1px solid var(--line2);color:var(--text-md);flex:0 0 auto;padding:14px 20px" type="button" onclick="contactBack()">← Retour</button>
-            <button type="button" class="f-submit" style="flex:1" data-i18n="submit_btn" onclick="submitForm('contact')">Envoyer la demande →</button>
+          <div style="display:flex;gap:10px;align-items:stretch">
+            <button type="button" style="background:transparent;border:1px solid var(--line2);color:var(--text-md);padding:12px 16px;font-family:'Outfit',sans-serif;font-size:11px;cursor:pointer;white-space:nowrap;flex-shrink:0;touch-action:manipulation" onclick="contactBack()">← Retour</button>
+            <button type="button" class="f-submit" style="flex:1;margin-top:0" data-i18n="submit_btn" onclick="submitForm('contact')">Envoyer la demande →</button>
           </div>
         </div>
 
@@ -3658,9 +3658,9 @@ footer {
             </div>
           </div>
           <p class="f-note" style="margin-bottom:8px">✓ Vous pouvez indiquer les vraies entreprises et le nom du consultant — Nistaria s'occupe de l'anonymisation.</p>
-          <div style="display:flex;gap:12px">
-            <button type="button" class="f-submit teal" style="background:transparent;border:1px solid var(--line2);color:var(--text-md);flex:0 0 auto;padding:14px 20px" onclick="submitBack()">← Retour</button>
-            <button type="button" class="f-submit teal" style="flex:1" data-i18n="submit_profile_btn" onclick="submitForm('submit')">Soumettre le profil →</button>
+          <div style="display:flex;gap:10px;align-items:stretch">
+            <button type="button" style="background:transparent;border:1px solid var(--line2);color:var(--text-md);padding:12px 16px;font-family:'Outfit',sans-serif;font-size:11px;cursor:pointer;white-space:nowrap;flex-shrink:0;touch-action:manipulation" onclick="submitBack()">← Retour</button>
+            <button type="button" class="f-submit teal" style="flex:1;margin-top:0" data-i18n="submit_profile_btn" onclick="submitForm('submit')">Soumettre le profil →</button>
           </div>
         </div>
 
@@ -3688,9 +3688,9 @@ footer {
           <div class="f-error" id="err_rk_company"></div>
         </div>
       </div>
-      <div style="display:flex;gap:12px;margin-top:8px">
-        <button type="button" class="f-submit" style="background:transparent;border:1px solid var(--line2);color:var(--text-md);flex:0 0 auto;padding:14px 20px" onclick="requestKeyBack()">← Retour</button>
-        <button type="button" class="f-submit" style="flex:1" onclick="submitRequestKeyForm()">Envoyer la demande →</button>
+      <div style="display:flex;gap:10px;margin-top:8px;align-items:stretch">
+        <button type="button" style="background:transparent;border:1px solid var(--line2);color:var(--text-md);padding:12px 16px;font-family:'Outfit',sans-serif;font-size:11px;cursor:pointer;white-space:nowrap;flex-shrink:0;touch-action:manipulation" onclick="requestKeyBack()">← Retour</button>
+        <button type="button" class="f-submit" style="flex:1;margin-top:0" onclick="submitRequestKeyForm()">Envoyer la demande →</button>
       </div>
     </div>
 
@@ -3894,7 +3894,7 @@ var translations = {
     // How it works
     how_label: 'Process', how_title: 'Comment ça marche',
     bridge_sell_title: 'Commercial / ESN', bridge_sell_sub: 'Sell Side',
-    bridge_sell_1: 'Dépose le profil via le formulaire',
+    bridge_sell_1: `Dépose le profil via le formulaire — <a href="#" onclick="openForms('submit');return false;" style="color:var(--teal);text-decoration:underline">accès ici</a>`,
     bridge_sell_2: 'Son profil est anonymisé et publié sur la plateforme',
     bridge_sell_3: 'Reçoit les coordonnées du recruteur intéressé',
     bridge_center_1: 'Retraite et anonymise le profil',
@@ -3903,7 +3903,7 @@ var translations = {
     bridge_promise: 'La splendeur de ce que le marché ne voit pas',
     bridge_buy_title: 'Institution / Recruteur', bridge_buy_sub: 'Buy Side',
     bridge_buy_1: 'Consulte les profils anonymisés sur la plateforme',
-    bridge_buy_2: 'Soumet une demande de mise en relation',
+    bridge_buy_2: `Soumet une demande de mise en relation — <a href="#" onclick="openForms('contact');return false;" style="color:var(--gold);text-decoration:underline">accès ici</a>`,
     bridge_buy_3: `Reçoit l'introduction directe sous 48h`,
     // ESN section
     esn_label: 'Partenaires', esn_title: 'Accès ESN & Cabinets',
@@ -4029,7 +4029,7 @@ var translations = {
     // How it works
     how_label: 'Process', how_title: 'How it works',
     bridge_sell_title: 'Commercial / ESN', bridge_sell_sub: 'Sell Side',
-    bridge_sell_1: 'Submits profile via the form',
+    bridge_sell_1: `Submits profile via the form — <a href="#" onclick="openForms('submit');return false;" style="color:var(--teal);text-decoration:underline">here</a>`,
     bridge_sell_2: 'Profile is anonymised and published on the platform',
     bridge_sell_3: 'Receives recruiter contact details',
     bridge_center_1: 'Processes and anonymises the profile',
@@ -4038,7 +4038,7 @@ var translations = {
     bridge_promise: 'The brilliance of what the market fails to see',
     bridge_buy_title: 'Institution / Recruiter', bridge_buy_sub: 'Buy Side',
     bridge_buy_1: 'Browses anonymised profiles on the platform',
-    bridge_buy_2: 'Submits an introduction request',
+    bridge_buy_2: `Submits an introduction request — <a href="#" onclick="openForms('contact');return false;" style="color:var(--gold);text-decoration:underline">here</a>`,
     bridge_buy_3: 'Receives the direct introduction within 48h',
     // ESN section
     esn_label: 'Partners', esn_title: 'ESN & Firm Access',
@@ -4131,7 +4131,7 @@ function setLang(lang, btn) {
   document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('active'); });
   if (btn) btn.classList.add('active');
   // Update all data-i18n elements
-  var htmlKeys = ['hero_line2']; // keys that contain HTML
+  var htmlKeys = ['hero_line2', 'bridge_sell_1', 'bridge_buy_2']; // keys that contain HTML
   document.querySelectorAll('[data-i18n]').forEach(function(el) {
     var key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
