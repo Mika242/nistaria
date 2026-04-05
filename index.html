@@ -3297,22 +3297,22 @@ footer {
       <div class="esn-card">
         <div class="esn-card-tag" data-i18n="esn_tag_free">Gratuit</div>
         <div class="esn-card-title" data-i18n="esn_free_title">2 profils inclus</div>
-        <div class="esn-card-price">0 €</div>
+        <div class="esn-card-price" style="font-size:18px;letter-spacing:0.05em">Sur demande</div>
         <div class="esn-card-desc" data-i18n="esn_free_desc">Pour démarrer sans engagement. 2 profils simultanés, 14 jours de visibilité. Lorsqu'un recruteur est intéressé, obtenez ses coordonnées pour <strong>249€ HT</strong>.</div>
         <ul class="esn-features">
           <li data-i18n="esn_ff1">2 profils simultanés maximum</li>
           <li data-i18n="esn_ff2">Visibilité 14 jours par profil</li>
-          <li data-i18n="esn_ff3">Coordonnées recruteur : 249€ HT</li>
-          <li data-i18n="esn_ff4">Profil supplémentaire : 49€ HT</li>
+          <li data-i18n="esn_ff3">Coordonnées recruteur incluses</li>
+          <li data-i18n="esn_ff4">Profil supplémentaire disponible</li>
         </ul>
-        <a class="esn-cta" href="mailto:contact@nistaria.com" data-i18n="esn_cta_submit">Nous contacter →</a>
+        <button type="button" class="esn-cta" onclick="openForms('contact')" data-i18n="esn_cta_contact2">Nous contacter →</button>
       </div>
 
       <div class="esn-card esn-card-featured">
         <div class="esn-card-featured-badge" data-i18n="esn_badge_popular">Le plus choisi</div>
         <div class="esn-card-tag teal" data-i18n="esn_tag_annual">Abonnement annuel</div>
         <div class="esn-card-title" data-i18n="esn_annual_title">Accès illimité</div>
-        <div class="esn-card-price">990 € <span style="font-size:14px;letter-spacing:0.05em">HT/an</span></div>
+        <div class="esn-card-price" style="font-size:18px;letter-spacing:0.05em">Sur demande</div>
         <div class="esn-card-desc" data-i18n="esn_annual_desc">Pour les ESN et cabinets avec un flux régulier de consultants à placer. Mises en relation illimitées sur l'année.</div>
         <ul class="esn-features">
           <li data-i18n="esn_af1">Mises en relation illimitées</li>
@@ -3322,13 +3322,13 @@ footer {
           <li data-i18n="esn_af5">Reporting mensuel des opportunités</li>
           <li data-i18n="esn_af6">Dépôt par email direct avec CV PDF — sans formulaire</li>
         </ul>
-        <a class="esn-cta esn-cta-featured" href="mailto:contact@nistaria.com" data-i18n="esn_cta_contact2">Nous contacter →</a>
+        <button type="button" class="esn-cta esn-cta-featured" onclick="openForms('contact')" data-i18n="esn_cta_contact2">Nous contacter →</button>
       </div>
 
       <div class="esn-card">
         <div class="esn-card-tag" data-i18n="esn_tag_hybrid">Modèle hybride</div>
         <div class="esn-card-title" data-i18n="esn_hybrid_title">Abonnement + commission</div>
-        <div class="esn-card-price" data-i18n="esn_hybrid_price">Sur demande</div>
+        <div class="esn-card-price" style="font-size:18px;letter-spacing:0.05em">Sur demande</div>
         <div class="esn-card-desc" data-i18n="esn_hybrid_desc">Abonnement annuel réduit combiné à une commission légère sur chaque mission signée. Le meilleur des deux modèles.</div>
         <ul class="esn-features">
           <li data-i18n="esn_hf1">Accès catalogue complet</li>
@@ -3336,7 +3336,7 @@ footer {
           <li data-i18n="esn_hf3">Adapté aux volumes moyens</li>
           <li data-i18n="esn_hf4">Flexible selon votre activité</li>
         </ul>
-        <a class="esn-cta" href="mailto:contact@nistaria.com" data-i18n="esn_cta_contact3">Nous contacter →</a>
+        <button type="button" class="esn-cta" onclick="openForms('contact')" data-i18n="esn_cta_contact3">Nous contacter →</button>
       </div>
 
     </div>
@@ -3911,7 +3911,7 @@ var translations = {
     esn_tag_free: 'Gratuit', esn_free_title: '2 profils inclus',
     esn_free_desc: 'Pour démarrer sans engagement. 2 profils simultanés, 14 jours de visibilité.',
     esn_ff1: '2 profils simultanés maximum', esn_ff2: 'Visibilité 14 jours par profil',
-    esn_ff3: 'Coordonnées recruteur : 249€ HT', esn_ff4: 'Profil supplémentaire : 49€ HT',
+    esn_ff3: 'Coordonnées recruteur incluses', esn_ff4: 'Profil supplémentaire disponible',
     esn_cta_submit: 'Déposer un profil →',
     esn_tag_annual: 'Abonnement annuel', esn_annual_title: 'Accès illimité',
     esn_badge_popular: 'Le plus choisi',
@@ -3927,7 +3927,7 @@ var translations = {
     esn_hf3: 'Adapté aux volumes moyens', esn_hf4: 'Flexible selon votre activité',
     esn_cta_contact3: 'Nous contacter →',
     free_tag: 'Gratuit', free_title: '2 profils inclus', free_desc: 'Publiez',
-    sub_tag: 'Abonné · 990€ HT/an', sub_title: 'Profils illimités',
+    sub_tag: 'Abonné · Accès illimité', sub_title: 'Profils illimités',
     sub_desc: 'Publiez autant de profils que vous souhaitez.',
     // Renew
     renew_btn: '↻ Renouveler', renew_text: '↻ Renouveler ce profil',
@@ -4046,7 +4046,7 @@ var translations = {
     esn_tag_free: 'Free', esn_free_title: '2 profiles included',
     esn_free_desc: 'Start with no commitment. 2 simultaneous profiles, 14 days visibility.',
     esn_ff1: 'Max 2 simultaneous profiles', esn_ff2: '14 days visibility per profile',
-    esn_ff3: 'Recruiter contact details: €249 excl. VAT', esn_ff4: 'Extra profile: €49 excl. VAT',
+    esn_ff3: 'Recruiter contact details included', esn_ff4: 'Extra profile available',
     esn_cta_submit: 'Submit a profile →',
     esn_tag_annual: 'Annual subscription', esn_annual_title: 'Unlimited access',
     esn_badge_popular: 'Most popular',
@@ -4062,7 +4062,7 @@ var translations = {
     esn_hf3: 'Suited for moderate volumes', esn_hf4: 'Flexible with your activity',
     esn_cta_contact3: 'Contact us →',
     free_tag: 'Free', free_title: '2 profiles included', free_desc: 'Publish',
-    sub_tag: 'Subscriber · €990/yr excl. VAT', sub_title: 'Unlimited profiles',
+    sub_tag: 'Subscriber · Unlimited access', sub_title: 'Unlimited profiles',
     sub_desc: 'Publish as many profiles as you wish.',
     // Renew
     renew_btn: '↻ Renew', renew_text: '↻ Renew this profile',
