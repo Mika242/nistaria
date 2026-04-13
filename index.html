@@ -2314,6 +2314,149 @@ footer {
   box-shadow: 0 0 8px rgba(244,169,78,0.5);
   animation: none;
 }
+
+/* ── LOCATION FILTER HUBS ── */
+.loc-filter-group {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.loc-hubs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.loc-hub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.loc-hub-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.loc-hub-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* ── LOCATION TJM BUILDER ── */
+.loc-builder {
+  margin-top: 4px;
+}
+
+.loc-add-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.loc-add-row .f-group { margin-bottom: 0; flex: 1; min-width: 130px; }
+
+.loc-add-btn {
+  background: var(--teal-dim);
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  padding: 10px 16px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.loc-add-btn:hover { background: rgba(77,217,176,0.2); }
+
+.loc-list { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+
+.loc-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg2);
+  border: 1px solid var(--line2);
+  padding: 8px 12px;
+  font-size: 12px;
+  gap: 8px;
+}
+
+.loc-item-left { display: flex; align-items: center; gap: 10px; flex: 1; }
+
+.loc-city {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  color: var(--text-hi);
+  min-width: 90px;
+}
+
+.loc-tjm {
+  font-family: 'DM Mono', monospace;
+  color: var(--gold);
+  font-size: 11px;
+}
+
+.loc-remote {
+  font-size: 10px;
+  color: var(--teal);
+  border: 1px solid rgba(77,217,176,0.3);
+  padding: 1px 6px;
+  letter-spacing: 0.06em;
+}
+
+.loc-default {
+  font-size: 9px;
+  color: var(--gold);
+  border: 1px solid rgba(232,184,75,0.3);
+  padding: 1px 6px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.loc-remove {
+  background: none;
+  border: none;
+  color: var(--text-lo);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 4px;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.loc-remove:hover { color: var(--red); }
+
+.loc-empty {
+  font-size: 11px;
+  color: var(--text-lo);
+  font-style: italic;
+  padding: 8px 0;
+  text-align: center;
+  border: 1px dashed var(--line);
+}
+
+/* ── FILTER LOCATION ── */
+.f-loc { }
+.f-loc:hover, .f-loc.active {
+  border-color: #7eb8d4;
+  color: #7eb8d4;
+  background: rgba(126,184,212,0.08);
+}
 </style>
 </head>
 <body style="background:#06080a !important">
@@ -2397,6 +2540,51 @@ footer {
     <button class="f-sec" onclick="filterSec('tech',this)">Tech & Startups</button>
   </div>
 
+  <div class="filter-group loc-filter-group">
+    <span class="filter-group-label">Localisation</span>
+    <div class="loc-hubs">
+      <div class="loc-hub">
+        <span class="loc-hub-label">🇫🇷 France</span>
+        <div class="loc-hub-btns">
+          <button class="f-loc f-btn active" onclick="filterLoc('paris',this)">Paris</button>
+          <button class="f-loc f-btn" onclick="filterLoc('lyon',this)">Lyon</button>
+          <button class="f-loc f-btn" onclick="filterLoc('bordeaux',this)">Bordeaux</button>
+          <button class="f-loc f-btn" onclick="filterLoc('lille',this)">Lille</button>
+          <button class="f-loc f-btn" onclick="filterLoc('nantes',this)">Nantes</button>
+          <button class="f-loc f-btn" onclick="filterLoc('toulouse',this)">Toulouse</button>
+          <button class="f-loc f-btn" onclick="filterLoc('marseille',this)">Marseille</button>
+          <button class="f-loc f-btn" onclick="filterLoc('strasbourg',this)">Strasbourg</button>
+        </div>
+      </div>
+      <div class="loc-hub">
+        <span class="loc-hub-label">🇪🇺 Europe</span>
+        <div class="loc-hub-btns">
+          <button class="f-loc f-btn" onclick="filterLoc('londres',this)">Londres</button>
+          <button class="f-loc f-btn" onclick="filterLoc('luxembourg',this)">Luxembourg</button>
+          <button class="f-loc f-btn" onclick="filterLoc('geneve',this)">Genève</button>
+          <button class="f-loc f-btn" onclick="filterLoc('bruxelles',this)">Bruxelles</button>
+          <button class="f-loc f-btn" onclick="filterLoc('amsterdam',this)">Amsterdam</button>
+          <button class="f-loc f-btn" onclick="filterLoc('francfort',this)">Francfort</button>
+          <button class="f-loc f-btn" onclick="filterLoc('dublin',this)">Dublin</button>
+          <button class="f-loc f-btn" onclick="filterLoc('barcelone',this)">Barcelone</button>
+          <button class="f-loc f-btn" onclick="filterLoc('madrid',this)">Madrid</button>
+          <button class="f-loc f-btn" onclick="filterLoc('zurich',this)">Zurich</button>
+        </div>
+      </div>
+      <div class="loc-hub">
+        <span class="loc-hub-label">🌍 International</span>
+        <div class="loc-hub-btns">
+          <button class="f-loc f-btn" onclick="filterLoc('telaviv',this)">Tel Aviv</button>
+          <button class="f-loc f-btn" onclick="filterLoc('dubai',this)">Dubaï</button>
+          <button class="f-loc f-btn" onclick="filterLoc('singapour',this)">Singapour</button>
+          <button class="f-loc f-btn" onclick="filterLoc('newyork',this)">New York</button>
+          <button class="f-loc f-btn" onclick="filterLoc('montreal',this)">Montréal</button>
+          <button class="f-loc f-btn" onclick="filterLoc('remote',this)">🌐 Remote</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Score Filter -->
   <div class="score-filter-wrap">
     <span class="score-filter-label" data-i18n="score_filter_label">Score min.</span>
@@ -2414,7 +2602,7 @@ footer {
   <!-- Grid -->
   <div class="grid" id="grid">
 
-    <div class="card-wrap" data-cat="pm" data-score="82" data-sec="finance"  data-pub="2026-03-16" data-exp="2026-03-30"onclick="openModal('pm')">
+    <div class="card-wrap" data-cat="pm" data-score="82" data-sec="finance"  data-pub="2026-03-16" data-exp="2026-03-30"onclick="openModal('pm')" data-locations='[{"city":"paris","tjm":820},{"city":"lyon","tjm":720},{"city":"remote","tjm":780}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#4ade80,#22c55e)">82</div>
@@ -2473,7 +2661,7 @@ footer {
       </div>
     </div>
 
-    <div class="card-wrap" data-cat="ai" data-sec="asset"  data-pub="2026-02-20" data-score="91" data-exp="2026-04-10" data-subscribed="1"onclick="openModal('llm')">
+    <div class="card-wrap" data-cat="ai" data-sec="asset"  data-pub="2026-02-20" data-score="91" data-exp="2026-04-10" data-subscribed="1"onclick="openModal('llm')" data-locations='[{"city":"paris","tjm":1050},{"city":"luxembourg","tjm":1150},{"city":"remote","tjm":980}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#e8c84a,#d4a017);box-shadow:0 0 16px rgba(232,200,74,0.4)">91</div>
@@ -2593,13 +2781,13 @@ footer {
                 <div class="cb-meta-val" data-i18n="mode_regie">Régie</div>
               </div>
             </div>
-            <button class="cb-cta" data-i18n="profile_cta" onclick="openModal('ba')">Profil →</button>
+            <button class="cb-cta" data-i18n="profile_cta" onclick="openModal('ba')" data-locations='[{"city":"paris","tjm":680},{"city":"bruxelles","tjm":720}]'>Profil →</button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="card-wrap" data-cat="ai" data-sec="finance"  data-pub="2026-03-14" data-score="88" data-exp="2026-03-28" data-subscribed="1"onclick="openModal('airisk')">
+    <div class="card-wrap" data-cat="ai" data-sec="finance"  data-pub="2026-03-14" data-score="88" data-exp="2026-03-28" data-subscribed="1"onclick="openModal('airisk')" data-locations='[{"city":"paris","tjm":950},{"city":"londres","tjm":1100},{"city":"remote","tjm":900}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#4ade80,#22c55e)">88</div>
@@ -2658,7 +2846,7 @@ footer {
       </div>
     </div>
 
-    <div class="card-wrap" data-cat="pmo" data-score="71" data-sec="asset"  data-pub="2026-03-07" data-exp="2026-04-11"onclick="openModal('pmo')">
+    <div class="card-wrap" data-cat="pmo" data-score="71" data-sec="asset"  data-pub="2026-03-07" data-exp="2026-04-11"onclick="openModal('pmo')" data-locations='[{"city":"paris","tjm":720},{"city":"lyon","tjm":650},{"city":"remote","tjm":680}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#9b72cf,#7a4fb5)">71</div>
@@ -2717,7 +2905,7 @@ footer {
       </div>
     </div>
 
-    <div class="card-wrap" data-cat="data" data-sec="finance"  data-pub="2026-03-21" data-score="69" data-exp="2026-03-26" data-dispo="2026-06-26"onclick="openModal('ds')">
+    <div class="card-wrap" data-cat="data" data-sec="finance"  data-pub="2026-03-21" data-score="69" data-exp="2026-03-26" data-dispo="2026-06-26"onclick="openModal('ds')" data-locations='[{"city":"paris","tjm":750},{"city":"remote","tjm":700}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#9b72cf,#7a4fb5)">69</div>
@@ -2781,7 +2969,7 @@ footer {
 
 
     <!-- Card 7: Product Owner Senior -->
-    <div class="card-wrap" data-cat="po" data-score="77" data-sec="finance" data-pub="2026-03-10" data-exp="2026-04-14" onclick="openModal('po')">
+    <div class="card-wrap" data-cat="po" data-score="77" data-sec="finance" data-pub="2026-03-10" data-exp="2026-04-14" onclick="openModal('po')" data-locations='[{"city":"paris","tjm":720},{"city":"nantes","tjm":650},{"city":"remote","tjm":680}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#4ade80,#22c55e)">77</div>
@@ -2817,7 +3005,7 @@ footer {
     </div>
 
     <!-- Card 8: Scrum Master -->
-    <div class="card-wrap" data-cat="pm" data-score="72" data-sec="assurance" data-pub="2026-03-13" data-exp="2026-04-02" onclick="openModal('sm')">
+    <div class="card-wrap" data-cat="pm" data-score="72" data-sec="assurance" data-pub="2026-03-13" data-exp="2026-04-02" onclick="openModal('sm')" data-locations='[{"city":"paris","tjm":620},{"city":"lille","tjm":560},{"city":"remote","tjm":580}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#9b72cf,#7a4fb5)">72</div>
@@ -2853,7 +3041,7 @@ footer {
     </div>
 
     <!-- Card 9: Architecte SI -->
-    <div class="card-wrap" data-cat="pm" data-score="85" data-sec="finance" data-pub="2026-03-17" data-exp="2026-03-31" onclick="openModal('archi')">
+    <div class="card-wrap" data-cat="pm" data-score="85" data-sec="finance" data-pub="2026-03-17" data-exp="2026-03-31" onclick="openModal('archi')" data-locations='[{"city":"paris","tjm":980},{"city":"luxembourg","tjm":1100},{"city":"francfort","tjm":1050}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#4ade80,#22c55e)">85</div>
@@ -2889,7 +3077,7 @@ footer {
     </div>
 
     <!-- Card 10: Quant Analyst (TJM NC) -->
-    <div class="card-wrap" data-cat="data" data-score="63" data-sec="finance" data-pub="2026-03-14" data-exp="2026-03-28" onclick="openModal('quant')">
+    <div class="card-wrap" data-cat="data" data-score="63" data-sec="finance" data-pub="2026-03-14" data-exp="2026-03-28" onclick="openModal('quant')" data-locations='[{"city":"paris","tjm":820}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#9b72cf,#7a4fb5)">63</div>
@@ -2925,7 +3113,7 @@ footer {
     </div>
 
     <!-- Card 11: DevSecOps -->
-    <div class="card-wrap" data-cat="data" data-score="79" data-sec="finance" data-pub="2026-03-04" data-exp="2026-04-18" onclick="openModal('devsec')">
+    <div class="card-wrap" data-cat="data" data-score="79" data-sec="finance" data-pub="2026-03-04" data-exp="2026-04-18" onclick="openModal('devsec')" data-locations='[{"city":"paris","tjm":800},{"city":"remote","tjm":800},{"city":"dublin","tjm":850}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#4ade80,#22c55e)">79</div>
@@ -2961,7 +3149,7 @@ footer {
     </div>
 
     <!-- Card 12: Change Manager -->
-    <div class="card-wrap" data-cat="pm" data-score="76" data-sec="finance" data-pub="2026-03-16" data-exp="2026-04-08" data-dispo="2026-04-26" onclick="openModal('change')">
+    <div class="card-wrap" data-cat="pm" data-score="76" data-sec="finance" data-pub="2026-03-16" data-exp="2026-04-08" data-dispo="2026-04-26" onclick="openModal('change')" data-locations='[{"city":"paris","tjm":850},{"city":"bruxelles","tjm":900},{"city":"remote","tjm":800}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#4ade80,#22c55e)">76</div>
@@ -2998,7 +3186,7 @@ footer {
 
 
     <!-- Card 13: Actuaire Junior M1 -->
-    <div class="card-wrap" data-cat="data" data-score="71" data-sec="finance" data-pub="2026-03-29" data-exp="2026-04-12" data-dispo="2026-04-28" onclick="openModal('actjr')">
+    <div class="card-wrap" data-cat="data" data-score="71" data-sec="finance" data-pub="2026-03-29" data-exp="2026-04-12" data-dispo="2026-04-28" onclick="openModal('actjr')" data-locations='[{"city":"paris","tjm":45}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#9b72cf,#7a4fb5)">71</div>
@@ -3035,7 +3223,7 @@ footer {
 
 
     <!-- Card 14: Alternant Cybersécurité -->
-    <div class="card-wrap" data-cat="devsec" data-score="85" data-sec="finance" data-pub="2026-03-29" data-exp="2026-04-12" data-dispo="2026-04-28" onclick="openModal('cyber')">
+    <div class="card-wrap" data-cat="devsec" data-score="85" data-sec="finance" data-pub="2026-03-29" data-exp="2026-04-12" data-dispo="2026-04-28" onclick="openModal('cyber')" data-locations='[{"city":"paris","tjm":85},{"city":"remote","tjm":85}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#4ade80,#22c55e)">85</div>
@@ -3072,7 +3260,7 @@ footer {
 
 
     <!-- Card 15: Lead Dev Backend -->
-    <div class="card-wrap" data-cat="dev" data-score="84" data-sec="finance" data-pub="2026-02-15" data-exp="2026-04-12" data-dispo="2026-03-01" onclick="openModal('devback')">
+    <div class="card-wrap" data-cat="dev" data-score="84" data-sec="finance" data-pub="2026-02-15" data-exp="2026-04-12" data-dispo="2026-03-01" onclick="openModal('devback')" data-locations='[{"city":"paris","tjm":820},{"city":"remote","tjm":780},{"city":"amsterdam","tjm":900}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#4ade80,#22c55e)">84</div>
@@ -3108,7 +3296,7 @@ footer {
     </div>
 
     <!-- Card 16: Dev Full Stack React/Node -->
-    <div class="card-wrap" data-cat="dev" data-score="78" data-sec="finance" data-pub="2026-03-01" data-exp="2026-04-12" data-dispo="2026-03-15" onclick="openModal('devfull')">
+    <div class="card-wrap" data-cat="dev" data-score="78" data-sec="finance" data-pub="2026-03-01" data-exp="2026-04-12" data-dispo="2026-03-15" onclick="openModal('devfull')" data-locations='[{"city":"paris","tjm":620},{"city":"bordeaux","tjm":560},{"city":"remote","tjm":600}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#60a5fa,#3b82f6)">78</div>
@@ -3144,7 +3332,7 @@ footer {
     </div>
 
     <!-- Card 17: Lead Tech / Architecte Cloud -->
-    <div class="card-wrap" data-cat="dev" data-score="89" data-sec="finance" data-pub="2026-01-20" data-exp="2026-04-12" data-dispo="2026-02-01" onclick="openModal('devcloud')">
+    <div class="card-wrap" data-cat="dev" data-score="89" data-sec="finance" data-pub="2026-01-20" data-exp="2026-04-12" data-dispo="2026-02-01" onclick="openModal('devcloud')" data-locations='[{"city":"paris","tjm":980},{"city":"luxembourg","tjm":1100},{"city":"remote","tjm":920},{"city":"telaviv","tjm":1050}]'>
       <div class="card-inner">
         <div class="card-face card-front">
           <div class="score-badge" style="background:linear-gradient(135deg,#a78bfa,#7c3aed)">89</div>
@@ -3388,6 +3576,7 @@ footer {
         <div>
           <div class="foot-tjm-label">TJM indicatif</div>
           <div class="foot-tjm-val" id="mTJM"></div>
+          <div id="mLocations" style="display:flex;flex-wrap:wrap;gap:5px;margin-top:6px"></div>
         </div>
         <button class="modal-share-pill" id="copyLinkBtn" onclick="copyProfileLink()" title="Copier le lien">
           <span class="share-pill-icon">🔗</span>
@@ -3613,15 +3802,62 @@ footer {
               </select>
             </div>
           </div>
-          <div class="form-grid">
+          <div class="form-grid single">
             <div class="f-group">
-              <label class="f-label" for="submit_tjm" data-i18n="label_tjm">TJM souhaité <span class="optional">(optionnel)</span></label>
-              <input id="submit_tjm" name="tjm" type="text" class="f-input" placeholder="Ex : 700–900 €/j">
-            </div>
-            <div class="f-group">
-              <label class="f-label" for="submit_location" data-i18n="label_location">Localisation *</label>
-              <input id="submit_location" name="localisation" type="text" class="f-input" placeholder="Ex : Paris · Remote OK" oninput="clearError('submit_location')">
-              <div class="f-error" id="err_submit_location"></div>
+              <label class="f-label">Localisations &amp; TJM *</label>
+              <div class="loc-builder">
+                <div class="loc-add-row">
+                  <div class="f-group">
+                    <label class="f-label" style="font-size:9px">Ville</label>
+                    <select id="loc_city_input" class="f-input" style="font-size:12px">
+                      <option value="">Sélectionner...</option>
+                      <optgroup label="── France">
+                        <option value="paris" selected>Paris</option>
+                        <option value="lyon">Lyon</option>
+                        <option value="bordeaux">Bordeaux</option>
+                        <option value="lille">Lille</option>
+                        <option value="nantes">Nantes</option>
+                        <option value="toulouse">Toulouse</option>
+                        <option value="marseille">Marseille</option>
+                        <option value="strasbourg">Strasbourg</option>
+                      </optgroup>
+                      <optgroup label="── Europe">
+                        <option value="londres">Londres</option>
+                        <option value="luxembourg">Luxembourg</option>
+                        <option value="geneve">Genève</option>
+                        <option value="bruxelles">Bruxelles</option>
+                        <option value="amsterdam">Amsterdam</option>
+                        <option value="francfort">Francfort</option>
+                        <option value="dublin">Dublin</option>
+                        <option value="barcelone">Barcelone</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="zurich">Zurich</option>
+                      </optgroup>
+                      <optgroup label="── Moyen-Orient / Asie">
+                        <option value="telaviv">Tel Aviv</option>
+                        <option value="dubai">Dubaï</option>
+                        <option value="singapour">Singapour</option>
+                      </optgroup>
+                      <optgroup label="── Amérique">
+                        <option value="newyork">New York</option>
+                        <option value="montreal">Montréal</option>
+                      </optgroup>
+                      <optgroup label="── Remote">
+                        <option value="remote">🌐 Remote</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div class="f-group" style="max-width:110px">
+                    <label class="f-label" style="font-size:9px">TJM (€/j) *</label>
+                    <input id="loc_tjm_input" type="number" class="f-input" placeholder="850" min="0" max="9999" style="font-size:12px">
+                  </div>
+                  <button type="button" class="loc-add-btn" onclick="addLocation()">+ Ajouter</button>
+                </div>
+                <div class="f-error" id="err_locations"></div>
+                <div id="loc_list" class="loc-list">
+                  <div class="loc-empty" id="loc_empty">Aucune localisation ajoutée — Paris par défaut si vide</div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="form-grid single">
@@ -3823,6 +4059,7 @@ function resetForms() {
   if (sd) sd.selectedIndex = 0;
   if (sm) sm.selectedIndex = 0;
   if (ps) ps.selectedIndex = 0;
+  resetLocationBuilder();
   var s1c = document.getElementById('contact-step1');
   var s2c = document.getElementById('contact-step2');
   var s1s = document.getElementById('submit-step1');
@@ -3835,8 +4072,88 @@ function resetForms() {
 
 
 
-// ── GLOBAL STATE ──
-var currentLang = 'fr';
+// ── LOCATION BUILDER ──
+var locationEntries = []; // [{city, label, tjm}]
+
+var cityLabels = {
+  paris:'Paris', lyon:'Lyon', bordeaux:'Bordeaux', lille:'Lille',
+  nantes:'Nantes', toulouse:'Toulouse', marseille:'Marseille', strasbourg:'Strasbourg',
+  londres:'Londres', luxembourg:'Luxembourg', geneve:'Genève', bruxelles:'Bruxelles',
+  amsterdam:'Amsterdam', francfort:'Francfort', dublin:'Dublin', barcelone:'Barcelone',
+  madrid:'Madrid', zurich:'Zurich', telaviv:'Tel Aviv', dubai:'Dubaï',
+  singapour:'Singapour', newyork:'New York', montreal:'Montréal', remote:'🌐 Remote'
+};
+
+function addLocation() {
+  var city = document.getElementById('loc_city_input').value;
+  var tjm = parseInt(document.getElementById('loc_tjm_input').value);
+  var errEl = document.getElementById('err_locations');
+
+  if (!city) { if(errEl) errEl.textContent = '⚠ Sélectionnez une ville'; return; }
+  if (!tjm || tjm <= 0) { if(errEl) errEl.textContent = '⚠ TJM invalide'; return; }
+  if (locationEntries.find(function(e) { return e.city === city; })) {
+    if(errEl) errEl.textContent = '⚠ Cette ville est déjà ajoutée'; return;
+  }
+  if(errEl) errEl.textContent = '';
+
+  locationEntries.push({ city: city, label: cityLabels[city] || city, tjm: tjm });
+
+  // Reset inputs
+  document.getElementById('loc_city_input').value = '';
+  document.getElementById('loc_tjm_input').value = '';
+
+  renderLocationList();
+}
+
+function removeLocation(idx) {
+  locationEntries.splice(idx, 1);
+  renderLocationList();
+}
+
+function renderLocationList() {
+  var list = document.getElementById('loc_list');
+  var empty = document.getElementById('loc_empty');
+  if (!list) return;
+
+  if (locationEntries.length === 0) {
+    list.innerHTML = '<div class="loc-empty" id="loc_empty">Aucune localisation ajoutée — Paris par défaut si vide</div>';
+    return;
+  }
+
+  list.innerHTML = locationEntries.map(function(e, i) {
+    var isDefault = i === 0;
+    var isRemote = e.city === 'remote';
+    return '<div class="loc-item">' +
+      '<div class="loc-item-left">' +
+        '<span class="loc-city">' + e.label + '</span>' +
+        '<span class="loc-tjm">' + e.tjm + ' €/j</span>' +
+        (isRemote ? '<span class="loc-remote">Remote</span>' : '') +
+        (isDefault ? '<span class="loc-default">Principal</span>' : '') +
+      '</div>' +
+      '<button type="button" class="loc-remove" onclick="removeLocation(' + i + ')" title="Supprimer">✕</button>' +
+    '</div>';
+  }).join('');
+}
+
+function getLocationsPayload() {
+  // Returns JSON string for Formspree + array for display
+  if (locationEntries.length === 0) {
+    return { json: '[{"city":"paris","tjm":0}]', text: 'Paris (TJM non communiqué)', entries: [] };
+  }
+  var text = locationEntries.map(function(e) { return e.label + ' · ' + e.tjm + '€/j'; }).join(' | ');
+  return {
+    json: JSON.stringify(locationEntries.map(function(e) { return {city: e.city, tjm: e.tjm}; })),
+    text: text,
+    entries: locationEntries
+  };
+}
+
+function resetLocationBuilder() {
+  locationEntries = [];
+  renderLocationList();
+  var errEl = document.getElementById('err_locations');
+  if(errEl) errEl.textContent = '';
+}
 
 // ── TRANSLATIONS (minimal - UI strings) ──
 var translations = {
@@ -3857,6 +4174,8 @@ var translations = {
     filter_group_profile: 'Profil', filter_group_sector: 'Secteur',
     sec_asset: 'Asset Management', sec_assurance: 'Assurance',
     score_filter_label: 'Score min.',
+    filter_group_loc: 'Localisation',
+    filter_loc_all: 'Toutes',
     // Cartes
     hint: 'Voir ↻', profile_cta: 'Profil →',
     years: 'ans', tjm_label: 'TJM', dispo_label: 'Dispo', mode_label: 'Mode',
@@ -3992,6 +4311,8 @@ var translations = {
     filter_group_profile: 'Profile', filter_group_sector: 'Sector',
     sec_asset: 'Asset Management', sec_assurance: 'Insurance',
     score_filter_label: 'Min. score',
+    filter_group_loc: 'Location',
+    filter_loc_all: 'All locations',
     // Cards
     hint: 'View ↻', profile_cta: 'Profile →',
     years: 'yrs', tjm_label: 'Daily Rate', dispo_label: 'Avail.', mode_label: 'Mode',
@@ -4166,13 +4487,52 @@ function applyFilters() {
     var catOk = currentCat === 'all' || cat === currentCat;
     var secOk = currentSec === 'all' || sec === currentSec;
     var scoreOk = score >= currentMinScore;
-    var ok = catOk && secOk && scoreOk;
+
+    // ── LOCATION FILTER ──
+    var locOk = true;
+    var matchedTjm = null;
+    var locsRaw = c.getAttribute('data-locations');
+    if (locsRaw) {
+      try {
+        var locs = JSON.parse(locsRaw);
+        if (currentLoc === 'remote') {
+          var remoteEntry = locs.find(function(l) { return l.city === 'remote'; });
+          locOk = !!remoteEntry;
+          if (remoteEntry) matchedTjm = remoteEntry.tjm;
+        } else {
+          var cityEntry = locs.find(function(l) { return l.city === currentLoc; });
+          locOk = !!cityEntry;
+          if (cityEntry) matchedTjm = cityEntry.tjm;
+        }
+      } catch(e) { locOk = false; }
+    } else {
+      locOk = false;
+    }
+
+    var ok = catOk && secOk && scoreOk && locOk;
     c.style.display = ok ? '' : 'none';
-    if (ok) visible++;
+    if (ok) {
+      visible++;
+      // Update TJM display on card back if we have a matched TJM
+      if (matchedTjm !== null) {
+        var tjmEl = c.querySelector('.cb-tjm-val');
+        if (tjmEl) {
+          var tjmDisplay = matchedTjm < 200 ? matchedTjm + '€/j' : matchedTjm + '€/j';
+          tjmEl.textContent = tjmDisplay;
+          tjmEl.setAttribute('data-tjm-override', matchedTjm);
+        }
+      }
+    }
   });
-  // Update counter
   var counter = document.getElementById('count');
   if (counter) counter.textContent = visible;
+}
+
+function filterLoc(loc, btn) {
+  currentLoc = loc;
+  document.querySelectorAll('.f-loc').forEach(function(b) { b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+  applyFilters();
 }
 
 // ── WAITLIST ──
@@ -4514,6 +4874,7 @@ function getProfiles() {
 let currentId = null;
 let currentCat = 'all';
 let currentSec = 'all';
+let currentLoc = 'paris';
 
 function openModal(id) {
   const allProfiles = getProfiles();
@@ -4535,6 +4896,31 @@ function openModal(id) {
     document.getElementById('mScoreRow').style.display = 'none';
   }
   document.getElementById('mTJM').textContent = p.tjm;
+
+  // ── TJM selon ville active ──
+  var locContainer = document.getElementById('mLocations');
+  var allCards = document.querySelectorAll('.card-wrap');
+  var matchCard = null;
+  allCards.forEach(function(c) {
+    if (c.getAttribute('onclick') && c.getAttribute('onclick').indexOf("'" + id + "'") !== -1) matchCard = c;
+  });
+  if (!matchCard) {
+    allCards.forEach(function(c) {
+      var btns = c.querySelectorAll('[onclick]');
+      btns.forEach(function(b) { if (b.getAttribute('onclick') && b.getAttribute('onclick').indexOf("openModal('" + id + "')") !== -1) matchCard = c; });
+    });
+  }
+  var locsRaw = matchCard ? matchCard.getAttribute('data-locations') : null;
+  if (locsRaw) {
+    try {
+      var locs = JSON.parse(locsRaw);
+      // Find TJM for active city
+      var activeLoc = locs.find(function(l) { return l.city === currentLoc; });
+      if (!activeLoc) activeLoc = locs.find(function(l) { return l.city === 'paris'; }) || locs[0];
+      if (activeLoc) document.getElementById('mTJM').textContent = activeLoc.tjm + ' €/j';
+    } catch(e) {}
+  }
+  if (locContainer) locContainer.innerHTML = '';
   const tags = getProfileTags(id); document.getElementById('mTags').innerHTML = tags.map(t=>`<span class="m-tag ${t.c}">${t.t}</span>`).join('');
   document.getElementById('mBody').innerHTML = p.body;
   document.getElementById('profileOverlay').classList.add('open');
@@ -4691,12 +5077,12 @@ async function submitForm(type) {
     const title = val('submit_title');
     const exp = val('submit_exp');
     const dispo = val('submit_dispo');
-    const location = val('submit_location');
+    const locPayload = getLocationsPayload();
     const skills = val('submit_skills');
     const name = val('submit_name');
     const company = val('submit_company');
 
-    // Validation — skip name/company if key provided (already known)
+    // Validation
     var hasErrors = false;
     var coordsVisible = document.getElementById('submit-coords') && document.getElementById('submit-coords').style.display !== 'none';
     if (coordsVisible && !name) { showError('submit_name', isEn ? 'Required' : 'Obligatoire'); hasErrors = true; }
@@ -4704,7 +5090,7 @@ async function submitForm(type) {
     if (!title) { showError('submit_title', isEn ? 'Required' : 'Obligatoire'); hasErrors = true; }
     if (!exp) { showError('submit_exp', isEn ? 'Required' : 'Obligatoire'); hasErrors = true; }
     if (!dispo) { showError('submit_dispo', isEn ? 'Required' : 'Obligatoire'); hasErrors = true; }
-    if (!location) { showError('submit_location', isEn ? 'Required' : 'Obligatoire'); hasErrors = true; }
+    if (locPayload.entries.length === 0) { showError('err_locations', isEn ? 'Add at least one location' : 'Ajoutez au moins une localisation'); hasErrors = true; }
     if (!skills) { showError('submit_skills', isEn ? 'Required' : 'Obligatoire'); hasErrors = true; }
     if (hasErrors) return;
 
@@ -4727,10 +5113,10 @@ async function submitForm(type) {
       // Infos profil
       intitule_poste: val('submit_title'),
       annees_experience: val('submit_exp'),
-      tjm: val('submit_tjm'),
+      tjm: locPayload.text,
+      localisations: locPayload.json,
       disponibilite: val('submit_dispo'),
       mode_intervention: val('submit_mode'),
-      localisation: val('submit_location'),
       competences: val('submit_skills'),
       secteur: val('submit_sector'),
       experiences: val('submit_experience'),
@@ -4764,6 +5150,28 @@ async function submitForm(type) {
   }
 }
 
+
+// ── OPEN WAITLIST MODAL ──
+function openWaitlist(id) {
+  var allProfiles = getProfiles();
+  var p = allProfiles[id];
+  var ref = p ? p.ref.replace('·', '·').trim() : id;
+  var title = p ? p.title : id;
+  var refEl = document.getElementById('waitlistRef');
+  if (refEl) refEl.textContent = 'Profil : ' + title + ' · Réf. ' + ref;
+  document.getElementById('waitlistOverlay').classList.add('open');
+}
+
+// ── OPEN RENEW MODAL ──
+function openRenew(id) {
+  var allProfiles = getProfiles();
+  var p = allProfiles[id];
+  var ref = p ? p.ref.replace(/·/g, '·').trim() : id;
+  var title = p ? p.title : id;
+  var refEl = document.getElementById('renewRef');
+  if (refEl) refEl.textContent = 'Réf. ' + ref + ' · ' + title;
+  document.getElementById('renewOverlay').classList.add('open');
+}
 
 async function submitRenew() {
   const isEn = currentLang === 'en';
