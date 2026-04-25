@@ -2489,7 +2489,7 @@ footer {
     <button class="lang-btn active" onclick="setLang('fr', this)">FR</button>
     <button class="lang-btn" onclick="setLang('en', this)">EN</button>
   </div>
-  <button type="button" class="nav-btn" id="nav-cta" data-i18n="nav_cta" onclick="openForms('contact')">Connexion / Accès</button>
+  <button type="button" class="nav-btn" id="nav-cta" data-i18n="nav_cta" onclick="openContactMail()">Connexion / Accès</button>
 </nav>
 
 <!-- HERO -->
@@ -3457,7 +3457,7 @@ footer {
         </div>
         <div class="bridge-step">
           <div class="bridge-step-num">02</div>
-          <div class="bridge-step-text" data-i18n="bridge_buy_2">Soumet une demande de mise en relation — <a href="#" onclick="openForms('contact');return false;" style="color:var(--gold);text-decoration:underline">accès ici</a></div>
+          <div class="bridge-step-text" data-i18n="bridge_buy_2">Envoie un email — <a href="#" onclick="openContactMail();return false;" style="color:var(--gold);text-decoration:underline">contact@nistaria.com</a></div>
         </div>
         <div class="bridge-step">
           <div class="bridge-step-num">03</div>
@@ -3496,7 +3496,7 @@ footer {
           <li data-i18n="esn_ff3">Coordonnées recruteur incluses</li>
           <li data-i18n="esn_ff4">Profil supplémentaire disponible</li>
         </ul>
-        <button type="button" class="esn-cta" onclick="openForms('contact')" data-i18n="esn_cta_contact2">Nous contacter →</button>
+        <button type="button" class="esn-cta" onclick="openContactMail()" data-i18n="esn_cta_contact2">Nous contacter →</button>
       </div>
 
       <div class="esn-card esn-card-featured">
@@ -3513,7 +3513,7 @@ footer {
           <li data-i18n="esn_af5">Reporting mensuel des opportunités</li>
           <li data-i18n="esn_af6">Dépôt par email direct avec CV PDF — sans formulaire</li>
         </ul>
-        <button type="button" class="esn-cta esn-cta-featured" onclick="openForms('contact')" data-i18n="esn_cta_contact2">Nous contacter →</button>
+        <button type="button" class="esn-cta esn-cta-featured" onclick="openContactMail()" data-i18n="esn_cta_contact2">Nous contacter →</button>
       </div>
 
       <div class="esn-card">
@@ -3527,7 +3527,7 @@ footer {
           <li data-i18n="esn_hf3">Adapté aux volumes moyens</li>
           <li data-i18n="esn_hf4">Flexible selon votre activité</li>
         </ul>
-        <button type="button" class="esn-cta" onclick="openForms('contact')" data-i18n="esn_cta_contact3">Nous contacter →</button>
+        <button type="button" class="esn-cta" onclick="openContactMail()" data-i18n="esn_cta_contact3">Nous contacter →</button>
       </div>
 
     </div>
@@ -3550,7 +3550,7 @@ footer {
       <div class="footer-col">
         <div class="footer-col-title" data-i18n="footer_contact_title">Contact</div>
         <a href="mailto:contact@nistaria.com" style="color:var(--text-md);text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='var(--text-hi)'" onmouseout="this.style.color='var(--text-md)'">contact@nistaria.com</a>
-        <a href="#" onclick="openForms('contact')" data-i18n="footer_find">Je cherche un profil</a>
+        <a href="#" onclick="openContactMail();return false;" data-i18n="footer_find">Je cherche un profil</a>
         <a href="mailto:contact@nistaria.com?subject=D%C3%A9p%C3%B4t%20de%20profil%20Nistaria&body=Bonjour%2C%0A%0AJe%20souhaite%20d%C3%A9poser%20un%20profil%20sur%20Nistaria.%0A%0A%E2%80%94%20Intitul%C3%A9%20du%20poste%20%3A%0A%E2%80%94%20Ann%C3%A9es%20d%27exp%C3%A9rience%20%3A%0A%E2%80%94%20Disponibilit%C3%A9%20%3A%20%28Imm%C3%A9diate%20/%20Sous%201%20mois%20/%20Sous%202%20mois%20/%20Sous%203%20mois%29%0A%E2%80%94%20Mode%20%3A%20%28R%C3%A9gie%20/%20Forfait%20/%20CDI%20/%20Alternance%20/%20Stage%29%0A%E2%80%94%20Localisation%28s%29%20%26%20TJM%20%3A%20%28ex%20%3A%20Paris%20850%E2%82%AC/j%20%C2%B7%20Remote%20780%E2%82%AC/j%29%0A%E2%80%94%20Secteurs%20cibles%20%3A%0A%E2%80%94%20Comp%C3%A9tences%20cl%C3%A9s%20%3A%0A%0AJe%20joins%20le%20CV%20en%20pi%C3%A8ce%20jointe.%0A%0ACordialement%2C" data-i18n="footer_submit">Je propose un profil</a>
       </div>
     </div>
@@ -3603,7 +3603,7 @@ footer {
           <span class="share-pill-text" data-i18n="share_native">Partager</span>
         </button>
       </div>
-      <button class="foot-btn" onclick="switchToContact()">Demander la mise en relation →</button>
+      <button class="foot-btn" onclick="openContactMail(currentId && getProfiles()[currentId] ? getProfiles()[currentId].ref : null, currentId && getProfiles()[currentId] ? getProfiles()[currentId].title : null)">Demander la mise en relation →</button>
     </div>
   </div>
 </div>
@@ -3615,7 +3615,7 @@ footer {
     <div class="forms-header">
       <button class="forms-close" onclick="document.getElementById('formsOverlay').classList.remove('open')">✕</button>
       <div class="forms-tabs">
-        <button class="forms-tab active" onclick="switchTab('contact',this)">Je cherche un profil</button>
+        <a class="forms-tab active" href="#" onclick="openContactMail();return false;" style="text-decoration:none;display:flex;align-items:center">Je cherche un profil</a>
         <a href="mailto:contact@nistaria.com?subject=D%C3%A9p%C3%B4t%20de%20profil%20Nistaria&body=Bonjour%2C%0A%0AJe%20souhaite%20d%C3%A9poser%20un%20profil%20sur%20Nistaria.%0A%0A%E2%80%94%20Intitul%C3%A9%20du%20poste%20%3A%0A%E2%80%94%20Ann%C3%A9es%20d%27exp%C3%A9rience%20%3A%0A%E2%80%94%20Disponibilit%C3%A9%20%3A%20%28Imm%C3%A9diate%20/%20Sous%201%20mois%20/%20Sous%202%20mois%20/%20Sous%203%20mois%29%0A%E2%80%94%20Mode%20%3A%20%28R%C3%A9gie%20/%20Forfait%20/%20CDI%20/%20Alternance%20/%20Stage%29%0A%E2%80%94%20Localisation%28s%29%20%26%20TJM%20%3A%20%28ex%20%3A%20Paris%20850%E2%82%AC/j%20%C2%B7%20Remote%20780%E2%82%AC/j%29%0A%E2%80%94%20Secteurs%20cibles%20%3A%0A%E2%80%94%20Comp%C3%A9tences%20cl%C3%A9s%20%3A%0A%0AJe%20joins%20le%20CV%20en%20pi%C3%A8ce%20jointe.%0A%0ACordialement%2C" class="forms-tab" style="text-decoration:none;display:flex;align-items:center">Je propose un profil</a>
       </div>
     </div>
@@ -4225,7 +4225,7 @@ var translations = {
     bridge_promise: 'La splendeur de ce que le marché ne voit pas',
     bridge_buy_title: 'Institution / Recruteur', bridge_buy_sub: 'Buy Side',
     bridge_buy_1: 'Consulte les profils anonymisés sur la plateforme',
-    bridge_buy_2: `Soumet une demande de mise en relation — <a href="#" onclick="openForms('contact');return false;" style="color:var(--gold);text-decoration:underline">accès ici</a>`,
+    bridge_buy_2: 'Envoie un email — <a href="#" onclick="openContactMail();return false;" style="color:var(--gold);text-decoration:underline">contact@nistaria.com</a>',
     bridge_buy_3: `Reçoit l'introduction directe sous 48h`,
     // ESN section
     esn_label: 'Partenaires', esn_title: 'Accès ESN & Cabinets',
@@ -4362,7 +4362,7 @@ var translations = {
     bridge_promise: 'The brilliance of what the market fails to see',
     bridge_buy_title: 'Institution / Recruiter', bridge_buy_sub: 'Buy Side',
     bridge_buy_1: 'Browses anonymised profiles on the platform',
-    bridge_buy_2: `Submits an introduction request — <a href="#" onclick="openForms('contact');return false;" style="color:var(--gold);text-decoration:underline">here</a>`,
+    bridge_buy_2: 'Sends an email — <a href="#" onclick="openContactMail();return false;" style="color:var(--gold);text-decoration:underline">contact@nistaria.com</a>',
     bridge_buy_3: 'Receives the direct introduction within 48h',
     // ESN section
     esn_label: 'Partners', esn_title: 'ESN & Firm Access',
@@ -5576,6 +5576,24 @@ function initDynamicDates() {
 
 
 
+
+// ── MAILTO RECRUTEUR ──
+function openContactMail(ref, title) {
+  var isEn = currentLang === 'en';
+  var subj, body;
+  if (ref) {
+    subj = isEn ? 'Introduction request — ' + ref : 'Demande de mise en relation — ' + ref;
+    body = isEn
+      ? 'Hello,\n\nI am interested in the following profile on Nistaria.\n\n— Profile ref: ' + ref + (title ? ' · ' + title : '') + '\n— My institution / company:\n— My role:\n— Context / need:\n— Desired availability:\n\nBest regards,'
+      : 'Bonjour,\n\nJe suis intéressé(e) par le profil suivant sur Nistaria.\n\n— Référence : ' + ref + (title ? ' · ' + title : '') + '\n— Mon institution / société :\n— Ma fonction :\n— Contexte du besoin :\n— Disponibilité souhaitée :\n\nCordialement,';
+  } else {
+    subj = isEn ? 'Introduction request Nistaria' : 'Demande de mise en relation Nistaria';
+    body = isEn
+      ? 'Hello,\n\nI am interested in one or more profiles on Nistaria.\n\n— My institution / company:\n— My role:\n— Profile(s) of interest: (e.g. FT-001, FT-AI-002)\n— Context / need:\n— Desired availability:\n\nBest regards,'
+      : 'Bonjour,\n\nJe suis intéressé(e) par un ou plusieurs profils sur Nistaria.\n\n— Mon institution / société :\n— Ma fonction :\n— Profil(s) qui m\'intéresse(nt) : (ex : FT-001, FT-AI-002)\n— Contexte du besoin :\n— Disponibilité souhaitée :\n\nCordialement,';
+  }
+  window.location.href = 'mailto:contact@nistaria.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+}
 
 // Track which tab opened the request panel
 var requestKeySource = 'contact';
