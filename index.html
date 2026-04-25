@@ -157,6 +157,22 @@ nav {
 
 .nav-btn:hover { background: var(--gold2); }
 
+.nav-btn-teal {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--teal);
+  border: none;
+  padding: 9px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: 8px;
+}
+.nav-btn-teal:hover { background: #6de8c0; }
+
 /* ── HERO ── */
 .hero-line-1 { opacity:0; transform: translateY(20px); animation: heroReveal 0.8s 0.2s forwards; display: inline-block; }
 .hero-line-2 { opacity:0; transform: translateY(20px); animation: heroReveal 0.8s 0.4s forwards; display: inline-block; }
@@ -1519,7 +1535,8 @@ footer {
   /* Nav */
   nav { padding: 0 20px; height: 52px; }
   .nav-links { display: none; }
-  .nav-btn { padding: 7px 14px; font-size: 10px; }
+  .nav-btn { padding: 7px 10px; font-size: 10px; }
+  .nav-btn-teal { padding: 7px 10px; font-size: 10px; margin-left: 4px; }
 
   /* Hero */
   .hero { padding: 80px 24px 60px; min-height: auto; }
@@ -2489,7 +2506,8 @@ footer {
     <button class="lang-btn active" onclick="setLang('fr', this)">FR</button>
     <button class="lang-btn" onclick="setLang('en', this)">EN</button>
   </div>
-  <button type="button" class="nav-btn" id="nav-cta" data-i18n="nav_cta" onclick="openContactMail()">Connexion / Accès</button>
+  <button type="button" class="nav-btn" id="nav-cta" data-i18n="nav_cta" onclick="openContactMail()">Je cherche un profil</button>
+  <button type="button" class="nav-btn-teal" id="nav-submit" data-i18n="nav_submit" onclick="openSubmitMail()">Déposer un profil</button>
 </nav>
 
 <!-- HERO -->
@@ -3496,7 +3514,7 @@ footer {
           <li data-i18n="esn_ff3">Coordonnées recruteur incluses</li>
           <li data-i18n="esn_ff4">Profil supplémentaire disponible</li>
         </ul>
-        <button type="button" class="esn-cta" onclick="openContactMail()" data-i18n="esn_cta_contact2">Nous contacter →</button>
+        <button type="button" class="esn-cta" onclick="openEsnMail('free')" data-i18n="esn_cta_contact2">Nous contacter →</button>
       </div>
 
       <div class="esn-card esn-card-featured">
@@ -3513,7 +3531,7 @@ footer {
           <li data-i18n="esn_af5">Reporting mensuel des opportunités</li>
           <li data-i18n="esn_af6">Dépôt par email direct avec CV PDF — sans formulaire</li>
         </ul>
-        <button type="button" class="esn-cta esn-cta-featured" onclick="openContactMail()" data-i18n="esn_cta_contact2">Nous contacter →</button>
+        <button type="button" class="esn-cta esn-cta-featured" onclick="openEsnMail('annual')" data-i18n="esn_cta_contact2">Nous contacter →</button>
       </div>
 
       <div class="esn-card">
@@ -3527,7 +3545,7 @@ footer {
           <li data-i18n="esn_hf3">Adapté aux volumes moyens</li>
           <li data-i18n="esn_hf4">Flexible selon votre activité</li>
         </ul>
-        <button type="button" class="esn-cta" onclick="openContactMail()" data-i18n="esn_cta_contact3">Nous contacter →</button>
+        <button type="button" class="esn-cta" onclick="openEsnMail('hybrid')" data-i18n="esn_cta_contact3">Nous contacter →</button>
       </div>
 
     </div>
@@ -4176,7 +4194,7 @@ var translations = {
   fr: {
     // Navigation
     nav_profiles: 'Profils', nav_how: 'Comment ça marche', nav_esn: 'ESN & Cabinets',
-    nav_cta: 'Connexion / Accès',
+    nav_cta: 'Je cherche un profil', nav_submit: 'Déposer un profil',
     // Hero
     hero_badge: 'Mise en relation exclusive · Talents IT & IA',
     hero_line1: 'Les talents', hero_line2: 'que le <span class="glow">marché</span>', hero_line3: 'ne voit pas.',
@@ -4313,7 +4331,7 @@ var translations = {
   en: {
     // Navigation
     nav_profiles: 'Profiles', nav_how: 'How it works', nav_esn: 'ESN & Firms',
-    nav_cta: 'Login / Access',
+    nav_cta: 'Find a profile', nav_submit: 'Submit a profile',
     // Hero
     hero_badge: 'Exclusive matching · IT & AI Talent',
     hero_line1: 'The talent', hero_line2: 'the <span class="glow">market</span>', hero_line3: "doesn't see.",
@@ -5576,6 +5594,29 @@ function initDynamicDates() {
 
 
 
+
+// ── MAILTO COMMERCIAL HEADER ──
+function openSubmitMail() {
+  var isEn = currentLang === 'en';
+  var subj = isEn ? 'Profile submission Nistaria' : 'Dépôt de profil Nistaria';
+  var body = isEn
+    ? 'Hello,\n\nI would like to submit a profile on Nistaria.\n\n— Job title:\n— Years of experience:\n— Availability: (Immediate / Within 1 month / Within 2 months / Within 3 months)\n— Mode: (T&M / Fixed / Permanent / Apprenticeship / Internship)\n— Location(s) & daily rate: (e.g. Paris 850€/day · Remote 780€/day)\n— Target sectors:\n— Key skills:\n\nI will attach the CV.\n\nBest regards,'
+    : 'Bonjour,\n\nJe souhaite déposer un profil sur Nistaria.\n\n— Intitulé du poste :\n— Années d\'expérience :\n— Disponibilité : (Immédiate / Sous 1 mois / Sous 2 mois / Sous 3 mois)\n— Mode : (Régie / Forfait / CDI / Alternance / Stage)\n— Localisation(s) & TJM : (ex : Paris 850€/j · Remote 780€/j)\n— Secteurs cibles :\n— Compétences clés :\n\nJe joins le CV en pièce jointe.\n\nCordialement,';
+  window.location.href = 'mailto:contact@nistaria.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+}
+
+// ── MAILTO ESN PAR FORMULE ──
+function openEsnMail(formule) {
+  var isEn = currentLang === 'en';
+  var formuleFR = { 'free': 'Offre gratuite — 2 profils inclus', 'annual': 'Abonnement annuel — Accès illimité', 'hybrid': 'Modèle hybride — Abonnement + commission' };
+  var formuleEN = { 'free': 'Free offer — 2 profiles included', 'annual': 'Annual subscription — Unlimited access', 'hybrid': 'Hybrid model — Subscription + commission' };
+  var label = isEn ? (formuleEN[formule] || formule) : (formuleFR[formule] || formule);
+  var subj = isEn ? 'ESN Access Nistaria — ' + label : 'Accès ESN Nistaria — ' + label;
+  var body = isEn
+    ? 'Hello,\n\nI would like to access Nistaria with the following offer:\n→ ' + label + '\n\n— Company:\n— Your name / role:\n— Type of profiles you place:\n— Do you have profiles to submit right now?\n\nBest regards,'
+    : 'Bonjour,\n\nJe souhaite accéder à Nistaria avec l\'offre suivante :\n→ ' + label + '\n\n— Société :\n— Votre nom / fonction :\n— Type de profils que vous placez :\n— Avez-vous des profils à déposer dès maintenant ?\n\nCordialement,';
+  window.location.href = 'mailto:contact@nistaria.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+}
 
 // ── MAILTO RECRUTEUR ──
 function openContactMail(ref, title) {
