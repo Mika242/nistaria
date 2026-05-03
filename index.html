@@ -1313,7 +1313,7 @@ footer {
 
 .esn-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   background: var(--line2);
   border: 1px solid var(--line2);
@@ -1529,6 +1529,57 @@ footer {
 }
 
 /* Cookie banner mobile */
+
+/* ── ESN PRIVATE SPACE BANNER ── */
+.esn-banner {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 48px;
+  background: rgba(77,217,176,0.06);
+  border-bottom: 1px solid rgba(77,217,176,0.2);
+  position: fixed;
+  top: 60px;
+  left: 0; right: 0;
+  z-index: 190;
+  backdrop-filter: blur(10px);
+}
+.esn-banner.visible { display: flex; }
+.esn-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.esn-banner-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+.esn-banner-logo.hidden { display: none; }
+.esn-banner-text {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.esn-banner-badge {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  border: 1px solid var(--line2);
+  padding: 3px 10px;
+}
+/* Décaler le hero quand bandeau visible */
+body.esn-mode .hero { padding-top: 180px; }
+@media (max-width: 768px) {
+  .esn-banner { padding: 8px 20px; top: 52px; }
+  body.esn-mode .hero { padding-top: 160px; }
+}
+
 /* ── RESPONSIVE MOBILE ── */
 @media (max-width: 768px) {
 
@@ -2510,6 +2561,14 @@ footer {
   <button type="button" class="nav-btn-teal" id="nav-submit" data-i18n="nav_submit" onclick="openSubmitMail()">Déposer un profil</button>
 </nav>
 
+<!-- ESN PRIVATE SPACE BANNER -->
+<div class="esn-banner" id="esnBanner">
+  <div class="esn-banner-left">
+    <img class="esn-banner-logo hidden" id="esnLogo" src="" alt="">
+    <span class="esn-banner-text" id="esnBannerText">Sélection de profils</span>
+  </div>
+  <span class="esn-banner-badge" id="esnBannerBadge">Espace privé</span>
+</div>
 <!-- HERO -->
 <section class="hero">
   <div class="hero-badge">
@@ -2669,7 +2728,7 @@ footer {
     <!-- Card 17: Lead Tech / Architecte Cloud -->
 
     <!-- Card 18: Développeur Fullstack Java/Angular -->
-    <div class="card-wrap" data-cat="dev" data-score="80" data-sec="finance" data-pub="2026-04-27" data-exp="2026-06-15"
+    <div class="card-wrap" data-cat="dev" data-score="80" data-sec="finance" data-pub="2026-04-27" data-exp="2026-06-15" data-esn="NIS-E-4K2M"
       data-locations='[{"city":"paris","tjm":600}]'
       onclick="openModal('devfull18')">
       <div class="card-inner">
@@ -2718,7 +2777,7 @@ footer {
       </div>
     </div>
     <!-- Card FT-AI-002 : LLM Engineer -->
-    <div class="card-wrap" data-cat="ai" data-sec="asset" data-pub="2026-03-21" data-score="91" data-exp="2026-05-09" data-subscribed="1"
+    <div class="card-wrap" data-cat="ai" data-sec="asset" data-pub="2026-03-21" data-score="91" data-exp="2026-05-09" data-subscribed="1" data-esn="NIS-E-2P5N"
       data-locations='[{"city":"paris","tjm":1050},{"city":"luxembourg","tjm":1150},{"city":"remote","tjm":980}]'
       onclick="openModal('llm')">
       <div class="card-inner">
@@ -2764,7 +2823,7 @@ footer {
     </div>
 
     <!-- Card FT-AI-004 : AI Risk Manager -->
-    <div class="card-wrap" data-cat="ai" data-sec="finance" data-pub="2026-04-06" data-score="88" data-exp="2026-05-25" data-subscribed="1"
+    <div class="card-wrap" data-cat="ai" data-sec="finance" data-pub="2026-04-06" data-score="88" data-exp="2026-05-25" data-subscribed="1" data-esn="NIS-E-2P5N"
       data-locations='[{"city":"paris","tjm":950},{"city":"londres","tjm":1100},{"city":"remote","tjm":900}]'
       onclick="openModal('airisk')">
       <div class="card-inner">
@@ -3044,26 +3103,10 @@ footer {
           <li data-i18n="esn_af4">Rentabilisé dès la 4ème mise en relation</li>
           <li data-i18n="esn_af5">Reporting mensuel des opportunités</li>
           <li data-i18n="esn_af6">Dépôt par email direct avec CV PDF — sans formulaire</li>
+          <li data-i18n="esn_af7">Espace privé partageable avec vos clients</li>
         </ul>
         <button type="button" class="esn-cta esn-cta-featured" onclick="openEsnMail('annual')" data-i18n="esn_cta_contact2">Nous contacter →</button>
       </div>
-
-      <div class="esn-card">
-        <div class="esn-card-tag" data-i18n="esn_tag_hybrid">Modèle hybride</div>
-        <div class="esn-card-title" data-i18n="esn_hybrid_title">Abonnement + commission</div>
-        <div class="esn-card-price" style="font-size:18px;letter-spacing:0.05em">Sur demande</div>
-        <div class="esn-card-desc" data-i18n="esn_hybrid_desc">Abonnement annuel réduit combiné à une commission légère sur chaque mission signée. Le meilleur des deux modèles.</div>
-        <ul class="esn-features">
-          <li data-i18n="esn_hf1">Accès catalogue complet</li>
-          <li data-i18n="esn_hf2">Commission réduite si contrat signé</li>
-          <li data-i18n="esn_hf3">Adapté aux volumes moyens</li>
-          <li data-i18n="esn_hf4">Flexible selon votre activité</li>
-        </ul>
-        <button type="button" class="esn-cta" onclick="openEsnMail('hybrid')" data-i18n="esn_cta_contact3">Nous contacter →</button>
-      </div>
-
-    </div>
-  </div>
 </section>
 
 <footer>
@@ -3774,12 +3817,6 @@ var translations = {
     esn_af3: 'Profils illimités · 7 semaines renouvelables',
     esn_af4: 'Rentabilisé dès la 4ème mise en relation', esn_af5: 'Reporting mensuel des opportunités',
     esn_cta_contact2: 'Nous contacter →',
-    esn_tag_hybrid: 'Modèle hybride', esn_hybrid_title: 'Abonnement + commission',
-    esn_hybrid_price: 'Sur demande',
-    esn_hybrid_desc: 'Abonnement annuel réduit combiné à une commission légère sur chaque mission signée.',
-    esn_hf1: 'Accès catalogue complet', esn_hf2: 'Commission réduite si contrat signé',
-    esn_hf3: 'Adapté aux volumes moyens', esn_hf4: 'Flexible selon votre activité',
-    esn_cta_contact3: 'Nous contacter →',
     free_tag: 'Gratuit', free_title: '2 profils inclus', free_desc: 'Publiez',
     sub_tag: 'Abonné · Accès illimité', sub_title: 'Profils illimités',
     sub_desc: 'Publiez autant de profils que vous souhaitez.',
@@ -3911,12 +3948,6 @@ var translations = {
     esn_af3: 'Unlimited profiles · 7 weeks renewable',
     esn_af4: 'ROI from the 4th placement', esn_af5: 'Monthly opportunity report',
     esn_cta_contact2: 'Contact us →',
-    esn_tag_hybrid: 'Hybrid model', esn_hybrid_title: 'Subscription + commission',
-    esn_hybrid_price: 'On request',
-    esn_hybrid_desc: 'Reduced annual subscription combined with a light commission per signed mission.',
-    esn_hf1: 'Full catalogue access', esn_hf2: 'Reduced commission on signed contracts',
-    esn_hf3: 'Suited for moderate volumes', esn_hf4: 'Flexible with your activity',
-    esn_cta_contact3: 'Contact us →',
     free_tag: 'Free', free_title: '2 profiles included', free_desc: 'Publish',
     sub_tag: 'Subscriber · Unlimited access', sub_title: 'Unlimited profiles',
     sub_desc: 'Publish as many profiles as you wish.',
@@ -5116,6 +5147,8 @@ document.addEventListener('DOMContentLoaded', function() {
   try { setLang(savedLang, langBtn); } catch(e) {}
   // Dynamic dates
   try { initDynamicDates(); } catch(e) {}
+  // ESN space
+  try { initEsnSpace(); } catch(e) {}
 });
 
 
@@ -5243,6 +5276,72 @@ function initDynamicDates() {
 
 
 
+
+// ── ESN PRIVATE SPACE ──
+var currentEsn = null;
+
+function initEsnSpace() {
+  var params = new URLSearchParams(window.location.search);
+  var esnKey = params.get('esn');
+  if (!esnKey || !/^NIS-E-[A-Z0-9]{4}$/.test(esnKey)) return;
+
+  currentEsn = esnKey;
+
+  // Masquer bouton dépôt uniquement en mode ESN
+  var submitBtn = document.getElementById("nav-submit");
+  if (submitBtn) submitBtn.style.display = "none";
+
+  // Afficher le bandeau
+  var banner = document.getElementById('esnBanner');
+  if (banner) banner.classList.add('visible');
+  document.body.classList.add('esn-mode');
+
+  // Tenter de charger le logo
+  var logo = document.getElementById('esnLogo');
+  if (logo) {
+    logo.src = 'logos/' + esnKey + '.png';
+    logo.classList.remove('hidden');
+    logo.onerror = function() { this.classList.add('hidden'); };
+  }
+
+  // Filtrer les cartes — ne montrer que celles de cette ESN
+  var count = 0;
+  document.querySelectorAll('.card-wrap').forEach(function(card) {
+    var cardEsn = card.getAttribute('data-esn') || '';
+    if (cardEsn.indexOf(esnKey) !== -1) {
+      card.style.display = '';
+      count++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  // Mettre à jour le compteur
+  var counter = document.getElementById('count');
+  if (counter) counter.textContent = count;
+
+  // Masquer les filtres (trop peu de cartes pour filtrer)
+  document.querySelectorAll('.filter-group, .score-filter-wrap').forEach(function(el) {
+    el.style.display = 'none';
+  });
+
+  // Adapter le mailto "Demander ce profil" avec contexte ESN
+  window._esnKey = esnKey;
+}
+
+// Override openContactMail pour inclure contexte ESN
+var _origOpenContactMail = openContactMail;
+function openContactMail(ref, title) {
+  if (!window._esnKey) { _origOpenContactMail(ref, title); return; }
+  var isEn = currentLang === 'en';
+  var subj = isEn
+    ? 'Introduction request — ' + (ref || 'Nistaria')
+    : 'Demande de mise en relation — ' + (ref || 'Nistaria');
+  var body = isEn
+    ? 'Hello,\n\nI discovered this profile via a private Nistaria space.\n\n— Profile ref: ' + (ref || '') + (title ? ' · ' + title : '') + '\n— My institution / company:\n— My role:\n— Context / need:\n— Desired availability:\n\nBest regards,'
+    : 'Bonjour,\n\nJ\'ai découvert ce profil via un espace privé Nistaria.\n\n— Référence : ' + (ref || '') + (title ? ' · ' + title : '') + '\n— Mon institution / société :\n— Ma fonction :\n— Contexte du besoin :\n— Disponibilité souhaitée :\n\nCordialement,';
+  window.location.href = 'mailto:contact@nistaria.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+}
 
 // ── MAILTO COMMERCIAL HEADER ──
 function openSubmitMail() {
