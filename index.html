@@ -1,4 +1,4 @@
-<!-- NISTARIA v2.2 - 2026-04-25 -->
+<!-- NISTARIA v2.3 - 2026-05-04 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -3091,7 +3091,6 @@ footer {
       </div>
 
       <div class="esn-card esn-card-featured">
-        <div class="esn-card-featured-badge" data-i18n="esn_badge_popular">Le plus choisi</div>
         <div class="esn-card-tag teal" data-i18n="esn_tag_annual">Abonnement annuel</div>
         <div class="esn-card-title" data-i18n="esn_annual_title">Accès illimité</div>
         <div class="esn-card-price" style="font-size:18px;letter-spacing:0.05em">Sur demande</div>
@@ -3811,7 +3810,6 @@ var translations = {
     esn_ff3: 'Coordonnées recruteur incluses', esn_ff4: 'Profil supplémentaire disponible',
     esn_cta_submit: 'Déposer un profil →',
     esn_tag_annual: 'Abonnement annuel', esn_annual_title: 'Accès illimité',
-    esn_badge_popular: 'Le plus choisi',
     esn_annual_desc: 'Pour les ESN avec un flux régulier de consultants. Mises en relation illimitées.',
     esn_af1: 'Mises en relation illimitées', esn_af2: 'Coordonnées recruteurs incluses',
     esn_af3: 'Profils illimités · 7 semaines renouvelables',
@@ -3942,7 +3940,6 @@ var translations = {
     esn_ff3: 'Recruiter contact details included', esn_ff4: 'Extra profile available',
     esn_cta_submit: 'Submit a profile →',
     esn_tag_annual: 'Annual subscription', esn_annual_title: 'Unlimited access',
-    esn_badge_popular: 'Most popular',
     esn_annual_desc: 'For ESN with a regular flow of consultants. Unlimited introductions.',
     esn_af1: 'Unlimited introductions', esn_af2: 'Recruiter contact details included',
     esn_af3: 'Unlimited profiles · 7 weeks renewable',
@@ -5320,10 +5317,12 @@ function initEsnSpace() {
   var counter = document.getElementById('count');
   if (counter) counter.textContent = count;
 
-  // Masquer les filtres (trop peu de cartes pour filtrer)
+  // Masquer les filtres et le bouton "Déposer un profil" (espace privé recruteur)
   document.querySelectorAll('.filter-group, .score-filter-wrap').forEach(function(el) {
     el.style.display = 'none';
   });
+  var navSubmit = document.getElementById('nav-submit');
+  if (navSubmit) navSubmit.style.display = 'none';
 
   // Adapter le mailto "Demander ce profil" avec contexte ESN
   window._esnKey = esnKey;
