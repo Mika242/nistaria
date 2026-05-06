@@ -1,4 +1,4 @@
-<!-- NISTARIA v2.3 - 2026-05-04 -->
+<!-- NISTARIA v2.4 - 2026-05-06 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2957,6 +2957,55 @@ footer {
       </div>
     </div>
 
+    <!-- Card FT-025 : BA / Chef de projet SI bancaires — eXalt Finance -->
+    <div class="card-wrap" data-cat="ba" data-score="99" data-sec="finance" data-pub="2026-05-06" data-exp="2026-05-20"
+      data-locations='[{"city":"paris","tjm":810}]'
+      onclick="openModal('ba_ft025')">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="score-badge" style="background:linear-gradient(135deg,#e8c84a,#f59e0b)">99</div>
+          <div class="cf-top">
+            <div class="cf-cat">Business Analyst</div>
+            <div class="cf-status-col">
+              <div class="cf-dispo"><div class="dispo-dot"></div><span data-i18n="dispo_now">Dispo</span></div>
+              <div class="cf-expiry"><div class="expiry-dot"></div><span class="expiry-dynamic"></span></div>
+            </div>
+          </div>
+          <div class="cf-mid">
+            <div class="cf-title">BA Senior · SI Bancaires & Risque</div>
+            <div class="cf-exp"><strong>25 <span data-i18n="years">ans</span></strong> · Banque & Finance de marché</div>
+          </div>
+          <div class="cf-bot">
+            <div class="cf-tags">
+              <span class="cf-tag">Bâle / IFRS</span>
+              <span class="cf-tag">PNL / Risque</span>
+              <span class="cf-tag">CIB</span>
+            </div>
+            <div class="cf-hint" data-i18n="hint">Voir ↻</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="cb-top">
+            <div><div class="cb-title">BA / Chef de projet SI</div><div class="cb-ref">Réf. FT-025</div></div>
+            <div class="cb-tjm"><div class="cb-tjm-label">TJM</div><div class="cb-tjm-val">810€/j</div></div>
+          </div>
+          <div class="cb-divider"></div>
+          <div class="cb-skills">
+            <div class="cb-skill">Reporting Bâlois (PD / LGD / RWA)</div>
+            <div class="cb-skill">IFRS7 / IFRS15 / FINREP / ANACREDIT</div>
+            <div class="cb-skill">Contrôle PNL · Trésorerie · Funding</div>
+            <div class="cb-skill">Murex · Kondor · Business Object</div>
+          </div>
+          <div class="cb-foot">
+            <div class="cb-meta">
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="dispo_label">Dispo</div><div class="cb-meta-val" data-i18n="dispo_immediate">Immédiate</div></div>
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="mode_label">Mode</div><div class="cb-meta-val">Régie</div></div>
+            </div>
+            <button class="cb-cta" onclick="openModal('ba_ft025')">Profil →</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Card FT-024 : Data Engineer -->
     <div class="card-wrap" data-cat="data" data-score="77" data-sec="finance" data-pub="2026-04-19" data-exp="2026-06-07" data-dispo="2026-06-29" data-locations='[{"city":"paris","tjm":720},{"city":"remote","tjm":680}]' onclick="openModal('dev_new2')">
       <div class="card-inner">
@@ -3091,6 +3140,7 @@ footer {
       </div>
 
       <div class="esn-card esn-card-featured">
+        <div class="esn-card-featured-badge" data-i18n="esn_badge_popular">Le plus choisi</div>
         <div class="esn-card-tag teal" data-i18n="esn_tag_annual">Abonnement annuel</div>
         <div class="esn-card-title" data-i18n="esn_annual_title">Accès illimité</div>
         <div class="esn-card-price" style="font-size:18px;letter-spacing:0.05em">Sur demande</div>
@@ -3810,6 +3860,7 @@ var translations = {
     esn_ff3: 'Coordonnées recruteur incluses', esn_ff4: 'Profil supplémentaire disponible',
     esn_cta_submit: 'Déposer un profil →',
     esn_tag_annual: 'Abonnement annuel', esn_annual_title: 'Accès illimité',
+    esn_badge_popular: 'Le plus choisi',
     esn_annual_desc: 'Pour les ESN avec un flux régulier de consultants. Mises en relation illimitées.',
     esn_af1: 'Mises en relation illimitées', esn_af2: 'Coordonnées recruteurs incluses',
     esn_af3: 'Profils illimités · 7 semaines renouvelables',
@@ -3940,6 +3991,7 @@ var translations = {
     esn_ff3: 'Recruiter contact details included', esn_ff4: 'Extra profile available',
     esn_cta_submit: 'Submit a profile →',
     esn_tag_annual: 'Annual subscription', esn_annual_title: 'Unlimited access',
+    esn_badge_popular: 'Most popular',
     esn_annual_desc: 'For ESN with a regular flow of consultants. Unlimited introductions.',
     esn_af1: 'Unlimited introductions', esn_af2: 'Recruiter contact details included',
     esn_af3: 'Unlimited profiles · 7 weeks renewable',
@@ -4536,6 +4588,30 @@ function getProfiles() {
     </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
     <div class="skills-cloud"><span class="s-tag hl">AWS (Solutions Architect Pro)</span><span class="s-tag hl">Terraform / IaC</span><span class="s-tag hl">Kubernetes / Helm</span><span class="s-tag hl">FinOps</span><span class="s-tag">Docker / CI-CD</span><span class="s-tag">Python / Bash</span><span class="s-tag">Vault / IAM</span><span class="s-tag">Datadog / Grafana</span></div></div>`
   },
+  ba_ft025: {
+    ref:'FT · 025', score:99, scoreGrad:'#e8c84a,#f59e0b',
+    scoreNote: isEn
+      ? 'Exceptional profile — 25 years in CIB, regulatory reporting and PNL control. BNP Paribas, CA-CIB, SG CIB, PSA Banque, AXA. Rare expertise: Basel, IFRS, Murex/Kondor, Business Object. Perfectly positioned TJM.'
+      : 'Profil d\'exception — 25 ans en CIB, reporting réglementaire et contrôle PNL. BNP Paribas, CA-CIB, SG CIB, PSA Banque, AXA. Expertise rare : Bâlois, IFRS, Murex/Kondor, Business Object. TJM parfaitement positionné.',
+    title: isEn ? 'Senior BA · Banking IS & Risk' : 'BA Senior · SI Bancaires & Risque',
+    tjm: '810 €/j',
+    body: isEn ? `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Experience</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2025 — Now</div><div><div class="exp-role">Product Owner · KYS Compliance</div><div class="exp-org">Major real estate group — Paris</div><div class="exp-desc">Comparative study of 6 third-party risk evaluation solutions (KYS). Requirements framing, evaluation matrices (functional, cost, technology), vendor workshops and committee presentations.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2022 — 2025</div><div><div class="exp-role">Senior Business Analyst · PNL Control</div><div class="exp-org">BNP Paribas Arbitrage — CIB</div><div class="exp-desc">Deployment of the PNL reconciliation tool for BNPP Arbitrage and CIB (Brazil, Canada entities). Framing with back/middle office teams, parameterisation, migration strategy, user training and quarterly close support.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2019 — 2022</div><div><div class="exp-role">Business Analyst · Banking Accounting</div><div class="exp-org">Crédit Agricole CIB — Paris</div><div class="exp-desc">Cash Management payment system (CMTP) — accounting framing for SEPA/SWIFT/STET flows. LORO/NOSTRO accounts monitoring, Agile methodology.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2016 — 2019</div><div><div class="exp-role">Project Manager · Basel Risk</div><div class="exp-org">PSA Banque (CREDIPAR) — Paris</div><div class="exp-desc">IRBA calculation and ANACREDIT regulatory reporting across France, Germany, Italy. PD/LGD/RWA implementation, Moody's POC/RFI, coordination of IT risk teams.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2001 — 2011</div><div><div class="exp-role">MOA Finance · Accounting & Risk Reporting</div><div class="exp-org">BNP Paribas CIB — Paris / New York / São Paulo</div><div class="exp-desc">International deployment of ATLAS2 accounting/risk datawarehouse. RWA/COOK ratio, BAFI reporting, Business Object universes. Missions in NYC, Tokyo, UK, Brazil, Eastern Europe.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Skills</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Basel II/III (PD/LGD/RWA)</span><span class="s-tag hl">IFRS7 / IFRS15 / FINREP</span><span class="s-tag hl">PNL Control</span><span class="s-tag hl">ANACREDIT / BAFI</span><span class="s-tag">Murex / Kondor / Calypso</span><span class="s-tag">Business Object (trainer)</span><span class="s-tag">SQL / Oracle / Sybase</span><span class="s-tag">Power BI / SAS</span><span class="s-tag">Agile / MS Project</span><span class="s-tag">Fluent English · Spanish · Portuguese</span></div></div>`
+    : `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Parcours</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2025 — Auj.</div><div><div class="exp-role">Product Owner · Conformité KYS</div><div class="exp-org">Grand groupe immobilier — Paris</div><div class="exp-desc">Étude comparative de 6 solutions d’évaluation des tiers (KYS). Cadrage des besoins, matrices d’évaluation (fonctionnel, coûts, technologie), ateliers éditeurs et présentation en comité.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2022 — 2025</div><div><div class="exp-role">Business Analyst Senior · Contrôle PNL</div><div class="exp-org">BNP Paribas Arbitrage — CIB</div><div class="exp-desc">Déploiement de l’outil de réconciliation du PNL pour BNPP Arbitrage et CIB (entités Brésil, Canada). Cadrage avec équipes back/middle office, paramétrage, stratégie de migration, formation et support lors des arrêtés trimestriels.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2019 — 2022</div><div><div class="exp-role">Business Analyst · Comptabilité bancaire</div><div class="exp-org">Crédit Agricole CIB — Paris</div><div class="exp-desc">Système de paiement Cash Management (CMTP) — cadrage comptable des flux SEPA/SWIFT/STET. Suivi comptes LORO/NOSTRO, environnement Agile.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2016 — 2019</div><div><div class="exp-role">Chef de projet · Risque Bâlois</div><div class="exp-org">PSA Banque (CREDIPAR) — Paris</div><div class="exp-desc">Calculs IRBA et reporting réglementaire ANACREDIT sur France, Allemagne, Italie. Implémentation PD/LGD/RWA, POC/RFI Moody’s, coordination équipes IT risque.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2001 — 2011</div><div><div class="exp-role">MOA Finance · Reporting Comptable & Risque</div><div class="exp-org">BNP Paribas CIB — Paris / New York / São Paulo</div><div class="exp-desc">Déploiement international du datawarehouse comptabilité/risque ATLAS2. Calcul RWA/ratio COOK, reporting BAFI, univers Business Object. Missions NYC, Tokyo, UK, Brésil, Europe de l’Est.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Bâle II/III (PD/LGD/RWA)</span><span class="s-tag hl">IFRS7 / IFRS15 / FINREP</span><span class="s-tag hl">Contrôle PNL</span><span class="s-tag hl">ANACREDIT / BAFI</span><span class="s-tag">Murex / Kondor / Calypso</span><span class="s-tag">Business Object (formateur)</span><span class="s-tag">SQL / Oracle / Sybase</span><span class="s-tag">Power BI / SAS</span><span class="s-tag">Agile / MS Project</span><span class="s-tag">Anglais courant · Espagnol · Portugais</span></div></div>`
+  },
   cyber: {
     ref:'FT · 014',
     score: 85,
@@ -4952,7 +5028,8 @@ const idToRef = {
   dev_new1: 'ft-023',
   dev_new2: 'ft-024',
   devfull18: 'ft-018',
-  devcloud:'ft-017'
+  devcloud:'ft-017',
+  ba_ft025: 'ft-025'
 };
 
 const refToId = Object.fromEntries(Object.entries(idToRef).map(function(kv) { return [kv[1], kv[0]]; }));
@@ -5317,12 +5394,10 @@ function initEsnSpace() {
   var counter = document.getElementById('count');
   if (counter) counter.textContent = count;
 
-  // Masquer les filtres et le bouton "Déposer un profil" (espace privé recruteur)
+  // Masquer les filtres (trop peu de cartes pour filtrer)
   document.querySelectorAll('.filter-group, .score-filter-wrap').forEach(function(el) {
     el.style.display = 'none';
   });
-  var navSubmit = document.getElementById('nav-submit');
-  if (navSubmit) navSubmit.style.display = 'none';
 
   // Adapter le mailto "Demander ce profil" avec contexte ESN
   window._esnKey = esnKey;
