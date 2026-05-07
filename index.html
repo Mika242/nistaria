@@ -1,4 +1,4 @@
-<!-- NISTARIA v2.4 - 2026-05-06 -->
+<!-- NISTARIA v2.5 - 2026-05-06 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2957,7 +2957,56 @@ footer {
       </div>
     </div>
 
-    <!-- Card FT-025 : BA / Chef de projet SI bancaires — eXalt Finance -->
+    <!-- Card FT-026 : PO / BA E-commerce Luxe — CBTW -->
+    <div class="card-wrap" data-cat="po" data-score="45" data-sec="esn" data-pub="2026-05-06" data-exp="2026-06-24"
+      data-locations='[{"city":"paris","tjm":600}]'
+      onclick="openModal('po_ft026')">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="score-badge" style="background:linear-gradient(135deg,#9b72cf,#7c3aed)">45</div>
+          <div class="cf-top">
+            <div class="cf-cat">Product Owner</div>
+            <div class="cf-status-col">
+              <div class="cf-dispo"><div class="dispo-dot"></div><span data-i18n="dispo_now">Dispo</span></div>
+              <div class="cf-expiry"><div class="expiry-dot"></div><span class="expiry-dynamic"></span></div>
+            </div>
+          </div>
+          <div class="cf-mid">
+            <div class="cf-title">PO / BA · E-commerce & Luxe</div>
+            <div class="cf-exp"><strong>8 <span data-i18n="years">ans</span></strong> · Retail premium · Omnicanal</div>
+          </div>
+          <div class="cf-bot">
+            <div class="cf-tags">
+              <span class="cf-tag">SFCC / AEM</span>
+              <span class="cf-tag">Agile</span>
+              <span class="cf-tag">Luxe</span>
+            </div>
+            <div class="cf-hint" data-i18n="hint">Voir ↻</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="cb-top">
+            <div><div class="cb-title">PO / BA E-commerce</div><div class="cb-ref">Réf. FT-026</div></div>
+            <div class="cb-tjm"><div class="cb-tjm-label">TJM</div><div class="cb-tjm-val">600€/j</div></div>
+          </div>
+          <div class="cb-divider"></div>
+          <div class="cb-skills">
+            <div class="cb-skill">SFCC · AEM6 · Shopify · Magento</div>
+            <div class="cb-skill">Akeneo (PIM) · Mirakl · Manhattan</div>
+            <div class="cb-skill">User stories · Backlog · Agile Scrum</div>
+            <div class="cb-skill">Lacoste · Van Cleef · Hermès</div>
+          </div>
+          <div class="cb-foot">
+            <div class="cb-meta">
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="dispo_label">Dispo</div><div class="cb-meta-val" data-i18n="dispo_immediate">Immédiate</div></div>
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="mode_label">Mode</div><div class="cb-meta-val">Régie / Forfait</div></div>
+            </div>
+            <button class="cb-cta" onclick="openModal('po_ft026')">Profil →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Card FT-025 : BA / Chef de projet SI bancaires — eXalt Finance -->
     <div class="card-wrap" data-cat="ba" data-score="99" data-sec="finance" data-pub="2026-05-06" data-exp="2026-05-20"
       data-locations='[{"city":"paris","tjm":810}]'
       onclick="openModal('ba_ft025')">
@@ -4588,6 +4637,28 @@ function getProfiles() {
     </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
     <div class="skills-cloud"><span class="s-tag hl">AWS (Solutions Architect Pro)</span><span class="s-tag hl">Terraform / IaC</span><span class="s-tag hl">Kubernetes / Helm</span><span class="s-tag hl">FinOps</span><span class="s-tag">Docker / CI-CD</span><span class="s-tag">Python / Bash</span><span class="s-tag">Vault / IAM</span><span class="s-tag">Datadog / Grafana</span></div></div>`
   },
+  po_ft026: {
+    ref:'FT · 026', score:45, scoreGrad:'#9b72cf,#7c3aed',
+    scoreNote: isEn
+      ? 'Solid e-commerce profile (8 years) with premium references: Hermès, Lacoste, Van Cleef & Arpels. Expert in SFCC, AEM6, Agile/Scrum, PIM/OMS ecosystems. Sector currently adjacent to Nistaria\'s core focus (finance) — relevant for retail-oriented recruiters or financial institutions with digital transformation projects.'
+      : 'Profil e-commerce solide (8 ans) avec références premium : Hermès, Lacoste, Van Cleef & Arpels. Expertise SFCC, AEM6, Agile/Scrum, écosystèmes PIM/OMS. Secteur adjacent à la cible Nistaria — pertinent pour recruteurs retail ou institutions financières avec projets de transformation digitale.',
+    title: isEn ? 'PO / BA · E-commerce & Luxury' : 'PO / BA · E-commerce & Luxe',
+    tjm: '600 €/j',
+    body: isEn ? `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Experience</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2022 — Now</div><div><div class="exp-role">Omnichannel Business Analyst</div><div class="exp-org">Lacoste — Paris</div><div class="exp-desc">Pilot of complex e-commerce projects across 22 international sites (SFCC): Virtual Try-On, Web3/Metaverse store, marketplace Spain, Shop The Look, product traceability, UX/PLP/PDP redesign. Coordination of IT, business and international vendors.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2021 — 2022</div><div><div class="exp-role">Proxy Product Owner</div><div class="exp-org">Van Cleef & Arpels (Richemont) — Paris</div><div class="exp-desc">Management and evolution of corporate and e-commerce sites (FR/UK/HK) on AEM6. Book Appointment feature, Store Locator, sprint planning, UAT testing.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2018 — 2021</div><div><div class="exp-role">Digital Project Manager</div><div class="exp-org">Hermès — Paris</div><div class="exp-desc">E-commerce rollout across 10 countries (Magento/Drupal). Management of 24 sites in 7 languages. Change management: e-learning creation, subsidiary training. Functional expert on Drupal/FredHopper.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2017 — 2018</div><div><div class="exp-role">E-commerce Project Manager</div><div class="exp-org">Brand Online Agency — Paris</div><div class="exp-desc">Launch of Clergerie on Shopify. Redesign of My Blend (Clarins) on Shopify. Management of Kérastase (L'Oréal) e-commerce site on Magento.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Skills</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">SFCC</span><span class="s-tag hl">AEM6</span><span class="s-tag hl">Agile Scrum · PSPO1</span><span class="s-tag">Shopify · Magento · Drupal</span><span class="s-tag">Akeneo (PIM) · Mirakl · Manhattan</span><span class="s-tag">Jira · Confluence · Figma · Miro</span><span class="s-tag">Google Analytics · ContentSquare</span><span class="s-tag">Fluent English</span></div></div>`
+    : `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Parcours</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2022 — Auj.</div><div><div class="exp-role">Omnichannel Business Analyst</div><div class="exp-org">Lacoste — Paris</div><div class="exp-desc">Pilotage de projets e-commerce complexes sur 22 sites internationaux (SFCC) : Virtual Try-On, store Metaverse/Web3, marketplace Espagne, Shop The Look, traçabilité produit, refonte UX/PLP/PDP. Coordination IT, métiers et prestataires internationaux.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2021 — 2022</div><div><div class="exp-role">Proxy Product Owner</div><div class="exp-org">Van Cleef & Arpels (Richemont) — Paris</div><div class="exp-desc">Gestion et évolution des sites corporate et e-commerce (FR/UK/HK) sur AEM6. Fonctionnalité Book Appointment, Store Locator, sprint planning, tests UAT.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2018 — 2021</div><div><div class="exp-role">Digital Project Manager</div><div class="exp-org">Hermès — Paris</div><div class="exp-desc">Roll-out e-commerce dans 10 pays (Magento/Drupal). Gestion de 24 sites en 7 langues. Conduite du changement : création e-learning, formation des filiales. Expert fonctionnel Drupal/FredHopper.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2017 — 2018</div><div><div class="exp-role">Chef de projet E-commerce</div><div class="exp-org">Brand Online Agency — Paris</div><div class="exp-desc">Lancement Clergerie sur Shopify. Refonte My Blend (Clarins) sur Shopify. Gestion du site Kérastase (L’Oréal) sur Magento.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">SFCC</span><span class="s-tag hl">AEM6</span><span class="s-tag hl">Agile Scrum · PSPO1</span><span class="s-tag">Shopify · Magento · Drupal</span><span class="s-tag">Akeneo (PIM) · Mirakl · Manhattan</span><span class="s-tag">Jira · Confluence · Figma · Miro</span><span class="s-tag">Google Analytics · ContentSquare</span><span class="s-tag">Anglais courant</span></div></div>`
+  },
   ba_ft025: {
     ref:'FT · 025', score:99, scoreGrad:'#e8c84a,#f59e0b',
     scoreNote: isEn
@@ -5029,7 +5100,8 @@ const idToRef = {
   dev_new2: 'ft-024',
   devfull18: 'ft-018',
   devcloud:'ft-017',
-  ba_ft025: 'ft-025'
+  ba_ft025: 'ft-025',
+  po_ft026: 'ft-026'
 };
 
 const refToId = Object.fromEntries(Object.entries(idToRef).map(function(kv) { return [kv[1], kv[0]]; }));
