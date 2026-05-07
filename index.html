@@ -1,4 +1,4 @@
-<!-- NISTARIA v2.5 - 2026-05-07 | Prochain profil réel : FT-027 | Prochain ID modal : ft-027 -->
+<!-- NISTARIA v2.6 - 2026-05-07 | Prochain profil réel : FT-028 | Prochain ID modal : ft-028 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2957,7 +2957,56 @@ footer {
       </div>
     </div>
 
-    <!-- Card FT-026 : PO / BA E-commerce Luxe — CBTW -->
+    <!-- Card FT-027 : BA · Cash Management & Paiements — CBTW -->
+    <div class="card-wrap" data-cat="ba" data-score="95" data-sec="finance" data-pub="2026-05-07" data-exp="2026-06-25"
+      data-locations='[{"city":"paris","tjm":600}]'
+      onclick="openModal('ba_ft027')">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="score-badge" style="background:linear-gradient(135deg,#d4a820,#b8860b)">95</div>
+          <div class="cf-top">
+            <div class="cf-cat">Business Analyst</div>
+            <div class="cf-status-col">
+              <div class="cf-dispo"><div class="dispo-dot"></div><span data-i18n="dispo_now">Dispo</span></div>
+              <div class="cf-expiry"><div class="expiry-dot"></div><span class="expiry-dynamic"></span></div>
+            </div>
+          </div>
+          <div class="cf-mid">
+            <div class="cf-title">BA · Cash Management & Paiements</div>
+            <div class="cf-exp"><strong>10 <span data-i18n="years">ans</span></strong> · Banque · SWIFT · ISO 20022</div>
+          </div>
+          <div class="cf-bot">
+            <div class="cf-tags">
+              <span class="cf-tag">xRDJ / Atlas 2</span>
+              <span class="cf-tag">SWIFT</span>
+              <span class="cf-tag">SCT Inst</span>
+            </div>
+            <div class="cf-hint" data-i18n="hint">Voir ↻</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="cb-top">
+            <div><div class="cb-title">BA Cash Management</div><div class="cb-ref">Réf. FT-027</div></div>
+            <div class="cb-tjm"><div class="cb-tjm-label">TJM</div><div class="cb-tjm-val">600€/j</div></div>
+          </div>
+          <div class="cb-divider"></div>
+          <div class="cb-skills">
+            <div class="cb-skill">Summit · AIS (ex-RDJ) · xRDJ · Loan IQ</div>
+            <div class="cb-skill">Atlas 2 · SWIFT MT940/101/103 · ISO 20022</div>
+            <div class="cb-skill">SCT Inst · SEPA · Paiements internationaux</div>
+            <div class="cb-skill">Anglais & Arabe courants · APAC · Afrique</div>
+          </div>
+          <div class="cb-foot">
+            <div class="cb-meta">
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="dispo_label">Dispo</div><div class="cb-meta-val" data-i18n="dispo_immediate">Immédiate</div></div>
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="mode_label">Mode</div><div class="cb-meta-val">Régie</div></div>
+            </div>
+            <button class="cb-cta" onclick="openModal('ba_ft027')">Profil →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Card FT-026 : PO / BA E-commerce Luxe — CBTW -->
     <div class="card-wrap" data-cat="po" data-score="45" data-sec="esn" data-pub="2026-05-06" data-exp="2026-06-24"
       data-locations='[{"city":"paris","tjm":600}]'
       onclick="openModal('po_ft026')">
@@ -4637,6 +4686,30 @@ function getProfiles() {
     </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
     <div class="skills-cloud"><span class="s-tag hl">AWS (Solutions Architect Pro)</span><span class="s-tag hl">Terraform / IaC</span><span class="s-tag hl">Kubernetes / Helm</span><span class="s-tag hl">FinOps</span><span class="s-tag">Docker / CI-CD</span><span class="s-tag">Python / Bash</span><span class="s-tag">Vault / IAM</span><span class="s-tag">Datadog / Grafana</span></div></div>`
   },
+  ba_ft027: {
+    ref:'FT · 027', score:95, scoreGrad:'#d4a820,#b8860b',
+    scoreNote: isEn
+      ? 'Elite profile — 10 years BA Cash Management & Payments across major banking groups. Deep expertise in SWIFT messaging (MT940/942/101/103), ISO 20022, SCT Inst, and front-to-back accounting flows (xRDJ, Atlas 2, Summit). Multi-zone deployments: Europe, APAC, Africa. Fluent English & Arabic. Perfectly positioned TJM.'
+      : 'Profil élite — 10 ans BA Cash Management & Paiements dans de grands groupes bancaires. Maîtrise des messages SWIFT (MT940/942/101/103), ISO 20022, SCT Inst, et des flux front-to-back comptabilité (xRDJ, Atlas 2, Summit). Déploiements multi-zones Europe, APAC, Afrique. Anglais & arabe courants. TJM parfaitement positionné.',
+    title: isEn ? 'BA · Cash Management & Payments' : 'BA · Cash Management & Paiements',
+    tjm: '600 €/j',
+    body: isEn ? `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Experience</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2023 — Now</div><div><div class="exp-role">Business Analyst</div><div class="exp-org">French Banking Group (BPCE entity) — Paris</div><div class="exp-desc">Deployment of an internal front-to-back solution (Summit, Oracle, AIS/ex-RDJ) across multiple group entities. Requirements gathering, functional specs, UAT, change management and go-live support.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2021 — 2023</div><div><div class="exp-role">Business Analyst — Payments & Accounting</div><div class="exp-org">Major French CIB — Paris</div><div class="exp-desc">xRDJ accounting interface team (15 people). Loan IQ European deployment, SEPA SCT Inst optimisation, EDELWEISS migration (Euro zone to Switzerland). PMO activities across multiple group entities.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2021</div><div><div class="exp-role">Business Analyst / MOA</div><div class="exp-org">Payments & Cash Management Operator — Paris</div><div class="exp-desc">New IHM for contract/service display. Coordination of Crédit du Nord clients migration to SG SI. XML flux creation for API integration.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2017 — 2021</div><div><div class="exp-role">Confirmed BA / MOA</div><div class="exp-org">Major French CIB — Paris</div><div class="exp-desc">xRDJ-SAI interface team (20 people). SCT Inst, international flows harmonisation, Wealth Management reporting, Cash Pooling automation (APAC), new payment channel via mobile banking (Africa). UAT lead, go-live on-call.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2015 — 2017</div><div><div class="exp-role">Cash Management Support — Back-office</div><div class="exp-org">French Universal Bank — Paris</div><div class="exp-desc">E-banking support for large corporate clients. SEPA migration, SWIFT/XML file tracing, N2 support Asia, incident management.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Skills</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">SWIFT MT940/942/101/103</span><span class="s-tag hl">ISO 20022 · XML</span><span class="s-tag hl">SCT Inst · SEPA</span><span class="s-tag">xRDJ · AIS · Summit</span><span class="s-tag">Atlas 2 · Loan IQ · Oracle</span><span class="s-tag">Jira · Clarity · Focus</span><span class="s-tag">UAT · Non-regression · Go-live</span><span class="s-tag">Fluent English & Arabic</span></div></div>`
+    : `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Parcours</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2023 — Auj.</div><div><div class="exp-role">Business Analyst</div><div class="exp-org">Groupe Bancaire Français (entité BPCE) — Paris</div><div class="exp-desc">Déploiement d'une solution interne front-to-back (Summit, Oracle, AIS/ex-RDJ) auprès de plusieurs entités du groupe. Recueil des besoins, spécifications fonctionnelles, UAT, conduite du changement et support mise en production.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2021 — 2023</div><div><div class="exp-role">Business Analyst — Paiements & Comptabilité</div><div class="exp-org">Grande Banque CIB Française — Paris</div><div class="exp-desc">Équipe interface xRDJ (15 pers.). Déploiement Loan IQ Europe, optimisation SCT Inst, migration EDELWEISS (zone Euro vers Suisse). Activités PMO multi-entités.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2021</div><div><div class="exp-role">Business Analyst / MOA</div><div class="exp-org">Opérateur Paiements & Cash Management — Paris</div><div class="exp-desc">Nouvel IHM de consultation contrats/services. Coordination migration clients Crédit du Nord vers SI SG. Création de flux XML pour intégration API.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2017 — 2021</div><div><div class="exp-role">Consultante Confirmée MOA</div><div class="exp-org">Grande Banque CIB Française — Paris</div><div class="exp-desc">Équipe interface xRDJ-SAI (20 pers.). SCT Inst, harmonisation flux internationaux, reporting Wealth Management, automatisation Cash Pooling (APAC), nouveau canal paiement mobile banking (Afrique). Lead UAT, astreintes MEP.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2015 — 2017</div><div><div class="exp-role">Support Cash Management — Back-office</div><div class="exp-org">Banque Universelle Française — Paris</div><div class="exp-desc">Support e-banking grands comptes. Migration SEPA, traçage flux SWIFT/XML, support N2 Asie, gestion incidents.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">SWIFT MT940/942/101/103</span><span class="s-tag hl">ISO 20022 · XML</span><span class="s-tag hl">SCT Inst · SEPA</span><span class="s-tag">xRDJ · AIS · Summit</span><span class="s-tag">Atlas 2 · Loan IQ · Oracle</span><span class="s-tag">Jira · Clarity · Focus</span><span class="s-tag">UAT · Non-régression · MEP</span><span class="s-tag">Anglais & Arabe courants</span></div></div>`
+  },
   po_ft026: {
     ref:'FT · 026', score:45, scoreGrad:'#9b72cf,#7c3aed',
     scoreNote: isEn
@@ -5101,7 +5174,8 @@ const idToRef = {
   devfull18: 'ft-018',
   devcloud:'ft-017',
   ba_ft025: 'ft-025',
-  po_ft026: 'ft-026'
+  po_ft026: 'ft-026',
+  ba_ft027: 'ft-027'
 };
 
 const refToId = Object.fromEntries(Object.entries(idToRef).map(function(kv) { return [kv[1], kv[0]]; }));
