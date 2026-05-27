@@ -1,4 +1,4 @@
-<!-- NISTARIA v2.9 - 2026-05-07 | Prochain profil réel : FT-031 | Prochain ID modal : ft-031 -->
+<!-- NISTARIA v3.0 - 2026-05-27 | Prochain profil réel : FT-032 | Prochain ID modal : ft-032 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2957,7 +2957,56 @@ footer {
       </div>
     </div>
 
-    <!-- Card FT-030 : BA/PM · Asset Management Fees & Conformité — CBTW -->
+    <!-- Card FT-031 : Dev Java · Microservices & Streaming — Statera -->
+    <div class="card-wrap" data-cat="dev" data-score="72" data-sec="esn" data-pub="2026-05-27" data-exp="2026-07-27" data-esn="NIS-E-STAT1"
+      data-locations='[{"city":"paris","tjm":680}]'
+      onclick="openModal('dev_ft031')">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="score-badge" style="background:linear-gradient(135deg,#1565c0,#1976d2)">72</div>
+          <div class="cf-top">
+            <div class="cf-cat">Développeur Java</div>
+            <div class="cf-status-col">
+              <div class="cf-dispo"><div class="dispo-dot"></div><span data-i18n="dispo_now">Dispo</span></div>
+              <div class="cf-expiry"><div class="expiry-dot"></div><span class="expiry-dynamic"></span></div>
+            </div>
+          </div>
+          <div class="cf-mid">
+            <div class="cf-title">Dev Java · Microservices & Streaming</div>
+            <div class="cf-exp"><strong>5 <span data-i18n="years">ans</span></strong> · Spring Boot · Quarkus · Kafka</div>
+          </div>
+          <div class="cf-bot">
+            <div class="cf-tags">
+              <span class="cf-tag">Java / Quarkus</span>
+              <span class="cf-tag">Apache Kafka</span>
+              <span class="cf-tag">Microservices</span>
+            </div>
+            <div class="cf-hint" data-i18n="hint">Voir ↻</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="cb-top">
+            <div><div class="cb-title">Dev Java Microservices</div><div class="cb-ref">Réf. FT-031</div></div>
+            <div class="cb-tjm"><div class="cb-tjm-label">TJM</div><div class="cb-tjm-val">680€/j</div></div>
+          </div>
+          <div class="cb-divider"></div>
+          <div class="cb-skills">
+            <div class="cb-skill">Java · Spring Boot · Quarkus · Apache Camel</div>
+            <div class="cb-skill">Apache Kafka · Docker · GraphQL · REST</div>
+            <div class="cb-skill">Python · TensorFlow · ML/Data Science</div>
+            <div class="cb-skill">Centrale Marseille · M2 Data Science · 5 langues</div>
+          </div>
+          <div class="cb-foot">
+            <div class="cb-meta">
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="dispo_label">Dispo</div><div class="cb-meta-val" data-i18n="dispo_immediate">Immédiate</div></div>
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="mode_label">Mode</div><div class="cb-meta-val">Régie</div></div>
+            </div>
+            <button class="cb-cta" onclick="openModal('dev_ft031')">Profil →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Card FT-030 : BA/PM · Asset Management Fees & Conformité — CBTW -->
     <div class="card-wrap" data-cat="ba" data-score="99" data-sec="finance" data-pub="2026-05-07" data-exp="2026-07-07" data-esn="NIS-E-4K2M"
       data-locations='[{"city":"paris","tjm":620}]'
       onclick="openModal('ba_ft030')">
@@ -4833,6 +4882,26 @@ function getProfiles() {
     </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
     <div class="skills-cloud"><span class="s-tag hl">AWS (Solutions Architect Pro)</span><span class="s-tag hl">Terraform / IaC</span><span class="s-tag hl">Kubernetes / Helm</span><span class="s-tag hl">FinOps</span><span class="s-tag">Docker / CI-CD</span><span class="s-tag">Python / Bash</span><span class="s-tag">Vault / IAM</span><span class="s-tag">Datadog / Grafana</span></div></div>`
   },
+  dev_ft031: {
+    ref:'FT · 031', score:72, scoreGrad:'#1565c0,#1976d2',
+    scoreNote: isEn
+      ? 'Solid Java developer profile (5 years) with strong backend expertise: microservices, Apache Kafka streaming, REST/GraphQL APIs, Quarkus. Complementary data science background (Deep Learning, ML). Formation: École Centrale de Marseille + M2 Data Science. Fluent in 5 languages including English, Arabic and German. Sector currently adjacent to Nistaria\'s core (finance): all experience in travel tech. Relevant for IT teams in financial institutions seeking Java/Kafka expertise without strict finance background requirement.'
+      : 'Profil développeur Java solide (5 ans) avec forte expertise backend : microservices, streaming Apache Kafka, APIs REST/GraphQL, Quarkus. Complément data science (Deep Learning, ML). Formation : École Centrale de Marseille + M2 Data Science. Anglais, arabe et allemand courants. Secteur actuellement adjacent à la cible Nistaria (finance) : tout le parcours est en travel tech. Pertinent pour des équipes IT en institution financière cherchant une expertise Java/Kafka sans exigence stricte de background finance.',
+    title: isEn ? 'Java Developer · Microservices & Streaming' : 'Développeur Java · Microservices & Streaming',
+    tjm: '680 €/j',
+    body: isEn ? `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Experience</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2021 — Now</div><div><div class="exp-role">Java Software Development Engineer</div><div class="exp-org">International Travel Tech Platform</div><div class="exp-desc">Backend development of a high-volume self-service API platform (flight booking, multi-airline distribution). REST & GraphQL APIs (Swagger/OpenAPI), Apache Kafka event streaming, microservices architecture (monolith extraction, JWT security), multi-source integration (GDS, LCC Direct Connect, NDC), Apache Camel orchestration. Java, Spring Boot, Quarkus, Docker, MySQL, Jenkins.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2020</div><div><div class="exp-role">Data Scientist — Final Year Internship</div><div class="exp-org">International Travel Tech Platform</div><div class="exp-desc">Hotel availability prediction system: feature engineering, statistical modelling, ML models (XGBoost, RandomForest), time series forecasting. Pandas, Sklearn, Scipy.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2019 — 2020</div><div><div class="exp-role">Developer / Data Scientist — Internship</div><div class="exp-org">AI & Computer Vision Startup</div><div class="exp-desc">GAN model for synthetic image generation, labelling tools (ReactJS + Flask), YOLO pre-annotation, dataset preparation for object detection models. Keras, TensorFlow, YOLO.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Skills</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Java · Spring Boot · Quarkus</span><span class="s-tag hl">Apache Kafka · Streaming</span><span class="s-tag hl">Microservices · REST · GraphQL</span><span class="s-tag">Apache Camel · Docker · Jenkins</span><span class="s-tag">Python · TensorFlow · ML</span><span class="s-tag">MySQL · Swagger/OpenAPI</span><span class="s-tag">Centrale Marseille · M2 Data Science</span><span class="s-tag">EN/AR/DE C1 · TOEIC 875</span></div></div>`
+    : `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Parcours</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2021 — Auj.</div><div><div class="exp-role">Java Software Development Engineer</div><div class="exp-org">Plateforme Travel Tech Internationale</div><div class="exp-desc">Développement backend d'une plateforme API self-service à forte volumétrie (réservation de vols, distribution multi-compagnies). APIs REST & GraphQL (Swagger/OpenAPI), streaming d'événements Apache Kafka, architecture microservices (extraction monolithe, sécurisation JWT), intégration multi-sources (GDS, LCC Direct Connect, NDC), orchestration Apache Camel. Java, Spring Boot, Quarkus, Docker, MySQL, Jenkins.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2020</div><div><div class="exp-role">Data Scientist — Stage de fin d’études</div><div class="exp-org">Plateforme Travel Tech Internationale</div><div class="exp-desc">Système de prédiction de disponibilité hôtelière : ingénierie des features, modélisation statistique, modèles ML (XGBoost, RandomForest), prévision temporelle. Pandas, Sklearn, Scipy.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2019 — 2020</div><div><div class="exp-role">Développeur / Data Scientist — Stage</div><div class="exp-org">Startup IA & Vision par Ordinateur</div><div class="exp-desc">Modèle GAN pour génération d'images synthétiques, outils de labellisation (ReactJS + Flask), pré-annotation YOLO, préparation datasets pour modèles de détection. Keras, TensorFlow, YOLO.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Java · Spring Boot · Quarkus</span><span class="s-tag hl">Apache Kafka · Streaming</span><span class="s-tag hl">Microservices · REST · GraphQL</span><span class="s-tag">Apache Camel · Docker · Jenkins</span><span class="s-tag">Python · TensorFlow · ML</span><span class="s-tag">MySQL · Swagger/OpenAPI</span><span class="s-tag">Centrale Marseille · M2 Data Science</span><span class="s-tag">EN/AR/DE C1 · TOEIC 875</span></div></div>`
+  },
   ba_ft030: {
     ref:'FT · 030', score:99, scoreGrad:'#b8860b,#8B6914',
     scoreNote: isEn
@@ -5389,7 +5458,8 @@ const idToRef = {
   ba_ft027: 'ft-027',
   ba_ft028: 'ft-028',
   ba_ft029: 'ft-029',
-  ba_ft030: 'ft-030'
+  ba_ft030: 'ft-030',
+  dev_ft031: 'ft-031'
 };
 
 const refToId = Object.fromEntries(Object.entries(idToRef).map(function(kv) { return [kv[1], kv[0]]; }));
