@@ -1,4 +1,4 @@
-<!-- NISTARIA v3.1 - 2026-06-04 | Prochain profil réel : FT-035 | Prochain ID modal : ft-035 -->
+<!-- NISTARIA v3.2 - 2026-06-09 | Prochain profil réel : FT-036 | Prochain ID modal : ft-036 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2957,7 +2957,56 @@ footer {
       </div>
     </div>
 
-    <!-- Card FT-034 : Tech Lead Java · Modernisation SI — Statera -->
+    <!-- Card FT-035 : BA/CDP · Finance de Marché & Kondor+ — Wolsome -->
+    <div class="card-wrap" data-cat="ba" data-score="76" data-sec="finance" data-pub="2026-06-09" data-exp="2026-08-09" data-esn="NIS-E-WLS1"
+      data-locations='[{"city":"paris","tjm":700}]'
+      onclick="openModal('ba_ft035')">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="score-badge" style="background:linear-gradient(135deg,#1565c0,#1976d2)">76</div>
+          <div class="cf-top">
+            <div class="cf-cat">BA / Chef de Projet</div>
+            <div class="cf-status-col">
+              <div class="cf-dispo"><div class="dispo-dot"></div><span data-i18n="dispo_now">Dispo</span></div>
+              <div class="cf-expiry"><div class="expiry-dot"></div><span class="expiry-dynamic"></span></div>
+            </div>
+          </div>
+          <div class="cf-mid">
+            <div class="cf-title">BA/CDP · Finance de Marché & Kondor+</div>
+            <div class="cf-exp"><strong>6 <span data-i18n="years">ans</span></strong> · ALM · P&L · Risk · Capital Markets</div>
+          </div>
+          <div class="cf-bot">
+            <div class="cf-tags">
+              <span class="cf-tag">Kondor+</span>
+              <span class="cf-tag">P&L · Greeks</span>
+              <span class="cf-tag">M2 MIAGE FM</span>
+            </div>
+            <div class="cf-hint" data-i18n="hint">Voir ↻</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="cb-top">
+            <div><div class="cb-title">BA/CDP Finance Marché</div><div class="cb-ref">Réf. FT-035</div></div>
+            <div class="cb-tjm"><div class="cb-tjm-label">TJM</div><div class="cb-tjm-val">700€/j</div></div>
+          </div>
+          <div class="cb-divider"></div>
+          <div class="cb-skills">
+            <div class="cb-skill">Kondor+ · Omega · ALM / Trésorerie</div>
+            <div class="cb-skill">P&L · Greeks · Dérivés · Fixed Income</div>
+            <div class="cb-skill">COREP · RWA · ECL · Large Exposure</div>
+            <div class="cb-skill">Agile Scrum · SQL · Alteryx · Jira</div>
+          </div>
+          <div class="cb-foot">
+            <div class="cb-meta">
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="dispo_label">Dispo</div><div class="cb-meta-val" data-i18n="dispo_immediate">Immédiate</div></div>
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="mode_label">Mode</div><div class="cb-meta-val">Régie</div></div>
+            </div>
+            <button class="cb-cta" onclick="openModal('ba_ft035')">Profil →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Card FT-034 : Tech Lead Java · Modernisation SI — Statera -->
     <div class="card-wrap" data-cat="dev" data-score="85" data-sec="finance" data-pub="2026-06-04" data-exp="2026-08-04" data-esn="NIS-E-ST41"
       data-locations='[{"city":"paris","tjm":730}]'
       onclick="openModal('dev_ft034')">
@@ -5029,6 +5078,28 @@ function getProfiles() {
     </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
     <div class="skills-cloud"><span class="s-tag hl">AWS (Solutions Architect Pro)</span><span class="s-tag hl">Terraform / IaC</span><span class="s-tag hl">Kubernetes / Helm</span><span class="s-tag hl">FinOps</span><span class="s-tag">Docker / CI-CD</span><span class="s-tag">Python / Bash</span><span class="s-tag">Vault / IAM</span><span class="s-tag">Datadog / Grafana</span></div></div>`
   },
+  ba_ft035: {
+    ref:'FT · 035', score:76, scoreGrad:'#1565c0,#1976d2',
+    scoreNote: isEn
+      ? 'Good finance-of-markets profile with strong domain expertise: Kondor+, ALM/Treasury front-to-back migration, P&L analysis, Greeks, regulatory reporting (COREP, RWA, ECL). M2 MIAGE Finance de Marché (ESCE Paris). Score penalised by parcours fragmentation: multiple short sub-missions (<18 months) within the same client group, and last mission under 1 year. TJM well positioned for the level.'
+      : 'Bon profil finance de marché avec forte expertise métier : Kondor+, migration ALM/Trésorerie front-to-back, analyse P&L, Greeks, reporting réglementaire (COREP, RWA, ECL). M2 MIAGE Finance de Marché (ESCE Paris). Score pénalisé par la fragmentation du parcours : plusieurs sous-missions courtes (<18 mois) au sein d’un même groupe client, et dernière mission inférieure à 1 an. TJM bien positionné pour le niveau.',
+    title: isEn ? 'BA/PM · Capital Markets & Kondor+' : 'BA/CDP · Finance de Marché & Kondor+',
+    tjm: '700 €/j',
+    body: isEn ? `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Experience</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2025 — 2026</div><div><div class="exp-role">Project Manager / Team Lead — Capital Markets</div><div class="exp-org">Major French CIB — Paris</div><div class="exp-desc">International transformation and harmonisation of allocation activities (Capital Markets Operations). Automation of Middle Office workflows via Omega, AI-driven analysis of shared mailboxes, Agile Scrum ceremonies, KPI production, cross-functional coordination (Europe, Asia, US).</div></div></div>
+    <div class="exp-row"><div class="exp-year">2024 — 2025</div><div><div class="exp-role">Product Owner — Wealth Management</div><div class="exp-org">Major French Banking Group — Paris</div><div class="exp-desc">ESG regulatory backlog integration into WM tools and processes. User stories, functional specs, SIT/UAT campaigns, Agile delivery coordination across Product, Risk, Compliance and IT teams.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2022 — 2024</div><div><div class="exp-role">Business Analyst — ALM Treasury / Front-to-Back</div><div class="exp-org">Major French Banking Group — Paris</div><div class="exp-desc">International Kondor+ migration programme across multiple subsidiaries (Italy, UK, Spain, India). Gap analysis, functional specs, booking flow security, change management and post-deployment support.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2019 — 2022</div><div><div class="exp-role">Business Analyst — Market Risk & Regulatory Reporting</div><div class="exp-org">Major French Universal Bank — Paris</div><div class="exp-desc">RWA, ECL, COREP, Large Exposure indicator reliability. SQL queries and risk database analysis, Front-to-Back data flow mapping, executive dashboards, regulatory impact analysis.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Skills</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Kondor+ · Omega · ALM</span><span class="s-tag hl">P&L · Greeks · Dérivés</span><span class="s-tag hl">COREP · RWA · ECL</span><span class="s-tag">Agile Scrum · Backlog · UAT</span><span class="s-tag">SQL · Alteryx · QlikView</span><span class="s-tag">Capital Markets · Fixed Income</span><span class="s-tag">M2 MIAGE Finance Marché · ESCE</span></div></div>`
+    : `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Parcours</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2025 — 2026</div><div><div class="exp-role">Chef de Projet / Team Lead — Capital Markets</div><div class="exp-org">Grande Banque CIB Française — Paris</div><div class="exp-desc">Transformation et harmonisation internationale des activités d’allocation (Capital Markets Operations). Automatisation workflows Middle Office via Omega, analyse IA des boîtes mails partagées, cérémonies Agile Scrum, production KPI, coordination transverse (Europe, Asie, États-Unis).</div></div></div>
+    <div class="exp-row"><div class="exp-year">2024 — 2025</div><div><div class="exp-role">Product Owner — Wealth Management</div><div class="exp-org">Grand Groupe Bancaire Français — Paris</div><div class="exp-desc">Intégration du backlog réglementaire ESG dans les outils et processus WM. User stories, specs fonctionnelles, campagnes SIT/UAT, coordination livraisons Agile entre équipes Produit, Risques, Conformité et IT.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2022 — 2024</div><div><div class="exp-role">Business Analyst — ALM Trésorerie / Front-to-Back</div><div class="exp-org">Grand Groupe Bancaire Français — Paris</div><div class="exp-desc">Programme international de migration Kondor+ sur plusieurs filiales (Italie, RU, Espagne, Inde). Gap analysis, spécifications fonctionnelles, sécurisation flux de booking, conduite du changement et support post-déploiement.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2019 — 2022</div><div><div class="exp-role">Business Analyst — Market Risk & Regulatory Reporting</div><div class="exp-org">Grande Banque Universelle Française — Paris</div><div class="exp-desc">Fiabilisation des indicateurs RWA, ECL, COREP, Large Exposure. Requêtes SQL et analyse bases de données risques, cartographie flux Front-to-Back, dashboards exécutifs, analyse impacts réglementaires.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Kondor+ · Omega · ALM</span><span class="s-tag hl">P&L · Greeks · Dérivés</span><span class="s-tag hl">COREP · RWA · ECL</span><span class="s-tag">Agile Scrum · Backlog · UAT</span><span class="s-tag">SQL · Alteryx · QlikView</span><span class="s-tag">Capital Markets · Fixed Income</span><span class="s-tag">M2 MIAGE Finance Marché · ESCE</span></div></div>`
+  },
   dev_ft034: {
     ref:'FT · 034', score:85, scoreGrad:'#2e7d32,#43a047',
     scoreNote: isEn
@@ -5671,7 +5742,8 @@ const idToRef = {
   dev_ft031: 'ft-031',
   pm_ft032: 'ft-032',
   dev_ft033: 'ft-033',
-  dev_ft034: 'ft-034'
+  dev_ft034: 'ft-034',
+  ba_ft035: 'ft-035'
 };
 
 const refToId = Object.fromEntries(Object.entries(idToRef).map(function(kv) { return [kv[1], kv[0]]; }));
