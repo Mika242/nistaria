@@ -1,4 +1,4 @@
-<!-- NISTARIA v3.2 - 2026-06-09 | Prochain profil réel : FT-036 | Prochain ID modal : ft-036 -->
+<!-- NISTARIA v3.3 - 2026-06-10 | Prochain profil réel : FT-037 | Prochain ID modal : ft-037 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2957,7 +2957,56 @@ footer {
       </div>
     </div>
 
-    <!-- Card FT-035 : BA/CDP · Finance de Marché & Kondor+ — Wolsome -->
+    <!-- Card FT-036 : BA/CDP · CIB · Collatéral & SSI — Delane SI -->
+    <div class="card-wrap" data-cat="ba" data-score="92" data-sec="finance" data-pub="2026-06-10" data-exp="2026-08-10" data-esn="NIS-E-WVV5"
+      data-locations='[{"city":"paris","tjm":700}]'
+      onclick="openModal('ba_ft036')">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="score-badge" style="background:linear-gradient(135deg,#d4a820,#b8860b)">92</div>
+          <div class="cf-top">
+            <div class="cf-cat">BA / Chef de Projet</div>
+            <div class="cf-status-col">
+              <div class="cf-dispo"><div class="dispo-dot"></div><span data-i18n="dispo_now">Dispo</span></div>
+              <div class="cf-expiry"><div class="expiry-dot"></div><span class="expiry-dynamic"></span></div>
+            </div>
+          </div>
+          <div class="cf-mid">
+            <div class="cf-title">BA/CDP · CIB · Collatéral & SSI</div>
+            <div class="cf-exp"><strong>20 <span data-i18n="years">ans</span></strong> · CIB · MO/BO · Swift · Calypso</div>
+          </div>
+          <div class="cf-bot">
+            <div class="cf-tags">
+              <span class="cf-tag">Calypso · Sophis</span>
+              <span class="cf-tag">SSI · Swift</span>
+              <span class="cf-tag">Dauphine PSL</span>
+            </div>
+            <div class="cf-hint" data-i18n="hint">Voir ↻</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="cb-top">
+            <div><div class="cb-title">BA/CDP CIB Senior</div><div class="cb-ref">Réf. FT-036</div></div>
+            <div class="cb-tjm"><div class="cb-tjm-label">TJM</div><div class="cb-tjm-val">700€/j</div></div>
+          </div>
+          <div class="cb-divider"></div>
+          <div class="cb-skills">
+            <div class="cb-skill">Calypso · Sophis · Kondor · Summit · 4Sight</div>
+            <div class="cb-skill">SSI · Swift · Repo · Collatéral · OPCVM</div>
+            <div class="cb-skill">MO/BO Securities · STP · ISO 20022</div>
+            <div class="cb-skill">MBA Dauphine PSL · Centrale Supélec 2026</div>
+          </div>
+          <div class="cb-foot">
+            <div class="cb-meta">
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="dispo_label">Dispo</div><div class="cb-meta-val" data-i18n="dispo_immediate">Immédiate</div></div>
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="mode_label">Mode</div><div class="cb-meta-val">Régie</div></div>
+            </div>
+            <button class="cb-cta" onclick="openModal('ba_ft036')">Profil →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Card FT-035 : BA/CDP · Finance de Marché & Kondor+ — Wolsome -->
     <div class="card-wrap" data-cat="ba" data-score="76" data-sec="finance" data-pub="2026-06-09" data-exp="2026-08-09" data-esn="NIS-E-WLS1"
       data-locations='[{"city":"paris","tjm":700}]'
       onclick="openModal('ba_ft035')">
@@ -5078,6 +5127,30 @@ function getProfiles() {
     </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
     <div class="skills-cloud"><span class="s-tag hl">AWS (Solutions Architect Pro)</span><span class="s-tag hl">Terraform / IaC</span><span class="s-tag hl">Kubernetes / Helm</span><span class="s-tag hl">FinOps</span><span class="s-tag">Docker / CI-CD</span><span class="s-tag">Python / Bash</span><span class="s-tag">Vault / IAM</span><span class="s-tag">Datadog / Grafana</span></div></div>`
   },
+  ba_ft036: {
+    ref:'FT · 036', score:92, scoreGrad:'#d4a820,#b8860b',
+    scoreNote: isEn
+      ? 'Elite profile — 20 years in CIB across three major French investment banks. Deep MO/BO expertise: collateral management, Cash SSI, Repo, OPCVM, STP chain, Swift/SSI, ISDA. Project leadership: TOM design, offshoring, RPA implementation, ISO 20022 migration, KPI/KRI API development. Measurable results: -40% operational fails, +10% productivity. MBA Dauphine PSL, Executive Certificate Centrale Supélec 2026. Slight penalty: CA-CIB mission under 1 year (in progress).'
+      : 'Profil élite — 20 ans en CIB (SG CIB 13 ans, Natixis CIB 3 ans, CA-CIB). Expertise MO/BO approfondie : gestion du collatéral, Cash SSI, Repo, OPCVM, chaîne STP, Swift/SSI, ISDA. Leadership projet : conception TOM, offshoring, mise en place RPA, migration ISO 20022, développement API KPI/KRI. Résultats mesurables : -40% fails opérationnels, +10% productivité. MBA Dauphine PSL, Executive Certificate Centrale Supélec 2026. Légère pénalité : mission CA-CIB en cours inférieure à 1 an.',
+    title: isEn ? 'BA/PM · CIB · Collateral & SSI' : 'BA/CDP · CIB · Collatéral & SSI',
+    tjm: '700 €/j',
+    body: isEn ? `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Experience</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2025 — Now</div><div><div class="exp-role">Project Manager — MO/BO Securities</div><div class="exp-org">Major French CIB — Paris</div><div class="exp-desc">IT and functional improvement projects for MO/BO Securities teams (MO Support, MO Rec, MO Collat, BO Securities, BO Issuance, BO OST/Coupons). Context: Calypso upgrade programme. Projects: TRADEcho reconciliation, Plug&Clear Euroclear automation, SWIFT 94F, EUREX SSI auto-selection, coupon automation, Collat KPI/KRI API. Calypso, SFCM, Orchestrade, Sophis.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2022 — 2025</div><div><div class="exp-role">Expert Leader — Cash SSI</div><div class="exp-org">French Investment Bank — Paris</div><div class="exp-desc">Head of Cash SSI team (Global Markets Operations). TOM design, ISO 20022 migration management, process modernisation, RPA implementation for mailbox management, primary issuance desk opening. -40% operational fails, +10% productivity. Calypso, Summit, Sophis.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2017 — 2019</div><div><div class="exp-role">Expert Leader — Collateral</div><div class="exp-org">Major French CIB — Paris</div><div class="exp-desc">International collateral management (Europe, US, Asia). Cash reinvestment automation, 4Sight upgrade, offshoring plan (SG Bangalore), ISDA standards alignment, UAT strategy. -40% fails, +10% productivity. Calypso, Summit TCI, Sophis.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2010 — 2017</div><div><div class="exp-role">Expert Leader — Securities Lending Confirmations</div><div class="exp-org">Major French CIB — Paris</div><div class="exp-desc">Creation and management of a 5-person confirmation team. Implementation of a 4Sight satellite tool, business requirements, specs, UAT, offshoring of Principal Lending to Bangalore. Front-to-back operations management.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2006 — 2010</div><div><div class="exp-role">Middle Office — Repo & Agency</div><div class="exp-org">Securities Services Group — Paris</div><div class="exp-desc">LMA Liquidity Management activities. Collateral management, margin calls, cash reinvestment. Migration, UAT, procedures. 4Sight, Collateral Manager.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Skills</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Calypso · Sophis · Kondor · Summit</span><span class="s-tag hl">SSI · Swift · Repo · Collatéral</span><span class="s-tag hl">MO/BO Securities · STP</span><span class="s-tag">ISO 20022 · ISDA · EMIR</span><span class="s-tag">RPA · TOM · Offshoring</span><span class="s-tag">UAT · BRD · Specs fonctionnelles</span><span class="s-tag">MBA Dauphine PSL · Centrale Supélec</span></div></div>`
+    : `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Parcours</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2025 — Auj.</div><div><div class="exp-role">Project Manager — MO/BO Securities</div><div class="exp-org">Grande Banque CIB Française — Paris</div><div class="exp-desc">Projets d'amélioration IT et fonctionnels pour les équipes MO/BO Securities. Contexte : programme upgrade Calypso. Projets : réconciliation TRADEcho, automatisation Euroclear Plug&Clear, SWIFT 94F, sélection auto SSI EUREX, automatisation coupons, API KPI/KRI Collat. Calypso, SFCM, Orchestrade, Sophis.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2022 — 2025</div><div><div class="exp-role">Expert Leader — Cash SSI</div><div class="exp-org">Banque d'Investissement Française — Paris</div><div class="exp-desc">Responsable équipe Cash SSI (Global Markets Operations). Conception TOM, migration ISO 20022, modernisation processus, mise en place RPA boite mail, ouverture desk émission primaire. -40% fails opérationnels, +10% productivité. Calypso, Summit, Sophis.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2017 — 2019</div><div><div class="exp-role">Expert Leader — Collatéral</div><div class="exp-org">Grande Banque CIB Française — Paris</div><div class="exp-desc">Gestion du collatéral international (Europe, US, Asie). Automatisation réinvestissement cash, upgrade 4Sight, plan d'offshoring (SG Bangalore), normalisation ISDA, stratégie UAT. Calypso, Summit TCI, Sophis.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2010 — 2017</div><div><div class="exp-role">Expert Leader — Confirmations Prêt-Emprunt</div><div class="exp-org">Grande Banque CIB Française — Paris</div><div class="exp-desc">Création et gestion d'un pôle confirmations (5 personnes). Implémentation outil satellite 4Sight, BRD, specs, UAT, offshoring Principal Lending Bangalore. Gestion transverse opérations front-to-back.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2006 — 2010</div><div><div class="exp-role">Middle Office — Repo & Agency</div><div class="exp-org">Groupe Services Titres — Paris</div><div class="exp-desc">Activités LMA Liquidity Management. Gestion collatéral, appels de marge, réinvestissement cash. Migration, UAT, procédures. 4Sight, Collateral Manager.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Calypso · Sophis · Kondor · Summit</span><span class="s-tag hl">SSI · Swift · Repo · Collatéral</span><span class="s-tag hl">MO/BO Securities · STP</span><span class="s-tag">ISO 20022 · ISDA · EMIR</span><span class="s-tag">RPA · TOM · Offshoring</span><span class="s-tag">UAT · BRD · Specs fonctionnelles</span><span class="s-tag">MBA Dauphine PSL · Centrale Supélec</span></div></div>`
+  },
   ba_ft035: {
     ref:'FT · 035', score:76, scoreGrad:'#1565c0,#1976d2',
     scoreNote: isEn
@@ -5743,7 +5816,8 @@ const idToRef = {
   pm_ft032: 'ft-032',
   dev_ft033: 'ft-033',
   dev_ft034: 'ft-034',
-  ba_ft035: 'ft-035'
+  ba_ft035: 'ft-035',
+  ba_ft036: 'ft-036'
 };
 
 const refToId = Object.fromEntries(Object.entries(idToRef).map(function(kv) { return [kv[1], kv[0]]; }));
