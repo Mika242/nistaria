@@ -1,4 +1,4 @@
-<!-- NISTARIA v3.3 - 2026-06-10 | Prochain profil réel : FT-037 | Prochain ID modal : ft-037 -->
+<!-- NISTARIA v3.4 - 2026-06-11 | Prochain profil réel : FT-038 | Prochain ID modal : ft-038 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2957,7 +2957,56 @@ footer {
       </div>
     </div>
 
-    <!-- Card FT-036 : BA/CDP · CIB · Collatéral & SSI — Delane SI -->
+    <!-- Card FT-037 : Data Analyst · ESG & Réglementaire Bancaire — Delane SI -->
+    <div class="card-wrap" data-cat="data" data-score="78" data-sec="finance" data-pub="2026-06-11" data-exp="2026-08-11" data-esn="NIS-E-WVV5"
+      data-locations='[{"city":"paris","tjm":545}]'
+      onclick="openModal('data_ft037')">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="score-badge" style="background:linear-gradient(135deg,#1565c0,#1976d2)">78</div>
+          <div class="cf-top">
+            <div class="cf-cat">Data Analyst</div>
+            <div class="cf-status-col">
+              <div class="cf-dispo"><div class="dispo-dot"></div><span data-i18n="dispo_now">Dispo</span></div>
+              <div class="cf-expiry"><div class="expiry-dot"></div><span class="expiry-dynamic"></span></div>
+            </div>
+          </div>
+          <div class="cf-mid">
+            <div class="cf-title">Data Analyst · ESG & Réglementaire Bancaire</div>
+            <div class="cf-exp"><strong>8 <span data-i18n="years">ans</span></strong> · Alteryx · Dataiku · GAR · Pilier 3</div>
+          </div>
+          <div class="cf-bot">
+            <div class="cf-tags">
+              <span class="cf-tag">Alteryx · Dataiku</span>
+              <span class="cf-tag">ESG · BCE</span>
+              <span class="cf-tag">Python · SQL</span>
+            </div>
+            <div class="cf-hint" data-i18n="hint">Voir ↻</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="cb-top">
+            <div><div class="cb-title">Data Analyst ESG</div><div class="cb-ref">Réf. FT-037</div></div>
+            <div class="cb-tjm"><div class="cb-tjm-label">TJM</div><div class="cb-tjm-val">545€/j</div></div>
+          </div>
+          <div class="cb-divider"></div>
+          <div class="cb-skills">
+            <div class="cb-skill">Alteryx Core Cert. · Dataiku Core Designer</div>
+            <div class="cb-skill">GAR · Pilier 3 · SPIF/SLL · Reporting BCE</div>
+            <div class="cb-skill">Python · SQL · VBA · Power BI · Tableau</div>
+            <div class="cb-skill">M2 Statistiques · ALM Trésorerie · ESG</div>
+          </div>
+          <div class="cb-foot">
+            <div class="cb-meta">
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="dispo_label">Dispo</div><div class="cb-meta-val" data-i18n="dispo_immediate">Immédiate</div></div>
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="mode_label">Mode</div><div class="cb-meta-val">Régie</div></div>
+            </div>
+            <button class="cb-cta" onclick="openModal('data_ft037')">Profil →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Card FT-036 : BA/CDP · CIB · Collatéral & SSI — Delane SI -->
     <div class="card-wrap" data-cat="ba" data-score="92" data-sec="finance" data-pub="2026-06-10" data-exp="2026-08-10" data-esn="NIS-E-WVV5"
       data-locations='[{"city":"paris","tjm":700}]'
       onclick="openModal('ba_ft036')">
@@ -5127,6 +5176,28 @@ function getProfiles() {
     </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
     <div class="skills-cloud"><span class="s-tag hl">AWS (Solutions Architect Pro)</span><span class="s-tag hl">Terraform / IaC</span><span class="s-tag hl">Kubernetes / Helm</span><span class="s-tag hl">FinOps</span><span class="s-tag">Docker / CI-CD</span><span class="s-tag">Python / Bash</span><span class="s-tag">Vault / IAM</span><span class="s-tag">Datadog / Grafana</span></div></div>`
   },
+  data_ft037: {
+    ref:'FT · 037', score:78, scoreGrad:'#1565c0,#1976d2',
+    scoreNote: isEn
+      ? 'Good data analyst profile (8 years) with direct banking finance experience: ESG regulatory reporting for BCE (GAR, Pilier 3, SPIF/SLL) over 4 years at a major French bank, ALM Treasury data flows (2.5 years at a major French CIB). Alteryx Core Certificate 2026, Dataiku Core Designer 2025, M2 Statistics. Score penalised by parcours fragmentation: several short missions (6 months BNP CIB, 8 months retail, 4 months research). Competitive TJM for the level.'
+      : 'Bon profil data analyst (8 ans) avec expérience finance bancaire directe : reporting réglementaire ESG pour la BCE (GAR, Pilier 3, SPIF/SLL) sur 4 ans dans une grande banque française, flux de données ALM Trésorerie (2,5 ans dans une grande banque CIB). Alteryx Core Certificate 2026, Dataiku Core Designer 2025, M2 Statistiques. Score pénalisé par la fragmentation du parcours : plusieurs missions courtes (6 mois BNP CIB, 8 mois retail, 4 mois recherche). TJM compétitif pour le niveau.',
+    title: isEn ? 'Data Analyst · ESG & Banking Regulatory' : 'Data Analyst · ESG & Réglementaire Bancaire',
+    tjm: '545 €/j',
+    body: isEn ? `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Experience</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2026 — Now</div><div><div class="exp-role">Data Analyst — Research</div><div class="exp-org">Research & Strategy Group</div><div class="exp-desc">Strategic analysis on European banking sector transformation (open innovation, regulation, digitalisation). Quantitative modelling: XGBoost, SHAP, ADASYN, open banking data sharing prediction. Academic deliverable.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2022 — 2026</div><div><div class="exp-role">Data Consultant — Alteryx</div><div class="exp-org">Major French Universal Bank — ESG Team</div><div class="exp-desc">Production of ESG regulatory indicators for the ECB (GAR, Pilier 3, SPIF/SLL). Alteryx workflows for multi-source data preparation, quality controls and automation. Pilier 3 T2 2024 publication. Migration from legacy platform to new regulatory system.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2019 — 2021</div><div><div class="exp-role">Data Consultant — Alteryx / Tableau</div><div class="exp-org">Major French CIB — ALM Treasury</div><div class="exp-desc">Referent for Alteryx tool. Data flow improvement (BNFR, DDA by currency), liquidity dashboard construction, migration Business Objects BI4, trading report. Alteryx, Business Object, PowerBI, Tableau, SQL.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2021</div><div><div class="exp-role">Data Consultant — Power BI</div><div class="exp-org">Major French CIB — Performance Management Global ITO</div><div class="exp-desc">Cost monitoring for CIB IT teams (12,000+ people, ~€1.7bn budget). KPI monthly closing analysis, budget control, reporting for top management. Power BI, Perseus, Excel.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Skills & Certifications</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Alteryx Core Certificate (2026)</span><span class="s-tag hl">Dataiku Core Designer (2025)</span><span class="s-tag hl">GAR · Pilier 3 · SPIF/SLL · BCE</span><span class="s-tag">Python · SQL · VBA</span><span class="s-tag">Power BI · Tableau · Business Object</span><span class="s-tag">ALM Trésorerie · ESG · RGPD</span><span class="s-tag">M2 Statistiques · Versailles</span></div></div>`
+    : `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Parcours</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2026 — Auj.</div><div><div class="exp-role">Data Analyst — Recherche</div><div class="exp-org">Groupe Recherche & Stratégie</div><div class="exp-desc">Analyse stratégique sur la transformation du secteur bancaire européen (open innovation, réglementation, digitalisation). Modélisation quantitative : XGBoost, SHAP, ADASYN, prédiction du partage de données open banking. Livrable académique.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2022 — 2026</div><div><div class="exp-role">Consultante Data — Alteryx</div><div class="exp-org">Grande Banque Universelle Française — Équipe ESG</div><div class="exp-desc">Production des indicateurs réglementaires ESG pour la BCE (GAR, Pilier 3, SPIF/SLL). Workflows Alteryx pour préparation multi-sources, contrôles qualité et automatisation. Publication Pilier 3 T2 2024. Migration de la plateforme héritée vers le nouveau système réglementaire.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2019 — 2021</div><div><div class="exp-role">Consultante Data — Alteryx / Tableau</div><div class="exp-org">Grande Banque CIB Française — ALM Trésorerie</div><div class="exp-desc">Référente outil Alteryx. Amélioration des flux de données (BNFR, DDA par currency), construction liquidity dashboard, migration Business Objects BI4, report analyse trading. Alteryx, Business Object, PowerBI, Tableau, SQL.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2021</div><div><div class="exp-role">Consultante Data — Power BI</div><div class="exp-org">Grande Banque CIB Française — Performance Management ITO</div><div class="exp-desc">Suivi des coûts IT des équipes CIB (12 000+ personnes, ~1,7 Mds€ de budget). Analyse KPI closing mensuel, contrôle budgétaire, reporting top management. Power BI, Perseus, Excel.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences & Certifications</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Alteryx Core Certificate (2026)</span><span class="s-tag hl">Dataiku Core Designer (2025)</span><span class="s-tag hl">GAR · Pilier 3 · SPIF/SLL · BCE</span><span class="s-tag">Python · SQL · VBA</span><span class="s-tag">Power BI · Tableau · Business Object</span><span class="s-tag">ALM Trésorerie · ESG · RGPD</span><span class="s-tag">M2 Statistiques · Versailles</span></div></div>`
+  },
   ba_ft036: {
     ref:'FT · 036', score:92, scoreGrad:'#d4a820,#b8860b',
     scoreNote: isEn
@@ -5817,7 +5888,8 @@ const idToRef = {
   dev_ft033: 'ft-033',
   dev_ft034: 'ft-034',
   ba_ft035: 'ft-035',
-  ba_ft036: 'ft-036'
+  ba_ft036: 'ft-036',
+  data_ft037: 'ft-037'
 };
 
 const refToId = Object.fromEntries(Object.entries(idToRef).map(function(kv) { return [kv[1], kv[0]]; }));
