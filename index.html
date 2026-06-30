@@ -1,4 +1,4 @@
-<!-- NISTARIA v3.4 - 2026-06-11 | Prochain profil réel : FT-038 | Prochain ID modal : ft-038 -->
+<!-- NISTARIA v3.6 - 2026-06-30 | Prochain profil réel : FT-039 | Prochain ID modal : ft-039 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -1156,6 +1156,46 @@ footer {
   overflow: hidden;
 }
 
+/* ── BRIDGE 5 COLONNES ── */
+.bridge-wrap-5 {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr 1fr 0.7fr 1fr;
+  gap: 0;
+  border: 1px solid var(--line2);
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+.bridge-side5 {
+  padding: 32px 24px;
+  border-right: 1px solid var(--line2);
+  position: relative;
+}
+.bridge-side5-center {
+  background: rgba(255,255,255,0.02);
+  border-left: 1px solid var(--line2);
+}
+.bridge-side5-last {
+  border-right: none;
+}
+.bridge-center5 {
+  padding: 32px 20px;
+  background: var(--surface2);
+  border-right: 1px solid var(--line2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.bridge-center5-right {
+  background: var(--surface2);
+}
+@media (max-width: 1200px) {
+  .bridge-wrap-5 { grid-template-columns: 1fr; }
+  .bridge-side5 { border-right: none; border-bottom: 1px solid var(--line2); }
+  .bridge-center5 { border-right: none; border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); }
+  .bridge-side5-last { border-bottom: none; }
+}
+
 .bridge-side {
   padding: 40px 36px;
   border-right: 1px solid var(--line2);
@@ -2182,6 +2222,30 @@ footer {
 
 .share-pill-icon { font-size: 11px; }
 
+/* ── SEEKING ESN BADGE ── */
+.badge-seeking {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--teal);
+  color: #0a1628;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.seeking-btn {
+  border-color: var(--teal) !important;
+  color: var(--teal) !important;
+}
+.seeking-btn.active {
+  background: var(--teal) !important;
+  color: #0a1628 !important;
+}
+
 /* ── SCORE BADGE ── */
 .score-badge {
   position: absolute;
@@ -2551,6 +2615,7 @@ footer {
   <ul class="nav-links">
     <li><a href="#" data-i18n="nav_profiles">Profils</a></li>
     <li><a href="#how-it-works" data-i18n="nav_how">Comment ça marche</a></li>
+    <li><a href="#consultants" data-i18n="nav_consultants">Consultants</a></li>
     <li><a href="#esn" data-i18n="nav_esn">ESN & Cabinets</a></li>
   </ul>
   <div class="lang-switcher">
@@ -2622,6 +2687,7 @@ footer {
     <button class="f-btn" onclick="filterCat('dev',this)" data-i18n="filter_dev">Dev & Cloud</button>
     <button class="f-btn" onclick="filterCat('data',this)" data-i18n="filter_data">Data</button>
     <button class="f-btn ia-btn" onclick="filterCat('ai',this)" data-i18n="filter_ai">◈ IA</button>
+    <button class="f-btn seeking-btn" onclick="filterSeeking(this)" data-i18n="filter_seeking">Recherche ESN</button>
   </div>
   <div class="filter-group">
     <span class="filter-group-label" data-i18n="filter_group_sector">Secteur</span>
@@ -2957,7 +3023,56 @@ footer {
       </div>
     </div>
 
-    <!-- Card FT-037 : Data Analyst · ESG & Réglementaire Bancaire — Delane SI -->
+    <!-- Card FT-038 : Lead BA · FX & Treasury · Consultant seeking ESN -->
+    <div class="card-wrap" data-cat="ba" data-score="87" data-sec="finance" data-pub="2026-06-30" data-exp="2026-08-30" data-seeking="esn"
+      data-locations='[{"city":"paris","tjm":0},{"city":"remote","tjm":0}]'
+      onclick="openModal('ba_ft038')">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="score-badge" style="background:linear-gradient(135deg,#2e7d32,#43a047)">87</div>
+          <div class="cf-top">
+            <div class="cf-cat">Lead Business Analyst</div>
+            <div class="cf-status-col">
+              <div class="cf-dispo"><div class="dispo-dot"></div><span>-1 mois</span></div>
+              <div class="cf-expiry"><div class="expiry-dot"></div><span class="expiry-dynamic"></span></div>
+            </div>
+          </div>
+          <div class="cf-mid">
+            <div class="cf-title">Lead BA · FX & Global Markets</div>
+            <div class="cf-exp"><strong>11+ <span data-i18n="years">ans</span></strong> · Kondor+ · Murex · Treasury</div>
+          </div>
+          <div class="cf-bot">
+            <div class="cf-tags">
+              <span class="cf-tag">Kondor+ · Murex</span>
+              <span class="cf-tag">FX · MiFID2</span>
+              <span class="cf-tag">CSM · CSPO</span>
+            </div>
+            <div class="cf-hint" data-i18n="hint">Voir ↻</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="cb-top">
+            <div><div class="cb-title">Lead BA FX & Markets</div><div class="cb-ref">Réf. FT-038</div></div>
+            <div class="cb-tjm"><div class="cb-tjm-label">TJM</div><div class="cb-tjm-val">—</div></div>
+          </div>
+          <div class="cb-divider"></div>
+          <div class="cb-skills">
+            <div class="cb-skill">Kondor+ · Murex FO/STP · Bloomberg</div>
+            <div class="cb-skill">FX · MM · Fixed Income · Derivatives OTC</div>
+            <div class="cb-skill">MiFID2 · SFTR · CFTC · ISO · IBOR</div>
+            <div class="cb-skill">CSM · CSPO · SQL · FIX · Paris / Remote</div>
+          </div>
+          <div class="cb-foot">
+            <div class="cb-meta">
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="dispo_label">Dispo</div><div class="cb-meta-val">Sous 1 mois</div></div>
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="mode_label">Mode</div><div class="cb-meta-val">Forfait / CDI</div></div>
+            </div>
+            <button class="cb-cta" onclick="openModal('ba_ft038')">Profil →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Card FT-037 : Data Analyst · ESG & Réglementaire Bancaire — Delane SI -->
     <div class="card-wrap" data-cat="data" data-score="78" data-sec="finance" data-pub="2026-06-11" data-exp="2026-08-11" data-esn="NIS-E-WVV5"
       data-locations='[{"city":"paris","tjm":545}]'
       onclick="openModal('data_ft037')">
@@ -3624,17 +3739,65 @@ footer {
     </div>
   </div>
 
-  <div class="bridge-wrap">
+  <!-- BRIDGE UNIFIÉ 5 COLONNES : Consultant → Nistaria → ESN → Nistaria → Recruteur -->
+  <div class="bridge-wrap-5">
 
-    <!-- SELL SIDE -->
-    <div class="bridge-side">
-      <div class="bridge-side-icon">◈</div>
+    <!-- BLOC 1 : CONSULTANT / INDÉPENDANT -->
+    <div class="bridge-side5">
+      <div class="bridge-side-icon" style="color:var(--teal)">◈</div>
+      <div class="bridge-side-title" data-i18n="bridge_consultant_title">Consultant / Indépendant</div>
+      <div class="bridge-side-sub" data-i18n="bridge_consultant_sub">Freelance</div>
+      <div class="bridge-steps">
+        <div class="bridge-step">
+          <div class="bridge-step-num" style="color:var(--teal)">01</div>
+          <div class="bridge-step-text" data-i18n="bridge_consultant_1">Envoie son CV par email — <a href="#" onclick="openConsultantMail();return false;" style="color:var(--teal);text-decoration:underline">contact@nistaria.com</a></div>
+        </div>
+        <div class="bridge-step">
+          <div class="bridge-step-num" style="color:var(--teal)">02</div>
+          <div class="bridge-step-text" data-i18n="bridge_consultant_2">Son profil est anonymisé et publié</div>
+        </div>
+        <div class="bridge-step">
+          <div class="bridge-step-num" style="color:var(--teal)">03</div>
+          <div class="bridge-step-text" data-i18n="bridge_consultant_3">Est mis en relation avec les ESN partenaires</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOC 2 : NISTARIA (pont consultant → ESN) -->
+    <div class="bridge-center5 bridge-center5-left">
+      <div class="bridge-logo">Nistaria</div>
+      <div class="bridge-line">
+        <div class="bridge-dot bridge-dot-1"></div>
+        <div class="bridge-dot bridge-dot-2"></div>
+        <div class="bridge-dot bridge-dot-3"></div>
+        <div class="bridge-connector"></div>
+      </div>
+      <div class="bridge-promise" style="font-size:0.7rem" data-i18n="bridge_consultant_promise">Met en relation les talents avec les ESN</div>
+      <div class="bridge-steps bridge-center-steps">
+        <div class="bridge-step center-step">
+          <div class="bridge-step-num gold">I</div>
+          <div class="bridge-step-text" data-i18n="bridge_center_1">Retraite et anonymise le profil</div>
+        </div>
+        <div class="bridge-step center-step">
+          <div class="bridge-step-num gold">II</div>
+          <div class="bridge-step-text" data-i18n="bridge_center_2">Publie sur la plateforme</div>
+        </div>
+        <div class="bridge-step center-step">
+          <div class="bridge-step-num gold">III</div>
+          <div class="bridge-step-text" data-i18n="bridge_consultant_center_3">Notifie les ESN partenaires</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOC 3 : ESN PARTENAIRE (pivot central) -->
+    <div class="bridge-side5 bridge-side5-center">
+      <div class="bridge-side-icon" style="color:var(--teal)">◈</div>
       <div class="bridge-side-title" data-i18n="bridge_sell_title">Commercial / ESN</div>
       <div class="bridge-side-sub" data-i18n="bridge_sell_sub">Sell Side</div>
       <div class="bridge-steps">
         <div class="bridge-step">
           <div class="bridge-step-num">01</div>
-          <div class="bridge-step-text" data-i18n="bridge_sell_1">Envoie le CV par email — <a href="mailto:contact@nistaria.com?subject=D%C3%A9p%C3%B4t%20de%20profil%20Nistaria&body=Bonjour%2C%0A%0AJe%20souhaite%20d%C3%A9poser%20un%20profil%20sur%20Nistaria.%0A%0A%E2%80%94%20Intitul%C3%A9%20du%20poste%20%3A%0A%E2%80%94%20Ann%C3%A9es%20d%27exp%C3%A9rience%20%3A%0A%E2%80%94%20Disponibilit%C3%A9%20%3A%20%28Imm%C3%A9diate%20/%20Sous%201%20mois%20/%20Sous%202%20mois%20/%20Sous%203%20mois%29%0A%E2%80%94%20Mode%20%3A%20%28R%C3%A9gie%20/%20Forfait%20/%20CDI%20/%20Alternance%20/%20Stage%29%0A%E2%80%94%20Localisation%28s%29%20%26%20TJM%20%3A%20%28ex%20%3A%20Paris%20850%E2%82%AC/j%20%C2%B7%20Remote%20780%E2%82%AC/j%29%0A%E2%80%94%20Secteurs%20cibles%20%3A%0A%E2%80%94%20Comp%C3%A9tences%20cl%C3%A9s%20%3A%0A%0AJe%20joins%20le%20CV%20en%20pi%C3%A8ce%20jointe.%0A%0ACordialement%2C" style="color:var(--teal);text-decoration:underline">contact@nistaria.com</a></div>
+          <div class="bridge-step-text" data-i18n="bridge_sell_1">Envoie le CV par email — <a href="#" onclick="openSubmitMail();return false;" style="color:var(--teal);text-decoration:underline">contact@nistaria.com</a></div>
         </div>
         <div class="bridge-step">
           <div class="bridge-step-num">02</div>
@@ -3647,8 +3810,8 @@ footer {
       </div>
     </div>
 
-    <!-- BRIDGE CENTER -->
-    <div class="bridge-center">
+    <!-- BLOC 4 : NISTARIA (pont ESN → Recruteur) -->
+    <div class="bridge-center5 bridge-center5-right">
       <div class="bridge-logo">Nistaria</div>
       <div class="bridge-line">
         <div class="bridge-dot bridge-dot-1"></div>
@@ -3656,7 +3819,7 @@ footer {
         <div class="bridge-dot bridge-dot-3"></div>
         <div class="bridge-connector"></div>
       </div>
-      <div class="bridge-promise" data-i18n="bridge_promise">La splendeur de ce que le marché ne voit pas</div>
+      <div class="bridge-promise" style="font-size:0.7rem" data-i18n="bridge_promise">La splendeur de ce que le marché ne voit pas</div>
       <div class="bridge-steps bridge-center-steps">
         <div class="bridge-step center-step">
           <div class="bridge-step-num gold">I</div>
@@ -3673,8 +3836,8 @@ footer {
       </div>
     </div>
 
-    <!-- BUY SIDE -->
-    <div class="bridge-side bridge-side-right">
+    <!-- BLOC 5 : INSTITUTION / RECRUTEUR -->
+    <div class="bridge-side5 bridge-side5-last">
       <div class="bridge-side-icon">◈</div>
       <div class="bridge-side-title" data-i18n="bridge_buy_title">Institution / Recruteur</div>
       <div class="bridge-side-sub" data-i18n="bridge_buy_sub">Buy Side</div>
@@ -3695,10 +3858,49 @@ footer {
     </div>
 
   </div>
+
 </section>
 
 
 <!-- ESN SECTION -->
+<section class="section" id="consultants">
+  <div class="section-head">
+    <div>
+      <div class="section-label" data-i18n="consultants_label">Consultants Indépendants</div>
+      <div class="section-title" data-i18n="consultants_title">Vous êtes consultant indépendant ?</div>
+    </div>
+  </div>
+
+  <div class="esn-intro">
+    <p data-i18n="consultants_sub">Déposez votre profil et nous vous mettons en relation avec les ESN qui recrutent ou proposent du portage salarial.</p>
+  </div>
+
+  <div class="esn-cards" style="justify-content:center;max-width:700px;margin:0 auto">
+    <div class="esn-card esn-card-featured" style="border-color:var(--teal)">
+      <div class="esn-card-featured-badge" style="background:var(--teal);color:#0a1628" data-i18n="consultants_label">Consultants Indépendants</div>
+      <div class="esn-card-title" data-i18n="consultants_title">Déposez votre profil gratuitement</div>
+      <div class="esn-card-desc" data-i18n="consultants_sub">Nistaria anonymise votre profil, lui attribue un score et vous met en relation avec les ESN partenaires qui recrutent ou proposent du portage.</div>
+      <ul class="esn-features">
+        <li data-i18n="esn_feat_anon">✓ Profil anonymisé</li>
+        <li data-i18n="esn_feat_score">✓ Score attribué automatiquement</li>
+        <li>✓ <span data-i18n="consultants_esn_match">Mise en relation avec les ESN partenaires</span></li>
+        <li>✓ <span data-i18n="consultants_free">Accès gratuit pendant la période de lancement</span></li>
+      </ul>
+      <button type="button" class="nav-btn-teal" style="margin-top:1.5rem;width:100%"
+        onclick="openConsultantMail()" data-i18n="consultants_cta">Déposer mon profil</button>
+    </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;width:100%">
+      <a href="?seeking=esn" style="display:inline-block;color:var(--teal);font-size:0.85rem;font-weight:600;letter-spacing:0.03em;border:1px solid var(--teal);padding:10px 24px;border-radius:6px;text-decoration:none;transition:all 0.2s"
+        onmouseover="this.style.background='var(--teal)';this.style.color='#0a1628'"
+        onmouseout="this.style.background='transparent';this.style.color='var(--teal)'"
+        data-i18n="consultants_seeking_link">Voir les consultants en recherche d'ESN →</a>
+    </div>
+
+</section>
+
 <section class="section" id="esn">
   <div class="section-head">
     <div>
@@ -3757,6 +3959,7 @@ footer {
         <div class="footer-col-title" data-i18n="footer_platform">Plateforme</div>
         <a href="#" data-i18n="nav_profiles">Profils</a>
         <a href="#how-it-works" data-i18n="footer_how">Comment ça marche</a>
+        <a href="#consultants" data-i18n="footer_consultants">Consultants</a>
         <a href="#esn" data-i18n="footer_esn">Accès ESN</a>
       </div>
       <div class="footer-col">
@@ -4387,8 +4590,30 @@ function resetLocationBuilder() {
 var translations = {
   fr: {
     // Navigation
-    nav_profiles: 'Profils', nav_how: 'Comment ça marche', nav_esn: 'ESN & Cabinets',
+    nav_profiles: 'Profils', nav_how: 'Comment ça marche', nav_consultants: 'Consultants', nav_esn: 'ESN & Cabinets',
     nav_cta: 'Je cherche un profil', nav_submit: 'Déposer un profil',
+    footer_consultants: 'Consultants',
+    badge_seeking_esn: 'Recherche ESN',
+    consultants_label: 'Consultants Indépendants',
+    consultants_title: 'Vous êtes consultant indépendant ?',
+    consultants_sub: 'Déposez votre profil et nous vous mettons en relation avec les ESN qui recrutent ou proposent du portage salarial.',
+    consultants_cta: 'Déposer mon profil',
+    consultants_esn_match: 'Mise en relation avec les ESN partenaires',
+    consultants_free: 'Accès gratuit pendant la période de lancement',
+    consultants_seeking_link: 'Voir les consultants en recherche d\'ESN →',
+    bridge_consultant_title: 'Consultant / Indépendant',
+    bridge_consultant_sub: 'Freelance',
+    bridge_consultant_1: 'Envoie son CV et ses infos par email — <a href="#" onclick="openConsultantMail();return false;" style="color:var(--teal);text-decoration:underline">contact@nistaria.com</a>',
+    bridge_consultant_2: 'Son profil est anonymisé et publié',
+    bridge_consultant_3: 'Est mis en relation avec les ESN partenaires',
+    bridge_consultant_label: 'Consultant indépendant',
+    bridge_consultant_promise: 'Met en relation les talents avec les ESN',
+    bridge_consultant_center_3: 'Notifie les ESN partenaires',
+    bridge_esn_title: 'ESN Partenaire',
+    bridge_esn_sub: 'Recrutement / Portage',
+    bridge_esn_1: 'Consulte les profils en recherche d\'ESN',
+    bridge_esn_2: 'Contacte Nistaria pour obtenir l\'introduction',
+    bridge_esn_3: 'Recrute ou propose une solution de portage',
     // Hero
     hero_badge: 'Mise en relation exclusive · Talents IT & IA',
     hero_line1: 'Les talents', hero_line2: 'que le <span class="glow">marché</span>', hero_line3: 'ne voit pas.',
@@ -4397,7 +4622,7 @@ var translations = {
     metric_exp: `Ans d'expertise secteur`, metric_resp: 'Réponse garantie',
     // Section profils
     section_label: 'Catalogue', section_title: 'Profils disponibles',
-    filter_all: 'Tous', filter_pm: 'Project Manager', filter_ba: 'Business Analyst',
+    filter_all: 'Tous', filter_pm: 'Project Manager', filter_ba: 'Business Analyst', filter_seeking: 'Recherche ESN',
     filter_data: 'Data Scientist', filter_ai: '◈ IA', filter_pmo: 'PMO Senior', filter_po: 'Product Owner',
     filter_group_profile: 'Profil', filter_group_sector: 'Secteur',
     sec_asset: 'Asset Management', sec_assurance: 'Assurance',
@@ -4428,7 +4653,7 @@ var translations = {
     // How it works
     how_label: 'Process', how_title: 'Comment ça marche',
     bridge_sell_title: 'Commercial / ESN', bridge_sell_sub: 'Sell Side',
-    bridge_sell_1: 'Envoie le CV par email — <a href="mailto:contact@nistaria.com?subject=D%C3%A9p%C3%B4t%20de%20profil%20Nistaria&body=Bonjour%2C%0A%0AJe%20souhaite%20d%C3%A9poser%20un%20profil%20sur%20Nistaria.%0A%0A%E2%80%94%20Intitul%C3%A9%20du%20poste%20%3A%0A%E2%80%94%20Ann%C3%A9es%20d%27exp%C3%A9rience%20%3A%0A%E2%80%94%20Disponibilit%C3%A9%20%3A%20%28Imm%C3%A9diate%20/%20Sous%201%20mois%20/%20Sous%202%20mois%20/%20Sous%203%20mois%29%0A%E2%80%94%20Mode%20%3A%20%28R%C3%A9gie%20/%20Forfait%20/%20CDI%20/%20Alternance%20/%20Stage%29%0A%E2%80%94%20Localisation%28s%29%20%26%20TJM%20%3A%20%28ex%20%3A%20Paris%20850%E2%82%AC/j%20%C2%B7%20Remote%20780%E2%82%AC/j%29%0A%E2%80%94%20Secteurs%20cibles%20%3A%0A%E2%80%94%20Comp%C3%A9tences%20cl%C3%A9s%20%3A%0A%0AJe%20joins%20le%20CV%20en%20pi%C3%A8ce%20jointe.%0A%0ACordialement%2C" style="color:var(--teal);text-decoration:underline">contact@nistaria.com</a>',
+    bridge_sell_1: 'Envoie le CV par email — <a href="#" onclick="openSubmitMail();return false;" style="color:var(--teal);text-decoration:underline">contact@nistaria.com</a>',
     bridge_sell_2: 'Son profil est anonymisé et publié sur la plateforme',
     bridge_sell_3: 'Reçoit les coordonnées du recruteur intéressé',
     bridge_center_1: 'Retraite et anonymise le profil',
@@ -4518,8 +4743,30 @@ var translations = {
   },
   en: {
     // Navigation
-    nav_profiles: 'Profiles', nav_how: 'How it works', nav_esn: 'ESN & Firms',
+    nav_profiles: 'Profiles', nav_how: 'How it works', nav_consultants: 'Consultants', nav_esn: 'ESN & Firms',
     nav_cta: 'Find a profile', nav_submit: 'Submit a profile',
+    footer_consultants: 'Consultants',
+    badge_seeking_esn: 'Looking for ESN',
+    consultants_label: 'Independent Consultants',
+    consultants_title: 'Are you an independent consultant?',
+    consultants_sub: 'Submit your profile and we will connect you with ESNs looking to recruit or offer umbrella company arrangements.',
+    consultants_cta: 'Submit my profile',
+    consultants_esn_match: 'Connected with partner ESNs',
+    consultants_free: 'Free access during the launch period',
+    consultants_seeking_link: 'View consultants looking for an ESN →',
+    bridge_consultant_title: 'Consultant / Independent',
+    bridge_consultant_sub: 'Freelance',
+    bridge_consultant_1: 'Sends CV and info by email — <a href="#" onclick="openConsultantMail();return false;" style="color:var(--teal);text-decoration:underline">contact@nistaria.com</a>',
+    bridge_consultant_2: 'Profile is anonymised and published',
+    bridge_consultant_3: 'Is connected with partner ESNs',
+    bridge_consultant_label: 'Independent Consultant',
+    bridge_consultant_promise: 'Connects talent with ESNs',
+    bridge_consultant_center_3: 'Notifies partner ESNs',
+    bridge_esn_title: 'Partner ESN',
+    bridge_esn_sub: 'Recruitment / Umbrella',
+    bridge_esn_1: 'Browses profiles looking for an ESN',
+    bridge_esn_2: 'Contacts Nistaria to get the introduction',
+    bridge_esn_3: 'Recruits or offers an umbrella company arrangement',
     // Hero
     hero_badge: 'Exclusive matching · IT & AI Talent',
     hero_line1: 'The talent', hero_line2: 'the <span class="glow">market</span>', hero_line3: "doesn't see.",
@@ -4528,7 +4775,7 @@ var translations = {
     metric_exp: 'Years of sector expertise', metric_resp: 'Guaranteed response',
     // Section profiles
     section_label: 'Catalogue', section_title: 'Available profiles',
-    filter_all: 'All', filter_pm: 'Project Manager', filter_ba: 'Business Analyst',
+    filter_all: 'All', filter_pm: 'Project Manager', filter_ba: 'Business Analyst', filter_seeking: 'Looking for ESN',
     filter_data: 'Data Scientist', filter_ai: '◈ AI', filter_pmo: 'PMO Senior', filter_po: 'Product Owner',
     filter_group_profile: 'Profile', filter_group_sector: 'Sector',
     sec_asset: 'Asset Management', sec_assurance: 'Insurance',
@@ -4559,7 +4806,7 @@ var translations = {
     // How it works
     how_label: 'Process', how_title: 'How it works',
     bridge_sell_title: 'Commercial / ESN', bridge_sell_sub: 'Sell Side',
-    bridge_sell_1: 'Send CV by email — <a href="mailto:contact@nistaria.com?subject=D%C3%A9p%C3%B4t%20de%20profil%20Nistaria&body=Bonjour%2C%0A%0AJe%20souhaite%20d%C3%A9poser%20un%20profil%20sur%20Nistaria.%0A%0A%E2%80%94%20Intitul%C3%A9%20du%20poste%20%3A%0A%E2%80%94%20Ann%C3%A9es%20d%27exp%C3%A9rience%20%3A%0A%E2%80%94%20Disponibilit%C3%A9%20%3A%20%28Imm%C3%A9diate%20/%20Sous%201%20mois%20/%20Sous%202%20mois%20/%20Sous%203%20mois%29%0A%E2%80%94%20Mode%20%3A%20%28R%C3%A9gie%20/%20Forfait%20/%20CDI%20/%20Alternance%20/%20Stage%29%0A%E2%80%94%20Localisation%28s%29%20%26%20TJM%20%3A%20%28ex%20%3A%20Paris%20850%E2%82%AC/j%20%C2%B7%20Remote%20780%E2%82%AC/j%29%0A%E2%80%94%20Secteurs%20cibles%20%3A%0A%E2%80%94%20Comp%C3%A9tences%20cl%C3%A9s%20%3A%0A%0AJe%20joins%20le%20CV%20en%20pi%C3%A8ce%20jointe.%0A%0ACordialement%2C" style="color:var(--teal);text-decoration:underline">contact@nistaria.com</a>',
+    bridge_sell_1: 'Send CV by email — <a href="#" onclick="openSubmitMail();return false;" style="color:var(--teal);text-decoration:underline">contact@nistaria.com</a>',
     bridge_sell_2: 'Profile is anonymised and published on the platform',
     bridge_sell_3: 'Receives recruiter contact details',
     bridge_center_1: 'Processes and anonymises the profile',
@@ -4655,7 +4902,7 @@ function setLang(lang, btn) {
   document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('active'); });
   if (btn) btn.classList.add('active');
   // Update all data-i18n elements
-  var htmlKeys = ['hero_line2', 'bridge_sell_1', 'bridge_buy_2']; // keys that contain HTML
+  var htmlKeys = ['hero_line2', 'bridge_sell_1', 'bridge_buy_2', 'bridge_consultant_1']; // keys that contain HTML
   document.querySelectorAll('[data-i18n]').forEach(function(el) {
     var key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
@@ -4680,6 +4927,31 @@ function setLang(lang, btn) {
 }
 
 // ── FILTERS ──
+function filterSeeking(btn) {
+  var isActive = btn && btn.classList.contains('active');
+  // Reset tous les filtres actifs
+  document.querySelectorAll('.f-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.querySelectorAll('.loc-btn').forEach(function(b) { b.classList.remove('active'); });
+  if (isActive) {
+    // Désactiver — tout afficher
+    filterCat(null, null);
+    return;
+  }
+  if (btn) btn.classList.add('active');
+  var count = 0;
+  document.querySelectorAll('.card-wrap').forEach(function(card) {
+    var seeking = card.getAttribute('data-seeking') || '';
+    if (seeking === 'esn') {
+      card.style.display = '';
+      count++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  var counter = document.getElementById('count');
+  if (counter) counter.textContent = count;
+}
+
 function filterCat(cat, btn) {
   currentCat = cat;
   document.querySelectorAll('.f-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -5175,6 +5447,26 @@ function getProfiles() {
     <div class="exp-row"><div class="exp-year">2014 — 2019</div><div><div class="exp-role">Ingénieur DevOps Senior</div><div class="exp-org">Groupe assurance — International</div><div class="exp-desc">Construction et automatisation des pipelines CI/CD pour 50+ applications. Infrastructure as Code Terraform. Gestion des incidents et culture post-mortem.</div></div></div>
     </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
     <div class="skills-cloud"><span class="s-tag hl">AWS (Solutions Architect Pro)</span><span class="s-tag hl">Terraform / IaC</span><span class="s-tag hl">Kubernetes / Helm</span><span class="s-tag hl">FinOps</span><span class="s-tag">Docker / CI-CD</span><span class="s-tag">Python / Bash</span><span class="s-tag">Vault / IAM</span><span class="s-tag">Datadog / Grafana</span></div></div>`
+  },
+  ba_ft038: {
+    ref:'FT · 038', score:87, scoreGrad:'#2e7d32,#43a047',
+    scoreNote: isEn
+      ? 'Strong Lead BA profile (11+ years) with deep FX and Global Markets expertise across major banking institutions (Middle East and India). Kondor+, Murex FO/STP, Bloomberg, electronic trading platforms (MaxxTrader, FXall, 360T). Multi-regulatory: MiFID2, SFTR, CFTC, IBOR, KRX. Certified CSM + CSPO. Currently relocating to Paris. Looking for an ESN. TJM not applicable (set by ESN).'
+      : 'Profil Lead BA solide (11+ ans) avec expertise FX et Global Markets approfondie dans de grands établissements bancaires (Moyen-Orient et Inde). Kondor+, Murex FO/STP, Bloomberg, plateformes de trading électronique (MaxxTrader, FXall, 360T). Multi-réglementations : MiFID2, SFTR, CFTC, IBOR, KRX. Certifié CSM + CSPO. En cours de relocalisation sur Paris. En recherche d’ESN. TJM non applicable (fixé par l’ESN).',
+    title: isEn ? 'Lead BA · FX & Global Markets' : 'Lead BA · FX & Global Markets',
+    tjm: '—',
+    body: isEn ? `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Experience</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2025 — Now</div><div><div class="exp-role">Lead Business Analyst — EFX & Global Markets</div><div class="exp-org">Major UAE Bank — Abu Dhabi</div><div class="exp-desc">Lead BA for EFX desk and Global Markets team. BRD writing, FX electronic trading platform rollout (MaxxTrader, FXall, 360T, Bloomberg), Murex FO/STP integration, UAT change management, L1/L2 support, DPRA/TRA assessment. FX streaming, RFQ rates, pricing curves, counterparty limits.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2023 — 2025</div><div><div class="exp-role">Business Analyst — Treasury & Investment Banking</div><div class="exp-org">Islamic Bank — Abu Dhabi</div><div class="exp-desc">Requirements gathering for WBG Treasury (FO/MO/BO). Reuters electronic trading implementation, LP onboarding (FXall), FX rates across all channels, IBOR transition (ITS ETHIX), LSEG FX upgrade. Agile + Waterfall, JIRA, MS Project EPM.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2017 — 2023</div><div><div class="exp-role">Assistant Manager — ALM Treasury & Money Markets</div><div class="exp-org">Major European CIB — Mumbai (Offshore)</div><div class="exp-desc">Murex integration (fixed income, MM, FX, derivatives). Regulatory reporting: SFTR, MiFID2, IBOR, CFTC. DVS/PNL validation. OIS/IRS/CIRS products (Markit Wire → Kondor MO → Murex BO). Lead BA for transformation and regulatory projects across EMEA, APAC, NAR.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Skills & Certifications</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Kondor+ · Murex FO/STP</span><span class="s-tag hl">FX · Money Market · Derivatives</span><span class="s-tag hl">MiFID2 · SFTR · CFTC</span><span class="s-tag">Bloomberg · FXall · 360T</span><span class="s-tag">SQL · FIX · XML · Unix</span><span class="s-tag">CSM · CSPO (Scrum Alliance)</span><span class="s-tag">Masters CS · Paris / Remote</span></div></div>`
+    : `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Parcours</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">2025 — Auj.</div><div><div class="exp-role">Lead Business Analyst — EFX & Global Markets</div><div class="exp-org">Grande Banque Emiratie — Abu Dhabi</div><div class="exp-desc">Lead BA pour le desk EFX et l\'équipe Global Markets. Rédaction BRD, rollout plateforme trading électronique FX (MaxxTrader, FXall, 360T, Bloomberg), intégration Murex FO/STP, gestion changements UAT, support L1/L2, évaluation DPRA/TRA. FX streaming, taux RFQ, courbes de pricing, limites contreparties.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2023 — 2025</div><div><div class="exp-role">Business Analyst — Treasury & Investment Banking</div><div class="exp-org">Banque Islamique — Abu Dhabi</div><div class="exp-desc">Recueil besoins WBG Treasury (FO/MO/BO). Implémentation trading électronique Reuters, onboarding LP (FXall), taux FX tous canaux, transition IBOR (ITS ETHIX), upgrade LSEG FX. Agile + Waterfall, JIRA, MS Project EPM.</div></div></div>
+    <div class="exp-row"><div class="exp-year">2017 — 2023</div><div><div class="exp-role">Assistant Manager — ALM Treasury & Money Markets</div><div class="exp-org">Grande Banque CIB Européenne — Mumbai (Offshore)</div><div class="exp-desc">Intégration Murex (fixed income, MM, FX, dérivés). Reporting réglementaire : SFTR, MiFID2, IBOR, CFTC. Validation DVS/PNL. Produits OIS/IRS/CIRS (Markit Wire → Kondor MO → Murex BO). Lead BA projets transformation et réglementaires EMEA, APAC, NAR.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences & Certifications</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag hl">Kondor+ · Murex FO/STP</span><span class="s-tag hl">FX · Money Market · Dérivés</span><span class="s-tag hl">MiFID2 · SFTR · CFTC</span><span class="s-tag">Bloomberg · FXall · 360T</span><span class="s-tag">SQL · FIX · XML · Unix</span><span class="s-tag">CSM · CSPO (Scrum Alliance)</span><span class="s-tag">Masters CS · Paris / Remote</span></div></div>`
   },
   data_ft037: {
     ref:'FT · 037', score:78, scoreGrad:'#1565c0,#1976d2',
@@ -5889,7 +6181,8 @@ const idToRef = {
   dev_ft034: 'ft-034',
   ba_ft035: 'ft-035',
   ba_ft036: 'ft-036',
-  data_ft037: 'ft-037'
+  data_ft037: 'ft-037',
+  ba_ft038: 'ft-038'
 };
 
 const refToId = Object.fromEntries(Object.entries(idToRef).map(function(kv) { return [kv[1], kv[0]]; }));
@@ -6142,6 +6435,17 @@ function initDynamicDates() {
     const isSubscribed = card.dataset.subscribed === '1';
     const diffDays = Math.round((expDate - today) / 86400000);
 
+    // ── SEEKING ESN BADGE ──
+    var seekingVal = card.getAttribute('data-seeking') || '';
+    if (seekingVal === 'esn' && !card.querySelector('.badge-seeking')) {
+      var seekBadge = document.createElement('div');
+      seekBadge.className = 'badge-seeking';
+      seekBadge.setAttribute('data-i18n', 'badge_seeking_esn');
+      seekBadge.textContent = isEn ? 'Looking for ESN' : 'Recherche ESN';
+      var cardFront = card.querySelector('.card-front');
+      if (cardFront) cardFront.appendChild(seekBadge);
+    }
+
     // ── EXPIRY DISPLAY ──
     const expirySpans = card.querySelectorAll('.expiry-dynamic');
     expirySpans.forEach(span => {
@@ -6217,6 +6521,16 @@ var currentEsn = null;
 function initEsnSpace() {
   var params = new URLSearchParams(window.location.search);
   var esnKey = params.get('esn');
+  var seekingKey = params.get('seeking');
+  if (seekingKey === 'esn') {
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.querySelector('.seeking-btn');
+      filterSeeking(btn);
+      // Scroll vers les cartes
+      var section = document.getElementById('profiles-section');
+      if (section) section.scrollIntoView({behavior:'smooth'});
+    });
+  }
   if (!esnKey || !/^NIS-E-[A-Z0-9]{4}$/.test(esnKey)) return;
 
   currentEsn = esnKey;
@@ -6278,13 +6592,22 @@ function openContactMail(ref, title) {
 }
 
 // ── MAILTO COMMERCIAL HEADER ──
+function openConsultantMail() {
+  var lang = currentLang || 'fr';
+  if (lang === 'en') {
+    window.location.href = 'mailto:contact@nistaria.com?subject=Profile%20submission%20Nistaria&body=Hello%2C%0A%0AI%20would%20like%20to%20submit%20my%20profile%20on%20Nistaria.%0A%0A%E2%80%94%20Status%3A%20Independent%20looking%20for%20ESN%0A%E2%80%94%20Job%20title%3A%0A%E2%80%94%20Years%20of%20experience%3A%0A%E2%80%94%20Availability%3A%20%28Immediate%20/%20Within%201%20month%20/%20Within%202%20months%20/%20Within%203%20months%29%0A%E2%80%94%20Mode%3A%20%28Contract%20/%20Umbrella%20company%29%0A%E2%80%94%20Location%28s%29%20%26%20Daily%20rate%3A%20%28e.g.%20Paris%20850%E2%82%AC/day%20%C2%B7%20Remote%20780%E2%82%AC/day%29%0A%E2%80%94%20Target%20sectors%3A%0A%E2%80%94%20Key%20skills%3A%0A%0AI%20attach%20the%20CV.%0A%0ABest%20regards%2C';
+  } else {
+    window.location.href = 'mailto:contact@nistaria.com?subject=D%C3%A9p%C3%B4t%20de%20profil%20Nistaria&body=Bonjour%2C%0A%0AJe%20souhaite%20d%C3%A9poser%20mon%20profil%20sur%20Nistaria.%0A%0A%E2%80%94%20Statut%20%3A%20Ind%C3%A9pendant%20en%20recherche%20d%27ESN%0A%E2%80%94%20Intitul%C3%A9%20du%20poste%20%3A%0A%E2%80%94%20Ann%C3%A9es%20d%27exp%C3%A9rience%20%3A%0A%E2%80%94%20Disponibilit%C3%A9%20%3A%20%28Imm%C3%A9diate%20/%20Sous%201%20mois%20/%20Sous%202%20mois%20/%20Sous%203%20mois%29%0A%E2%80%94%20Mode%20%3A%20%28R%C3%A9gie%20/%20Portage%29%0A%E2%80%94%20Localisation%28s%29%20%26%20TJM%20%3A%20%28ex%20%3A%20Paris%20850%E2%82%AC/j%20%C2%B7%20Remote%20780%E2%82%AC/j%29%0A%E2%80%94%20Secteurs%20cibles%20%3A%0A%E2%80%94%20Comp%C3%A9tences%20cl%C3%A9s%20%3A%0A%0AJe%20joins%20le%20CV%20en%20pi%C3%A8ce%20jointe.%0A%0ACordialement%2C';
+  }
+}
+
 function openSubmitMail() {
-  var isEn = currentLang === 'en';
-  var subj = isEn ? 'Profile submission Nistaria' : 'Dépôt de profil Nistaria';
-  var body = isEn
-    ? 'Hello,\n\nI would like to submit a profile on Nistaria.\n\n— Job title:\n— Years of experience:\n— Availability: (Immediate / Within 1 month / Within 2 months / Within 3 months)\n— Mode: (T&M / Fixed / Permanent / Apprenticeship / Internship)\n— Location(s) & daily rate: (e.g. Paris 850€/day · Remote 780€/day)\n— Target sectors:\n— Key skills:\n\nI will attach the CV.\n\nBest regards,'
-    : 'Bonjour,\n\nJe souhaite déposer un profil sur Nistaria.\n\n— Intitulé du poste :\n— Années d\'expérience :\n— Disponibilité : (Immédiate / Sous 1 mois / Sous 2 mois / Sous 3 mois)\n— Mode : (Régie / Forfait / CDI / Alternance / Stage)\n— Localisation(s) & TJM : (ex : Paris 850€/j · Remote 780€/j)\n— Secteurs cibles :\n— Compétences clés :\n\nJe joins le CV en pièce jointe.\n\nCordialement,';
-  window.location.href = 'mailto:contact@nistaria.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+  var lang = currentLang || 'fr';
+  if (lang === 'en') {
+    window.location.href = 'mailto:contact@nistaria.com?subject=Profile%20submission%20Nistaria&body=Hello%2C%0A%0AI%20would%20like%20to%20submit%20a%20profile%20on%20Nistaria.%0A%0A%E2%80%94%20Status%3A%20ESN%0A%E2%80%94%20Job%20title%3A%0A%E2%80%94%20Years%20of%20experience%3A%0A%E2%80%94%20Availability%3A%20%28Immediate%20/%20Within%201%20month%20/%20Within%202%20months%20/%20Within%203%20months%29%0A%E2%80%94%20Mode%3A%20%28Contract%20/%20Fixed%20price%29%0A%E2%80%94%20Location%28s%29%20%26%20Daily%20rate%3A%20%28e.g.%20Paris%20850%E2%82%AC/day%20%C2%B7%20Remote%20780%E2%82%AC/day%29%0A%E2%80%94%20Target%20sectors%3A%0A%E2%80%94%20Key%20skills%3A%0A%0AI%20attach%20the%20CV.%0A%0ABest%20regards%2C';
+  } else {
+    window.location.href = 'mailto:contact@nistaria.com?subject=D%C3%A9p%C3%B4t%20de%20profil%20Nistaria&body=Bonjour%2C%0A%0AJe%20souhaite%20d%C3%A9poser%20un%20profil%20sur%20Nistaria.%0A%0A%E2%80%94%20Statut%20%3A%20ESN%0A%E2%80%94%20Intitul%C3%A9%20du%20poste%20%3A%0A%E2%80%94%20Ann%C3%A9es%20d%27exp%C3%A9rience%20%3A%0A%E2%80%94%20Disponibilit%C3%A9%20%3A%20%28Imm%C3%A9diate%20/%20Sous%201%20mois%20/%20Sous%202%20mois%20/%20Sous%203%20mois%29%0A%E2%80%94%20Mode%20%3A%20%28R%C3%A9gie%20/%20Forfait%29%0A%E2%80%94%20Localisation%28s%29%20%26%20TJM%20%3A%20%28ex%20%3A%20Paris%20850%E2%82%AC/j%20%C2%B7%20Remote%20780%E2%82%AC/j%29%0A%E2%80%94%20Secteurs%20cibles%20%3A%0A%E2%80%94%20Comp%C3%A9tences%20cl%C3%A9s%20%3A%0A%0AJe%20joins%20le%20CV%20en%20pi%C3%A8ce%20jointe.%0A%0ACordialement%2C';
+  }
 }
 
 // ── MAILTO ESN PAR FORMULE ──
