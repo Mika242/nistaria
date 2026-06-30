@@ -3889,15 +3889,14 @@ footer {
       <button type="button" class="nav-btn-teal" style="margin-top:1.5rem;width:100%"
         onclick="openConsultantMail()" data-i18n="consultants_cta">Déposer mon profil</button>
     </div>
+  </div>
 
-    </div>
-
-    <div style="text-align:center;margin-top:2.5rem;width:100%">
-      <a href="?seeking=esn" style="display:inline-block;color:var(--teal);font-size:0.85rem;font-weight:600;letter-spacing:0.03em;border:1px solid var(--teal);padding:10px 24px;border-radius:6px;text-decoration:none;transition:all 0.2s"
-        onmouseover="this.style.background='var(--teal)';this.style.color='#0a1628'"
-        onmouseout="this.style.background='transparent';this.style.color='var(--teal)'"
-        data-i18n="consultants_seeking_link">Voir les consultants en recherche d'ESN →</a>
-    </div>
+  <div style="text-align:center;margin-top:2.5rem;width:100%">
+    <a href="?seeking=esn" style="display:inline-block;color:var(--teal);font-size:0.85rem;font-weight:600;letter-spacing:0.03em;border:1px solid var(--teal);padding:10px 24px;border-radius:6px;text-decoration:none;transition:all 0.2s"
+      onmouseover="this.style.background='var(--teal)';this.style.color='#0a1628'"
+      onmouseout="this.style.background='transparent';this.style.color='var(--teal)'"
+      data-i18n="consultants_seeking_link">Voir les consultants en recherche d'ESN →</a>
+  </div>
 
 </section>
 
@@ -6523,13 +6522,10 @@ function initEsnSpace() {
   var esnKey = params.get('esn');
   var seekingKey = params.get('seeking');
   if (seekingKey === 'esn') {
-    document.addEventListener('DOMContentLoaded', function() {
-      var btn = document.querySelector('.seeking-btn');
-      filterSeeking(btn);
-      // Scroll vers les cartes
-      var section = document.getElementById('profiles-section');
-      if (section) section.scrollIntoView({behavior:'smooth'});
-    });
+    var btn = document.querySelector('.seeking-btn');
+    filterSeeking(btn);
+    var section = document.getElementById('profiles-section');
+    if (section) section.scrollIntoView({behavior:'smooth'});
   }
   if (!esnKey || !/^NIS-E-[A-Z0-9]{4}$/.test(esnKey)) return;
 
