@@ -1,4 +1,4 @@
-<!-- NISTARIA STAGING - 2026-07-05 | Prochain profil réel : FT-048 | Prochain ID modal : ft-048 -->
+<!-- NISTARIA STAGING - 2026-11-02 | Prochain profil réel : FT-049 | Prochain ID modal : ft-049 -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2845,6 +2845,54 @@ footer {
     <!-- Card FT-AI-002 : LLM Engineer -->
 
     <!-- Card FT-AI-004 : AI Risk Manager -->
+        <!-- Card FT-048 : Data Analyst · BI & Reporting -->
+    <div class="card-wrap" data-cat="data" data-score="55" data-sec="finance" data-pub="2026-11-02" data-exp="2027-01-01" data-seeking="esn"
+      data-locations='[{"city":"paris","tjm":0},{"city":"remote","tjm":0}]'
+      onclick="openModal('data_ft048')">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <div class="score-badge" style="background:linear-gradient(135deg,#9b72cf,#7c3aed)">55</div>
+          <div class="cf-top">
+            <div class="cf-cat">Data Analyst</div>
+            <div class="cf-status-col">
+              <div class="cf-dispo"><div class="dispo-dot"></div><span data-i18n="dispo_immediate">Immédiate</span></div>
+              <div class="cf-expiry"><div class="expiry-dot"></div><span class="expiry-dynamic"></span></div>
+            </div>
+          </div>
+          <div class="cf-mid">
+            <div class="cf-title">Data Analyst · BI &amp; Reporting</div>
+          </div>
+          <div class="cf-bot">
+            <div class="cf-tags">
+              <span class="cf-tag">SQL · PostgreSQL</span>
+              <span class="cf-tag">Python · Pandas</span>
+              <span class="cf-tag">Tableau · KPI</span>
+            </div>
+            <div class="cf-hint" data-i18n="hint">Voir ↻</div>
+          </div>
+        </div>
+        <div class="card-face card-back">
+          <div class="cb-top">
+            <div><div class="cb-title">Data Analyst · BI &amp; Reporting</div><div class="cb-ref">Réf. FT-048</div></div>
+            <div class="cb-tjm"><div class="cb-tjm-label">TJM</div><div class="cb-tjm-val">—</div></div>
+          </div>
+          <div class="cb-divider"></div>
+          <div class="cb-skills">
+            <div class="cb-skill">SQL · PostgreSQL · CTE · Window functions</div>
+            <div class="cb-skill">Python · Pandas · NumPy · Matplotlib</div>
+            <div class="cb-skill">Tableau · Dashboards · KPI reporting</div>
+            <div class="cb-skill">ETL · Data modeling · A/B testing · Paris / Remote</div>
+          </div>
+          <div class="cb-foot">
+            <div class="cb-meta">
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="dispo_label">Dispo</div><div class="cb-meta-val">Immédiate</div></div>
+              <div class="cb-meta-item"><div class="cb-meta-label" data-i18n="mode_label">Mode</div><div class="cb-meta-val">Régie / Forfait</div></div>
+            </div>
+            <button class="cb-cta" onclick="openModal('data_ft048')">Profil →</button>
+          </div>
+        </div>
+      </div>
+    </div>
         <!-- Card FT-019 : PM Senior Transformation -->
     <div class="card-wrap" data-cat="pm" data-score="86" data-sec="finance" data-pub="2026-04-16" data-exp="2026-06-04" data-locations='[{"city":"paris","tjm":900}]' onclick="openModal('pm_new1')">
       <div class="card-inner">
@@ -5114,6 +5162,26 @@ function getProfiles() {
     </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
     <div class="skills-cloud"><span class="s-tag hl">Java 17 / Spring Boot</span><span class="s-tag hl">Apache Kafka</span><span class="s-tag hl">CQRS / Event Sourcing</span><span class="s-tag">Angular / TypeScript</span><span class="s-tag">Microservices</span><span class="s-tag">Docker / Kubernetes</span><span class="s-tag">PostgreSQL / Oracle</span><span class="s-tag">Liquibase / Flyway</span><span class="s-tag">JUnit5 / Mockito</span><span class="s-tag">GitLab CI/CD</span><span class="s-tag">Anglais courant</span></div></div>`
   },
+  data_ft048: {
+    ref:'FT · 048', score:55, scoreGrad:'#9b72cf,#7c3aed',
+    scoreNote: isEn
+      ? 'Junior Data Analyst profile (about 3 years) focused on BI and reporting: SQL/PostgreSQL, Python (Pandas), Tableau, KPI and dashboard automation. Experience at an online lending company and on crypto market data, an adjacent sector to the core target. Career made of assignments shorter than one year, with two simultaneous roles in early 2026. Available immediately, Paris / Remote. Looking for an ESN. TJM not applicable (set by the ESN).'
+      : 'Profil Data Analyst junior (environ 3 ans) orienté BI et reporting : SQL/PostgreSQL, Python (Pandas), Tableau, automatisation de KPI et de tableaux de bord. Expériences dans une société de crédit en ligne et sur des données de marché crypto, soit un secteur adjacent au cœur de cible. Parcours en missions de moins d’un an, avec deux rôles simultanés début 2026. Disponible immédiatement, Paris / Remote. En recherche d’ESN. TJM non applicable (fixé par l’ESN).',
+    title: isEn ? 'Data Analyst · BI & Reporting' : 'Data Analyst · BI & Reporting',
+    tjm: '—',
+    body: isEn ? `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Experience</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">Oct 2025 — Aug 2026</div><div><div class="exp-role">Data Analyst</div><div class="exp-org">Online Lending Company — Remote</div><div class="exp-desc">PostgreSQL query optimization across fragmented data sources (-40% report generation time). Analysis of 4,000 to 5,000+ daily transactions. Automated SQL reporting: productivity, KPIs, target attainment. Identification of trends and bottlenecks for resource allocation.</div></div></div>
+    <div class="exp-row"><div class="exp-year">Jan 2026 — Jul 2026</div><div><div class="exp-role">Business Intelligence &amp; Automation Analyst</div><div class="exp-org">Technology Company — Remote</div><div class="exp-desc">Analysis of operational workflows to identify bottlenecks and automation opportunities. Structuring of data from CRM, ERP, payment and document-processing systems. SQL reports and dashboards (KPIs, exceptions, performance). Definition of data validation rules for AI and workflow automation.</div></div></div>
+    <div class="exp-row"><div class="exp-year">Nov 2023 — Sep 2025</div><div><div class="exp-role">Data Analyst &amp; Engineer</div><div class="exp-org">Crypto Market Data Platform — Remote</div><div class="exp-desc">Monitoring of real-time crypto market databases: validation of prices, spreads and funding rates, detection and reporting of anomalies. Transformation of market data into actionable product insights and support for feature prioritization.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Skills</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag">SQL · PostgreSQL</span> <span class="s-tag">Python · Pandas · NumPy</span> <span class="s-tag">Tableau · Dashboards</span> <span class="s-tag">KPI reporting</span> <span class="s-tag">ETL · Data modeling</span> <span class="s-tag">A/B testing · Statistics</span> <span class="s-tag">Excel · Google Sheets</span> <span class="s-tag">Paris / Remote</span></div></div>`
+    : `<div class="m-section"><div class="m-section-head"><div class="m-section-label">Parcours</div><div class="m-section-line"></div></div>
+    <div class="exp-row"><div class="exp-year">Oct. 2025 — Août 2026</div><div><div class="exp-role">Data Analyst</div><div class="exp-org">Société de crédit en ligne — Remote</div><div class="exp-desc">Optimisation de requêtes PostgreSQL sur sources de données fragmentées (-40 % du temps de génération des rapports). Analyse de 4 000 à 5 000+ transactions quotidiennes. Reporting SQL automatisé : productivité, KPI, atteinte des objectifs. Identification de tendances et de goulots d’étranglement pour l’allocation des ressources.</div></div></div>
+    <div class="exp-row"><div class="exp-year">Jan. 2026 — Juil. 2026</div><div><div class="exp-role">Business Intelligence &amp; Automation Analyst</div><div class="exp-org">Société de technologies — Remote</div><div class="exp-desc">Analyse des flux opérationnels pour identifier goulots d’étranglement et opportunités d’automatisation. Structuration de données issues de CRM, ERP, paiement et traitement documentaire. Rapports et tableaux de bord SQL (KPI, exceptions, performance). Définition des règles de validation de données pour des workflows IA et d’automatisation.</div></div></div>
+    <div class="exp-row"><div class="exp-year">Nov. 2023 — Sept. 2025</div><div><div class="exp-role">Data Analyst &amp; Engineer</div><div class="exp-org">Plateforme de données de marché crypto — Remote</div><div class="exp-desc">Surveillance de bases de données de marchés crypto en temps réel : validation des prix, spreads et funding rates, détection et remontée d’anomalies. Transformation des données en indicateurs produit exploitables et appui à la priorisation fonctionnelle.</div></div></div>
+    </div><div class="m-section"><div class="m-section-head"><div class="m-section-label">Compétences</div><div class="m-section-line"></div></div>
+    <div class="skills-cloud"><span class="s-tag">SQL · PostgreSQL</span> <span class="s-tag">Python · Pandas · NumPy</span> <span class="s-tag">Tableau · Dashboards</span> <span class="s-tag">Reporting KPI</span> <span class="s-tag">ETL · Modélisation de données</span> <span class="s-tag">A/B testing · Statistiques</span> <span class="s-tag">Excel · Google Sheets</span> <span class="s-tag">Paris / Remote</span></div></div>`
+  },
   ba_ft038: {
     ref:'FT · 038', score:87, scoreGrad:'#2e7d32,#43a047',
     scoreNote: isEn
@@ -5776,6 +5844,7 @@ async function submitRenew() {
 
 // ── ID ↔ REF MAPPING ──
 const idToRef = {
+  data_ft048: 'ft-048',
   pm_new1: 'ft-019',
   pm_new2: 'ft-020',
   ba_new1: 'ft-021',
